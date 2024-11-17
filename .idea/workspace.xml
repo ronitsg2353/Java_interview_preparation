@@ -44,6 +44,43 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "ronitsg2353"
+  }
+}]]></component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1731847023" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1731847022" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ronitsg2353/Java_interview_preparation.git",
+    "accountId": "19dbe668-45cd-421a-b711-ea416c7df560"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 5
 }]]></component>
@@ -57,9 +94,14 @@
   "keyToString": {
     "Gradle.java_interview-code [:Duplicate_array.main()].executor": "Run",
     "Gradle.java_interview-code [:ascending_order.main()].executor": "Run",
+    "Gradle.java_interview-code [:count_occurance_of_char_in_string.main()].executor": "Run",
     "Gradle.java_interview-code [:desceding_order.main()].executor": "Run",
     "Gradle.java_interview-code [:factorial_number.main()].executor": "Run",
+    "Gradle.java_interview-code [:fibonnaci_number.main()].executor": "Run",
     "Gradle.java_interview-code [:largest_num.main()].executor": "Run",
+    "Gradle.java_interview-code [:palindrome.main()].executor": "Run",
+    "Gradle.java_interview-code [:prime_number.main()].executor": "Run",
+    "Gradle.java_interview-code [:remove_whitespace.main()].executor": "Run",
     "Gradle.java_interview-code [:reverse_number.main()].executor": "Run",
     "Gradle.java_interview-code [:reverse_number_in_array.main()].executor": "Run",
     "Gradle.java_interview-code [:reverse_string.main()].executor": "Run",
@@ -71,7 +113,7 @@
     "Gradle.java_interview-code [:swap_num_with_3rd_var.main()].executor": "Run",
     "Gradle.java_interview-code [:swap_two_num_without_var.main()].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "C:/Users/LENOVO/IdeaProjects/java_interview-code/src/main/java/org/example/Main.java",
     "project.structure.last.edited": "Modules",
