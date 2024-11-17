@@ -4,11 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa016312-86f7-4c23-ac29-0637b5db6c74" name="Changes" comment="" />
+    <list default="true" id="aa016312-86f7-4c23-ac29-0637b5db6c74" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_blame.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/anagram.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ascending_order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/desceding_order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/second_largest_no_array.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/second_smallest_no_array.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/reverse_string.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/reverse_string.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -24,12 +55,38 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.java_interview-code [:Duplicate_array.main()].executor": "Run",
+    "Gradle.java_interview-code [:ascending_order.main()].executor": "Run",
+    "Gradle.java_interview-code [:desceding_order.main()].executor": "Run",
+    "Gradle.java_interview-code [:factorial_number.main()].executor": "Run",
+    "Gradle.java_interview-code [:largest_num.main()].executor": "Run",
+    "Gradle.java_interview-code [:reverse_number.main()].executor": "Run",
+    "Gradle.java_interview-code [:reverse_number_in_array.main()].executor": "Run",
+    "Gradle.java_interview-code [:reverse_string.main()].executor": "Run",
+    "Gradle.java_interview-code [:second_largest_no_array.main()].executor": "Run",
+    "Gradle.java_interview-code [:second_smallest_no_array.main()].executor": "Run",
+    "Gradle.java_interview-code [:smallest_num.main()].executor": "Run",
+    "Gradle.java_interview-code [:sort_array.main()].executor": "Run",
+    "Gradle.java_interview-code [:sum_average.main()].executor": "Run",
+    "Gradle.java_interview-code [:swap_num_with_3rd_var.main()].executor": "Run",
+    "Gradle.java_interview-code [:swap_two_num_without_var.main()].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "C:/Users/LENOVO/IdeaProjects/java_interview-code/src/main/java/org/example/Main.java"
+    "onboarding.tips.debug.path": "C:/Users/LENOVO/IdeaProjects/java_interview-code/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="java_interview_code" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
