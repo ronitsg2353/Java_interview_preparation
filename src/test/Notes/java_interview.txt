@@ -1,0 +1,9 @@
+throw--->throw is keyword is used to throw an exception explicitly by programmer.we can defined user defined exception.
+
+throws--->java throws keyword is used to declared an exception. This gives info to programmer.they might give a exception so use to try n catch
+
+finally--> finally block contains the code which is always executed whether the exception is handled or not.
+
+this--> refer current class instance variable
+
+super-->super keyword in Java is a reference variable which is used to refer immediate parent class object.
