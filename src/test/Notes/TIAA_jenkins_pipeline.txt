@@ -1,0 +1,107 @@
+
+
+Pipeline==>
+
+Description->Pipeline is for running Regression on Account unlock of various App
+
+Discard old build?-->
+Strategy->Log Rotation
+Days to keep build-->20
+max # of build keep-->25
+
+This project is pametrized--> checked yes
+coice browser?
+Name-->browser_version
+choices-->
+120
+108
+75
+60
+55
+54
+45
+14
+11
+
+
+choice parameter?
+Name-->browser
+choices--> chrome_webSecurityDisabled
+			chrome
+			firefox
+			edge
+			ie
+			
+String Parameter?
+Name-->environment
+default_value-->ST2
+Description->ST2/ST4
+
+String Parameter?
+Name-->BranchName
+Default-->IdentityServices_Transmit
+
+
+String Parameter?
+Name-->deployment
+Description->choices:blue/green
+
+String parameter?
+Name-->platform
+Description->openshift/fabric
+
+pipeline script==>
+
+timeout (time:60,unit:'MINUTES')
+{
+node('rh6'){
+//set Enviroment Path
+withEnv(['JAVA_HOME=/cloudbees/buildtools/jdk/jdk-11','ARTIFACTORY_AUTH_TOKEN='--------------------','PATH=/cloudbees/buildtools app/gradle
+																										gradle-8.0.2/bin:${JAVA_HOME}/bin:/usr/loca/bin:/bin:/usr/bin'])
+	{
+	stage('git_checkout')
+	//clean WorkSpace
+	cleanWs()
+	
+	//git checkout
+	
+	git branch:"${BranchName}",credentialsId:'--------------',url:'git@gitlab.technocloud.com:digital-automation/IdentityServices.git'
+	
+	def fileContents3=readFile file="${WORKSPACE}"+'/src/test/resource.reportPortal.properties'
+	fileContents3=fileContents3.replace("rp.launch=DIS_UI","rp.launch="Account_unlock.Regression")
+	fileContents3=fileContents3.replace("rp.project=dis_ui","rp.project=dis_regression")
+	fileContents3=fileContents3.replace("rp.uuid=-------","rp.uuid=-----------")
+	echo fileContents3
+	writeFile file:"${WORKSPACE}"+'/src/test/resource/reportPortal.properties',text:fileContents3
+	
+	}
+	try{
+	
+		stage('Test Case Execution')
+		{
+		script{
+		sh 'gradle.processTestResources'
+		sh 'gradle.runMyTiaaAccountUnlockInParallel-Dselenium.browser="remote" -Dselenium.remote.saucelab.user="sso-TIAA-clabuser" -Dselenium.remote.saucelab.accesskey="---------------" -Dselenium.remote.browser.type=$browser -Dselenium.remote.browser.platform="windows" -Dselenium.remote.browser.version=$browser_version -Dselenium.remote.saucelab="true" -Dselenium.testEnvironment=$environment -Dselenium.remote.buildName=MyTIAA_authentication_Account_unlock_$environment_$BUILD_NUMBER -Dselenium.updateDBExecutionFlag=No -Dselenium.buildNameMyTIAA_authentication_Account_unlock_$environment _$BUILD_NUMBER -Dselenium.projectName=MyTIAA_authentication_Account_unlockA92381 -Dselenium.CMDB_ID
+		}
+		
+		}
+		failFast:false
+		}
+		}
+		catch(e)
+		{
+		currentBuild.result="FAILURE"
+		echo e.toString()
+		}
+		stage('cucumberReport'){
+		Cucumber FailedFeatureNumber:-1, FailedScenarioNumber:-1,failedStepsNumber:-1,failIncludePattern:'**/feature.json',pendingstepsNumber:-1,skipEmptyJSONFiles:true,skippedStepNumber:-1,sortingMethod:'ALPHABETICAL',undefinedStepNumber:-1,hideEmptyHooks:true
+		}
+		}
+		}
+		}
+		
+		
+																										
+																										
+
+			

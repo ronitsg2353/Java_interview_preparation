@@ -5,24 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa016312-86f7-4c23-ac29-0637b5db6c74" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_blame.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/anagram.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ascending_order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/desceding_order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/second_largest_no_array.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/second_smallest_no_array.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/reverse_string.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/reverse_string.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/Notes/BDD_cucumber.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Notes/BDD_cucumber.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/Notes/RestAssured_API_Testing.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Notes/RestAssured_API_Testing.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/Notes/TestNG_Junit.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Notes/TestNG_Junit.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/Notes/java_interview.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Notes/java_interview.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/Notes/selenium_interview.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Notes/selenium_interview.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,12 +32,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "ronitsg2353"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ronitsg2353&quot;
   }
-}]]></component>
+}</component>
   <component name="GitToolBoxStore">
     <option name="recentBranches">
       <RecentBranches>
@@ -75,15 +63,15 @@
       </RecentBranches>
     </option>
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ronitsg2353/Java_interview_preparation.git",
-    "accountId": "19dbe668-45cd-421a-b711-ea416c7df560"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ronitsg2353/Java_interview_preparation.git&quot;,
+    &quot;accountId&quot;: &quot;19dbe668-45cd-421a-b711-ea416c7df560&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2oyVmGaeyu1fRHjbt6CWJh2BiXg" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -92,6 +80,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.Java_interview_preparation [:anagram.main()].executor": "Run",
     "Gradle.java_interview-code [:Duplicate_array.main()].executor": "Run",
     "Gradle.java_interview-code [:ascending_order.main()].executor": "Run",
     "Gradle.java_interview-code [:count_occurance_of_char_in_string.main()].executor": "Run",
@@ -115,19 +104,44 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/312952/IdeaProjects/Java_interview_preparation/src/test/Notes",
     "onboarding.tips.debug.path": "C:/Users/LENOVO/IdeaProjects/java_interview-code/src/main/java/org/example/Main.java",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\312952\IdeaProjects\Java_interview_preparation\src\test\Notes" />
+    </key>
+  </component>
   <component name="RunManager">
+    <configuration name="anagram" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="anagram" />
+      <module name="java_interview-code.test" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="java_interview_code" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Java_interview_preparation" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.anagram" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
