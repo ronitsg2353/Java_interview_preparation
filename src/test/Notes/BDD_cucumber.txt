@@ -1,3 +1,21 @@
+                                            ######### Cucumber ######
+
+ Latest version of cucumber-->>7.20.1
+
+ background(keyword)--> used to group multiple given statements into a single group.Excecute the similar precondition for each test scenarios.
+
+ Scenario -->Scenario" is used for individual, non-parameterized test cases
+ Scenario outline--> "Scenario Outline" is used for parameterized test cases where the same steps are executed with different sets of input data.
+
+ dry run-->compile the stepDefination files and feature files.Its runs find any compilation errors.
+
+hooks-->myhook.java file in project-->the hooks are used to control the flow of the program and optimize lines of code. A block of code tagged with hooks
+in Cucumber can run before or post a scenario with the help of @Before and @After annotations.
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------
 1.what is cucumber?
 -->Cucumber is a testing tool based on Behavior Driven Development (BDD) framework. It is used to run functional tests written in plain text and develop test cases for software functionality. It plays a supporting role in automated testing.
 
@@ -5,14 +23,11 @@
 
 3.purpose of feature file?--> high level description of test scenarios.
 
-4.background keyword in cucumber?---> used to group multiple given statements into a single group
 
-5.scenario outline?(parameter based test scenario)
--->used as a parameter of scenarios.This is used when the same scenario needs to be executed for multiple sets of data; however, the test steps remain the same.
 
 6.Step Definition file?-->actual code of implementation
 
-7.cucumber dry run?--> compile cucumber features files and step definitions. It is run to find any compilation errors.
+
 
 8.starting point of feature file?---> Test Runner class 
 
@@ -26,7 +41,7 @@ Options tag is a part of the Test Runner file and comes in the form of an annota
 Feature parameter: The feature parameter is used to specify the path of the feature file.
 Glue parameter: The glue parameter is used to specify the path of the step definition file.
 
-11.latest version of cucumber-->7.20.1
+
 
 
 ------------------------------------------------------------------------------------------------------------

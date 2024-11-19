@@ -1,4 +1,8 @@
                     ####   Java Interview Question ####
+------------------------------------------------------------------------------------------------------------
+class-->
+object-->physical entity having state and behaviour.
+method-->
 ----------------------------------------------------------------------------------------------------------
 ==> public static void main (String [] args)
 public--> access modifier-Making the main() method public makes it globally available.
@@ -6,16 +10,45 @@ static(keyword)-->JVM can invoke it without instantiating the class.
 void--> method not return anything
 main-->starting point of Execution for JVM
 (String [] args)--> method having string ,array and argument inside
-
------------------------------------------------------------------------------------------------------------
+=================================================================================================================
                 ### Access Modifier ###
 
 public--> everywhere like package/outside package/class/outside class
 protected-->accessible for class/outside class/package/outside package with help of child class
-private -->accesible only within class only ..no outside class
+private -->accesible only within class only..no outside class
 Default--> only for package-no outside package
 
-----------------------------------------------------------------------------------------------------------
+===================================================================================================================
+Constructor==>
+----###code-#########--------------------------------------------------
+// Create a Main class
+public class Main {
+  int x;  // Create a class attribute
+
+  // Create a class constructor for the Main class
+  public Main() {
+    x = 5;  // Set the initial value for the class attribute x
+  }
+
+  public static void main(String[] args) {
+    Main myObj = new Main(); // Create an object of class Main (This will call the constructor)
+    System.out.println(myObj.x); // Print the value of x
+  }
+}
+---------------------------------------------------------------------------------------------------------------------
+A constructor in Java is a special method that is used to initialize objects.
+The constructor is called when an object of a class is created.
+the constructor name must match the class name, and it cannot have a return type (like void).
+Also note that the constructor is called when the object is created.
+All classes have constructors by default: if you do not create a class constructor yourself, Java creates one for you.
+
+#Type of constructor#-->
+Default constructor: A constructor that does not accept any parameters.
+Parameterized constructor: A constructor that accepts a specific number of parameters.
+Copy constructor: A constructor that creates a duplicate of an existing object of a class.
+
+
+===========================================================================================================================
 throw--->throw is keyword is used to throw an exception explicitly by programmer.we can defined user defined exception.
 
 throws--->java throws keyword is used to declared an exception. This gives info to programmer.they might give a exception so use to try n catch

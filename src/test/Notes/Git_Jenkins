@@ -9,3 +9,11 @@ Git pull--> git pull retrieves the latest changes from the remote repository lik
   Git fetch-->download the changes from remote but not merge into local
   Git pull-->download the changes from remote and merge into local
 -----------------------------------------------------------------------------------------------------------------------------------------
+Git Rebase-->Rebase is one of two Git utilities designed to integrate changes from one branch into another. Rebasing combines or moves a sequence of commits on top of a new base commit.
+Git rebase is the linear process of merging.
+Git rebase(simple word)-->its uses to move the changes from one branch to another branch.
+
+Difference between Git Rebase vs Git Merge?
+git merge combines changes from one branch (source branch) into another branch (target branch),
+ while git rebase moves the changes from one branch to another branch
+ ---------------------------------------------------------------------------------------------------------------

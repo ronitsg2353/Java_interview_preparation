@@ -1,1 +1,57 @@
----------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
+
+                    ## Selenium Exception ###
+ Difference between Invalid Session or NoSession Exception-->
+ InvalidSessionIdException-->Raised when the session ID used in a request is invalid or has expired
+ No Session-->
+
+
+ 1.InvalidSessionIdException-->Raised when the session ID used in a request is invalid or has expired.
+ solution-->restart new webdriver session
+
+ 2.NoAlertPresentException-->Raised when an expected alert is not present. Happens when trying to interact
+ with an alert that doesn’t exist.
+ solution-->use try-catch block
+
+ 3.ElementClickInterceptedException-->raised when an element you try to click is not clickable because another element is blocking it.
+solution-->use javaSriptExecutor
+ -----------------------------------------------------------------------------------------------------------------------
+
+                   ### waits #####
+
+ Thread.sleep-->Thread.sleep(2000)-->static wait provided by java
+
+ implicit wait-->driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+ WebDriver to wait for a specified amount of time when trying to locate an element before throwing a NoSuchElementException.
+
+
+Explicit wait--> wait for a specific condition to be true before proceeding further.
+It allows you to wait for a particular element or condition with a specific timeout.
+
+ Explicit wait-->WebDriverWait wait = new WebDriverWait(driver,30);
+                 wait.until(ExpectedConditions.visibilityOfElementLocated(WebElement);
+
+ Fluent wait-->Fluent wait looking element the wait conditions, such as checking for the condition at regular intervals
+ and ignoring certain exceptions
+
+ FluentWait wait = new FluentWait(driver);
+ wait.withTimeout(5000, TimeUnit.MILLISECONDS).pollingEvery(250, TimeUnit.MILLISECONDS).ignoring(NoSuchElementException.class)
+.until(ExpectedConditions.alertIsPresent());
+
+which wait is better?--> Explicit wait
+-------------------------------------------------------------------------------------------------------------------------
+
+                ## JavaScriptExceutor ###
+ JavaScriptExecutor is an interface that is used to execute JavaScriprt through selenium webdriver. JavaScript is a programming language
+  that interacts with HTML in a browser, and to use this function in Selenium, JavascriptExecutor is required.
+
+  JavascriptExecutor js = (JavascriptExecutor) driver;
+  scroll by-->  js.executeScript(“window.scrollBy(0,150)”);
+  get title--> string sText =  js.executeScript(“return document.title;”).toString();
+  inner text of webpage-->string sText =  js.executeScript(“return document.documentElement.innerText;”).toString();
+  alert poput window--> Js.executeScript(“alert(‘hello world’);”);
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+
+
