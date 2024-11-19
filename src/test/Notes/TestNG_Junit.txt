@@ -1,2 +1,31 @@
+                    ##### Junit ####
+------------------------------------------------------------------------------------------------------------------------
+latest version of junit-->Junit 5
+
+Feature of Junit 5-->
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------
+Annotation of Junit-->
+
+@Test-->(test case)--This annotation is a replacement of org.junit.TestCase which indicates that public void method to which it is attached can be executed as a test Case.
+@Before-->(precondn-Execution before each test case)--This annotation is used if you want to execute some statement such as preconditions before each test case.
+@After-->(postcondtn-Execution after each test case)-This annotation can be used if you want to execute some statements after each Test Case for e.g resetting variables, deleting temporary files ,variables, etc.
+@BeforeClass-->(execution before all test case)-- his annotation is used if you want to execute some statements before all the test cases for e.g. test connection must be executed before all the test cases.
+@AfterClass-->(Execution after all test case)--This annotation can be used if you want to execute some statements after all test cases for e.g. Releasing resources after executing all test cases.
+@Ignores-->disabling some test cases during test execution.
+@Test(timeout=500)-->  test execution need to be completed within some specified time.
+@Test(expected=IllegalArgumentException.class)-->f you want to handle some exception during test execution. For, e.g., if you want to check whether a particular method is throwing specified exception or not.
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+
 
 DataProvider-->
+------------------------------------------------------------------------------------------------------------------------
