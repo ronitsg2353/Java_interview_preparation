@@ -1,0 +1,11 @@
+
+==============================================================================================================================================================
+Git fetch--> downloads the changes from the remote repository to the local repository but does not make any changes to the current working directory.
+ Since the changes are not merged into the local branch, you can check the changes from the remote repository without interrupting your current work.
+
+Git pull--> git pull retrieves the latest changes from the remote repository like git fetch, but it also automatically merges those changes into the current branch.
+  In contrast to git fetch, git pull directly applies the changes from the remote repository to the local working directory.
+
+  Git fetch-->download the changes from remote but not merge into local
+  Git pull-->download the changes from remote and merge into local
+-----------------------------------------------------------------------------------------------------------------------------------------

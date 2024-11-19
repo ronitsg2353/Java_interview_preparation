@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa016312-86f7-4c23-ac29-0637b5db6c74" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/Notes/Git_Jenkins" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/Notes/BDD_cucumber.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Notes/BDD_cucumber.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/Notes/RestAssured_API_Testing.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Notes/RestAssured_API_Testing.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/Notes/TestNG_Junit.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Notes/TestNG_Junit.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/Notes/java_interview.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Notes/java_interview.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/Notes/selenium_interview.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Notes/selenium_interview.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +104,8 @@
     "onboarding.tips.debug.path": "C:/Users/LENOVO/IdeaProjects/java_interview-code/src/main/java/org/example/Main.java",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "vcs.Git"
   }
 }]]></component>
   <component name="RecentsManager">
