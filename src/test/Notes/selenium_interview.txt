@@ -1,5 +1,7 @@
 ------------------------------------------------------------------------------------------------------------------------
 
+
+
                     ## Selenium Exception ###
  Difference between Invalid Session or NoSession Exception-->
  InvalidSessionIdException-->Raised when the session ID used in a request is invalid or has expired
