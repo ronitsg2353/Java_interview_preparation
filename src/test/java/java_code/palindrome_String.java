@@ -1,3 +1,5 @@
+package java_code;
+
 public class palindrome_String {
     public static void main(String[] args) {
         String rev = "";

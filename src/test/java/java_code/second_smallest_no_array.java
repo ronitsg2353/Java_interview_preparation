@@ -1,3 +1,5 @@
+package java_code;
+
 public class second_smallest_no_array {
     public static void main(String[] args) {
 

@@ -1,3 +1,5 @@
+package java_code;
+
 public class remove_whitespace {
     public static void main(String[] args) {
 

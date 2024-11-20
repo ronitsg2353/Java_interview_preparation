@@ -1,4 +1,4 @@
-import java.util.Scanner;
+package java_code;
 
 public class factorial_number {
 

@@ -1,4 +1,5 @@
-import java.lang.reflect.Array;
+package java_code;
+
 import java.util.Arrays;
 
 public class anagram {
@@ -16,9 +17,9 @@ public class anagram {
         if(result==true)
 
 
-            System.out.println("anagram");
+            System.out.println("java_code.anagram");
         else
-            System.out.println("no anagram");
+            System.out.println("no java_code.anagram");
 
 
     }

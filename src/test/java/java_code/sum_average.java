@@ -1,3 +1,5 @@
+package java_code;
+
 public class sum_average {
     public static void main(String[] args) {
 

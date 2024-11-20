@@ -1,3 +1,5 @@
+package java_code;
+
 public class count_occurance_of_char_in_string {
     public static void main(String[] args) {
 

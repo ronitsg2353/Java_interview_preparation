@@ -1,3 +1,5 @@
+package java_code;
+
 public class smallest_num {
     public static void main(String[] args) {
 
