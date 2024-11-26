@@ -3,6 +3,10 @@
 class-->
 object-->physical entity having state and behaviour.
 method-->
+------------------------------------------------------------------------------------------------------
+Typecasting-->converting one datatype to another datatype
+widening--> int to double
+narrowing-->double to int
 ----------------------------------------------------------------------------------------------------------
 ==> public static void main (String [] args)
 public--> access modifier-Making the main() method public makes it globally available.
@@ -48,7 +52,124 @@ Parameterized constructor: A constructor that accepts a specific number of param
 Copy constructor: A constructor that creates a duplicate of an existing object of a class.
 
 
+can we override constructor like method-->No
+can we overload the constructor-->Yes.
+
+constructor overloading-->is feature of java.that allows a class to have multiple constructors,
+each with a different set of parameters
+
+------------------------------------------------------------------------------------------------------------
+Instance method & static method-->
+
+1.Instance method-->its required object of class
+2.Static method-->its doesn't requires object of class.Accesible for only static attribute.
+
+Static method-->Static methods are the methods in Java that can be called without creating an object of class
+
+
+1.can we override static method-->No
+2.can we overload static method-->Yes.
 ===========================================================================================================================
+                    # Method overloading & overriding ###
+
+  Both are type of polymorhpism
+
+ 1.Method overloading-->compile time polymorphism
+ 2.Method overloading-->static binding
+
+ code-->  class methodoverload{
+ static int add(int a,int b){
+ return a+b;
+ }
+
+ static int add(int a,int b,int c){
+ return a+b+c;
+}
+public static void main(String []args){
+System.out.println(add(10,20));
+System.out.println(add(10,20,30));
+}
+}
+
+-----Method overloading-->more than one method shares the same method name with a different parameter in the class.
+return type some or may not same.
+
+----Method overriding--->----------------->
+
+code==>
+
+ 2.Method overriding-->runtime polymorphism
+ Method overriding-->dynamic binding
+
+ Method overriding-->same method and same signature.
+ method in a derived class has the same name, return type, and parameters
+  as a method in its parent class. The derived class provides a specific implementation
+  for the method that is already defined in the parent class.
+
+//base class
+ public class Animal{
+ public void eat(){
+ System.out.println("Eating is method");
+}
+//Derived class
+public class Dog extends Animal(){
+void eat(){
+System.out.println("Eating for derived method");
+ }
+
+  // Method to call the base class method
+     void eatAsAnimal() {
+         super.eat();
+     }
+
+ public static void main(String []args){
+ Animal animal=new Animal();
+ animal.eat();
+
+ Dog dog=new Dog();
+ dog.eat();
+
+ Animal animal=new Dog();
+ animal.eat();
+ }
+ -------------------------------------------------------------------------------------------------------------
+ Abstraction==> OOPs concept-hiding the unnecessary details from user and show only functionality.
+
+
+ Abstract class & Abstract Method:
+Abstract method--> using abstract keyword in abstract class.A method dont have implementation body.
+
+Abstract class--> both abstract and concrete method.its restricted class and its cannt user for create obj
+
+Abstract Animal{
+
+public void abstract dog();//abstract method
+
+public void sheep(){//concrete method
+System.out.printn("Sheep is name of animal");
+
+}
+---------------------------------------------------------------------------------------------------------\
+Interface:
+
+interface Animal{
+void eat(): //abstract method
+void sleep(); //abstract method
+}
+Interface-->
+An interface is declared by using the interface keyword. It provides total abstraction;
+ means all the methods in an interface are declared with the empty body, and all the fields are public, static and final by default.
+A class that implements an interface must implement all the methods declared in the interface.
+
+
+ -----------------------------------------------------------------------------------------------------------
+ Difference between Argument and parameter==>
+
+
+
+--------------------------------------------------------------------------------------------------------------
+
+
 throw--->throw is keyword is used to throw an exception explicitly by programmer.we can defined user defined exception.
 
 throws--->java throws keyword is used to declared an exception. This gives info to programmer.they might give a exception so use to try n catch
