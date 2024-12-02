@@ -1,8 +1,29 @@
 ------------------------------------------------------------------------------------------------------------------------
+Selenium cant handle Desktop application.open source for web application
+
+Appium-->mobile application testing
+
+Desktop application-->
+Robot Framework-->
+WinAppDriver-->
+katalon-->
 
 
+---------------------------------------------------------------------------------------------------------
+Selenium Webdriver-->
+Selenium Grid-->
+Selnoid-->
+selense-->
+Selenium IDE-->
+-----------------------------------------------------------------------------------------------------------
+Difference verify and Assert?
 
-                    ## Selenium Exception ###
+verify(soft assertion)-->If the verify condition fails, the test continues to run until the last test is executed.
+Assert(hard assertion)-->If the assert condition fails, the test case is marked as failed,
+and the remaining tests are skipped
+----------------------------------------------------------------------------------------------------------
+
+                ## Selenium Exception ###
  Difference between Invalid Session or NoSession Exception-->
  InvalidSessionIdException-->Raised when the session ID used in a request is invalid or has expired
  No Session-->
@@ -54,6 +75,79 @@ which wait is better?--> Explicit wait
   alert poput window--> Js.executeScript(“alert(‘hello world’);”);
 
   ----------------------------------------------------------------------------------------------------------------------
+                    findElement() and findElements()?
+  findElement()-->method which finding out webelement of webpage and return noELmentfoundExption for no webelement.
+  findElements()-->method which finding out mutliple element of webpage and return zero element for no webelment.
+  ---------------------------------------------------------------------------------------------------------------------------
+               Diff between getWindowHandle and getWindowHandles ?
+
+  It is a unique identifier that holds the address of all the windows. Think of it as a pointer to a window, which returns the string value.
+  It is assumed that each browser will have a unique window handle.
+
+  getWindowHandle-->This method helps to get the window handle of the current window
+                    String parentWindow=driver.getWindowHandle();
+
+  getWindowHandles-->This method helps to get the handles of all the windows opened
+                    String <set> allwindows=driver.getWindowHandles();
+
+  switch to: This method helps to switch between the windows
+  action: This method helps to perform certain actions on the windows
+  ---------------------------------------------------------------------------------------------------------
+                     ### Action class ###
+  Actions class is an ability provided by Selenium for handling keyboard and mouse events
+
+  Actions action=new Actions(driver);
+  action.moveToElement(element).build().perform();
+  click()-->    action.click(element).build().perform();
+
+
+  Mouse Actions in Selenium:
+
+  doubleClick(): Performs double click on the element
+  action.doubleClick(element).perform();
+
+  clickAndHold(): Performs long click on the mouse without releasing it
+  action.clickAndHold(element).perform();
+
+  dragAndDrop(): Drags the element from one point and drops to another
+  action.dragAndDrop(sourcelocator,destinationlocator).build().perform();
+
+  moveToElement(): Shifts the mouse pointer to the center of the element
+
+  contextClick(): Performs right-click on the mouse
+  action.contextClick(element).build().perform();
+
+  sendKey()--
+  WebElement searchbox=driver.findElmenet(xpath);
+  action.sendkey(searchbox,"selenium").perform();
+
+  --------------#####------####-------####---------#####----------####-------####-----####----
+  Keyboard events:
+
+        Actions action=new Actions(driver);
+  1.TAB-->
+  action.sendKeys(keys.TAB);
+
+  2.control+All
+  // Select the Current Address using CTRL + A
+          actions.keyDown(Keys.CONTROL);
+          actions.sendKeys("a");
+
+ --------------------------------------------------------------------------------------------------------
+
+
+
+-------------------------------------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------------------------------------
+  Capabilities-->
+
+
+
+
+
 
 
 
