@@ -7,14 +7,12 @@ Desktop application-->
 Robot Framework-->
 WinAppDriver-->
 katalon-->
-
-
 ---------------------------------------------------------------------------------------------------------
-Selenium Webdriver-->
-Selenium Grid-->
-Selnoid-->
-selense-->
-Selenium IDE-->
+Selenium Webdriver-->Selenium WebDriver is a code library of APIs for controlling browsers.
+Selenium Grid--> Selenium Grid is a smart proxy server that makes it easy to run tests in parallel on multiple machines
+Selnoid-->Selenoid is an open-source, automated testing solution that runs browsers in Docker containers
+selense-->scripting language-used for writing selenium command
+Selenium IDE-->open source having record and playback feature
 -----------------------------------------------------------------------------------------------------------
 Difference verify and Assert?
 
@@ -94,6 +92,10 @@ which wait is better?--> Explicit wait
   action: This method helps to perform certain actions on the windows
   ---------------------------------------------------------------------------------------------------------
                      ### Action class ###
+
+  Action-->Interface
+  Actions-->class
+
   Actions class is an ability provided by Selenium for handling keyboard and mouse events
 
   Actions action=new Actions(driver);
@@ -124,7 +126,7 @@ which wait is better?--> Explicit wait
   --------------#####------####-------####---------#####----------####-------####-----####----
   Keyboard events:
 
-        Actions action=new Actions(driver);
+   Actions action=new Actions(driver);
   1.TAB-->
   action.sendKeys(keys.TAB);
 
