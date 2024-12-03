@@ -11,6 +11,10 @@ Types of Authorization-->
         OAuth1.0
         OAuth2.0
         API KEy
+
+ HTTP Request--> Get,Put,Patch,delete
+
+ RestAssured-->using gherking keyword-->Given,when ,then
 ---------------------------------------------------------------------------------------------------------
               ### API chaining ###
 
@@ -87,4 +91,98 @@ Deserialization-->json to POJO
  RestAssured.given().baseURI().content-type().header().body(data).when().post().then().log().all();
  ----------------------------------------------------------
                 ### Path parameter & Query Parameter ###
+
+Path parameter-->The path parameter defines the resource location. The path parameter is separated from the URL by a `/`
+Query Parameter-->API Query parameters can be defined as the optional key-value pairs that appear after the question mark in the URL.
+                query parameter(s) by a question mark (`?`).
+---------------------------------------------------------------------------------------------------------------------
+                ### capture the response ###
+
+                extrect().response()-->used to retreive response
+
+Response response=RestAssured.given().content-type("application/json").body(data).when().Post().then().statusCode(200).extract().response();
+
+-------------------------------------------------------------------------------------------------------
+                ### Fetch data from response ###
+
+ JSonPath js=new JSonPath(response);
+ System.out.println(js.getString("id"));
+ int id=js.getString("Id");
+ -------------------------------------------------------------------------------------------------------
+                    ### retireve cookies from response ###
+
+ Map <String,String> cookies=response.getCookies();
+ System.out.println(cookies.size());
+ ----------------------------------------------------------------------------------------------------------
+                    ### retreive Headers from response ###
+
+  Header header=response.getHeader();
+  for(header hd:headers){
+  System.out.println(hd.getName()+" "+hd.getValue()):
+  }
+  --------------------------------------------------------------------------------------------------------
+                ### converting response into jsonObject ###
+
+ JsonObject jo=new JsonObject(response.toString);
+ for(int i=0;i<jo.getJSonArray("first name").length();i++){
+ String firstname=jo.getJSONArray("first name").getJsonObject(i).get("first name").toString();
+ System.out.println(firstname);
+ }
+
+ ---------------------------------------------------------------------------------------------------------
+                ### FIle upload ###-->mutli part
+
+  public void fileUpload(){
+
+  File file=new File("filepath");
+
+  RestAssured.given().multiPart("file",file).content-type("multiPart/form-data").when().post(baseurl).then().statusCode().log().all();
+  }
+  ---------------------------------------------------------------------------------------------------------------------------------------
+                  ### JsonArray to JsonObject ###
+
+  JSONArray jarr=new JSONArray(response.toString());
+  jarr.getJSONObject().get("first name");
+  ---------------------------------------------------------------------------------------------------------
+                    ### Dummary Test Data ###
+
+      "Javafaker"-->maven dependency
+
+     Faker fakedata=new Faker();
+     String name=fakedata.name.fullName();
+     String firstname=fakedata.name.firstname();
+
+
+
+ -----------------------------------------------------------------------------------------------------------
+                  ## Data Driven (data extract from excel file)###
+
+//file class for open xlsx file
+  File file=new File(excelfilepath);
+
+//create object of fileInputstream  class to read excel sheet
+FileInputStream inputstream=new FileInputStream(file);
+
+
+//creating workbook instance that refers to .xls file
+workbook=new HSSFWorkbook(inputStream);
+
+//creating a Sheet object
+sheet=workbook.getSheet(sheetName);
+
+public String getCellData(int rowNumber,int cellNumber){
+       //getting the cell value from rowNumber and cell Number
+        cell =sheet.getRow(rowNumber).getCell(cellNumber);
+
+        //returning the cell value as string
+        return cell.getStringCellValue();
+    }
+
+ ---------------------------------------------------------------------------------------------------------
+                    ### Rest-Assured Framework ###
+
+
+  src/main/java
+  src/main/resources
+  src/test/java-->
 

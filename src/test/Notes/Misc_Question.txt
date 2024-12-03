@@ -1,0 +1,17 @@
+
+1.Difficulties in Automation testing?
+1.Rapid changes in UI--> changing ui--updating locators and some methods.
+2.flakiness -->
+3.Maintaining test data-->
+
+2.Difficulties in Agile?
+1.changing requirement-->
+2.Lack of communication between tester and dev
+3.Not enough information
+4.Time constraint
+
+3.Testing in one day before Prod?
+1.inform the stakeholder and scrum
+2.prioritze test cases-smoke and regression
+3.critical path & high priority testing
+4.Exploratory testing-->identify the hidden issue through unscripted testing of high risk modues

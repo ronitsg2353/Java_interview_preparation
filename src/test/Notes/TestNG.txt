@@ -22,6 +22,44 @@ AfterClass-->method will be run after all the test methods in the current class 
 AfterMethod-->method will be run before each test method.
 BeforeMethod-->method will be run after each test method.
 --------------------------------------------------------------------------------------------------------
-                ### Listeners ###
+                            ### Data Provider ###
 
-  IRetryAnalyzer--> rerun the failed tests
+ Dataprovider--> DataProvider helps with data-driven test cases that carry the same methods
+  but can be run multiple times with different data sets.
+
+@DataProvider (name = "name_of_dataprovider")
+public Object[][] dpMethod() {
+    return new Object [][] { values}
+}
+
+-----------------------------------------------------------------------------------------------------------
+                ### Listeners ###
+Listener is an interfaces that can track events and modify system behavior during the execution of Selenium tests.
+
+  1.IRetryAnalyzer--> rerun the failed tests
+  2.ITestListener-->allows us to implement methods to listen to test events, such as when a test case starts, finishes, fails, or skips
+  3.IReporter-->report generation
+  ----------------------------------------------------------------------------------------------------------------------------
+                ### testng.xml ###
+   <?xml version="1.0" encoding="UTF-8"?>
+   <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+   <suite name="Parallel Test Suite" thread-count="2" parallel="tests" >
+   <test name="Parallel Test Chrome" >
+   <classes>
+   <class name="com.qa.testcases.ChromeTest"/>
+   </classes>
+   </test> <!-- Test -->
+
+   <test name="Parallel Test Firefox" >
+   <classes>
+   <class name="com.qa.testcases.FirefoxTest"/>
+   </classes>
+   </test> <!-- Test -->
+
+   <test name="Parallel Test Edge" >
+   <classes>
+   <class name="com.qa.testcases.EdgeTest"/>
+   </classes>
+   </test> <!-- Test -->
+   </suite> <!-- Suite -->
+   -----------------------------------------------------------------------------------------

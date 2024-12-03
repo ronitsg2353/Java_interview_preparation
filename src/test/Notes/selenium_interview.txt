@@ -275,7 +275,29 @@ selectByValue(String arg)-->
 3.driver.navigate().back()-->come to previous webpage
 4.driver.navigate().forward()-->move to the next webpage
 ----------------------------------------------------------------------------------------------------------
+                   ## Data Driven (data extract from excel file)###
 
+//file class for open xlsx file
+  File file=new File(excelfilepath);
+
+//create object of fileInputstream  class to read excel sheet
+FileInputStream inputstream=new FileInputStream(file);
+
+
+//creating workbook instance that refers to .xls file
+workbook=new HSSFWorkbook(inputStream);
+
+//creating a Sheet object
+sheet=workbook.getSheet(sheetName);
+
+public String getCellData(int rowNumber,int cellNumber){
+       //getting the cell value from rowNumber and cell Number
+        cell =sheet.getRow(rowNumber).getCell(cellNumber);
+
+        //returning the cell value as string
+        return cell.getStringCellValue();
+    }
+---------------------------------------------------------------------------------------------------------
                  ### IMP Questions ###
 
  1.Window resize-->can we minimize and maximize the window size?
@@ -299,7 +321,22 @@ selectByValue(String arg)-->
 
   5.upload files-->element.sendKeys(filepath)-we need to use the HTML tag ‘input’ with the attribute type as a file
 
+   6.how do yo handle dynamic webelemtns in selenium? -->fluent wait and explicit wait..cssSelector
 
+   7.How do you handle situation where an element is not visible(hidden element)?
+            Hidden elements are the ones that are present in the DOM but not visible on the web page.
+            hidden elements are defined by the CSS property style="display:none;"
+
+            "JavascriptExecutor"-->
+             // Javascript executor class with executeScript method
+                  JavascriptExecutor j = (JavascriptExecutor) driver;
+                   j.executeScript
+                        ("document.getElementById('displayed-text').value='Selenium';");
+----------------------------------------------------------------------------------------------------------
+            ### NoSuchElementException vs StaleElementReferenceExcpetion ###
+ 1.NoSuchElementException-->Element doesnt exist on webpage
+ 2.ELementNotVisibleException-->ELment exist but its hidden
+ 3.
 
 
 

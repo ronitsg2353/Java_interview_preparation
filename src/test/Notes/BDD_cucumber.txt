@@ -32,7 +32,9 @@ Options tag is a part of the Test Runner file and comes in the form of an annota
 Feature parameter: The feature parameter is used to specify the path of the feature file.
 Glue parameter: The glue parameter is used to specify the path of the step definition file.
 
-
+-----------------------------------------------------------------------------------------------------------
+            ### Fixture ###
+tearDown() and setup()
 ------------------------------------------------------------------------------------------------------------
                     ### Project structure ###
 
