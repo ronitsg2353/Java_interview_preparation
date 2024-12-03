@@ -116,10 +116,11 @@ code==>
  2.Method overriding-->runtime polymorphism
  Method overriding-->dynamic binding
 
- Method overriding-->same method and same signature.
+ Method overriding(child class having a method already present in parent class)-->same method and same signature.
  method in a derived class has the same name, return type, and parameters
-  as a method in its parent class. The derived class provides a specific implementation
-  for the method that is already defined in the parent class.
+  as a method in its parent class.
+  [[while method overriding involves creating a method in the child class
+  that has the same name, parameters, and return type as a method in the parent class.]]
 
 //base class
  public class Animal{
@@ -175,6 +176,10 @@ Interface-->
 An interface is declared by using the interface keyword. It provides total abstraction;
  means all the methods in an interface are declared with the empty body, and all the fields are public, static and final by default.
 A class that implements an interface must implement all the methods declared in the interface.
+
+[[An interface in Java looks similar to a class but both the interface and class are two different concepts.
+An interface can have methods and variables just like the class but the methods declared in interface are by default abstract. W
+e can achieve 100% abstraction and multiple inheritance in Java with Interface]]
 
 
  -----------------------------------------------------------------------------------------------------------
@@ -279,3 +284,82 @@ each key can map to at most one value. The Map interface is used to store key-va
  and it provides an efficient way to retrieve, update, and manipulate data based on keys.
 
  HashMap-->HashMap implements the Map interface and is used for managing large datasets efficiently.
+ ---------------------------------------------------------------------------------------------------------------------------
+                         ### Inheritance ###
+ mechanism in Java by which one class is allowed to inherit the features(fields and methods) of another class.
+
+ The "extends" keyword is used for inheritance in Java
+
+ 1.Single level inheritance-->
+  a sub-class is derived from only one super class. It inherits the properties and behavior of a single-parent class.
+         ----
+        | B  |    -->super(single parent class)
+        -----
+          ^
+          |
+         -----
+        | A  |     -->subclass
+         ----
+ 2.Multi level inheritance:-
+ a derived class will be inheriting a base class, and as well as the derived class also acts as the base class for other classes.
+         -------
+         |  C  |        --> base class
+         ------
+           ^
+           |
+          ----
+         | B  |    -->intermidiate class
+         -----
+           ^
+           |
+          -----
+         | A  |     -->Derived class
+          ----
+ 3.Hiearchical Inheritance-->
+   one parent class(base class) serves to more than one child class.
+
+ 4.Multiple inheritance-->
+ one child class(base class)having more than one parent class.
+ #.java 8 support multiple inheritance to interface but not classes.
+
+ 5.Hybrid inheritance-->
+ combination two or more type of inheritance.
+ ----------------------------------------------------------------------------------------------------------
+                       ### Encapsulation ###
+
+Encapsulation in Java is a process of wrapping code and data together into a single unit.
+Java Encapsulation is a way of hiding the implementation details of a class from outside access and only exposing a public interface that can be used to interact with the class.
+
+// Person Class
+class Person {
+
+    private String name;
+    private int age;
+
+    public String getName() { return name; }
+
+    public void setName(String name) { this.name = name; }
+
+    public int getAge() { return age; }
+
+    public void setAge(int age) { this.age = age; }
+}
+
+// Driver Class
+public class Main {
+    // main function
+    public static void main(String[] args)
+    {
+        // person object created
+        Person person = new Person();
+        person.setName("John");
+        person.setAge(30);
+
+        // Using methods to get the values from the
+        // variables
+        System.out.println("Name: " + person.getName());
+        System.out.println("Age: " + person.getAge());
+    }
+}
+-----------------------------------------------------------------------------------------------------------
+                    ###

@@ -205,8 +205,80 @@ It may be used for warning purposes as well.
 2.accept button--> driver.switchTo().alert().accept();
 3.getText(capture alert message)--> driver.switchTo().alert().getText();
 4.sendKeys(send data to alert box)-->driver.switchTo().alert().sendKeys("Ronit");
+-------------------------------------------------------------------------------------------------------------
+                    ### OOPS concept used in selenium project ###
+
+ WebElement-->interface
+ WebDriver-->Interface
+ FindBy-->annotation
+ FindElement-->"method" in pom to identify webelement
+
+ 1.Inheritance--> one class acquires the property of another class.
+ We create a Base Class in the Automation Framework to initialize the WebDriver interface, WebDriver waits, Property files, Excels, etc., in the Base Class.
+ We extend the Base Class to other classes such as Tests and Utility Class.
+
+ 2.Polymorphism-->
+ 2.1 Method overloading-->"implicit wait"-use different timestamp like sec,min and hrs.
+                    Action class and Assert class also example of method overloading
+
+ 2.2 Method overrriding-->We use a method which was already implemented in another class by changing its parameters.
+                    "get" and "navigate" methods of different drivers in Selenium .
+
+3.Abstraction(POM-locators)--> Page Object Model design pattern, we write locators (such as id, name, xpath etc.,) and the methods in a Page Class. We utilize these locators in tests but we can’t see the implementation of the methods.
+ Literally we hide the implementations of the locators from the tests.
+
+4.Interface-->WebDriver driver = new FirefoxDriver();
+
+5.Encapsulation-->ll the classes in a framework are an example of Encapsulation.
+In POM classes, we declare the data members using @FindBy and initialization of data members will be done using Constructor to utilize those in methods.
+----------------------------------------------------------------------------------------------------------------
+                       ### DropDown ###
+
+ Select:-->Select class provides the implementation of the HTML SELECT tag. A Select tag provides the helper methods with select and deselect options
+            Select select = new Select();
+            WebElement list=driver.findElement(By.id("Xpath"));
 
 
+  selectByVisibileText(String arg)-->
+            select.selectByVisibleText("text");
+
+  selectByIndex(int)-->
+            select.selectByIndex();
+
+  getOptions()-->List<WebElement>
+            List <WebElement> list=select.getOptions();
+            System.out.println(list.size());
+
+selectByValue(String arg)-->
+         select.selectByValue("text");
+
+  deselectAll()-->select.deselectAll();
+
+  isMultiple()-->isMultiple(): boolean – This method informs whether the Select element supports multiple selection options at the same time or not.
+  This method accepts nothing and returns a boolean value (true/false).
+        select.isMultiple();
+
+---------------------------------------------------------------------------------------------------------------------------
+
+
+                 ### IMP Questions ###
+
+ 1.Window resize-->can we minimize and maximize the window size?
+                int width = 600;
+                int height = 400;
+                Dimension dimension = new Dimension(width, height);
+                driver.manage().window().setSize(dimension);
+
+  window.resizeTo() method and capability commands can also be used to achieve the same result.
+  Use windows.resizeTo() method along with Javascript executor.
+                ((JavascriptExecutor)driver).executeScript("window.resizeTo(600,400);");
+
+
+  2. How to Handle colors in webdriver?
+        "getCSSValue(arg0)"" to fetch the colours by sending the colour as the argument
+
+  3.How to debug the test in Selenium?
+  -->using "breakpoints"
 
 
 

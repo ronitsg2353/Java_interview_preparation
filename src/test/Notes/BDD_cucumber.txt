@@ -12,9 +12,6 @@
 hooks-->myhook.java file in project-->the hooks are used to control the flow of the program and optimize lines of code. A block of code tagged with hooks
 in Cucumber can run before or post a scenario with the help of @Before and @After annotations.
 
-
-
-
 --------------------------------------------------------------------------------------------------------------------------------
 1.what is cucumber?
 -->Cucumber is a testing tool based on Behavior Driven Development (BDD) framework. It is used to run functional tests written in plain text and develop test cases for software functionality. It plays a supporting role in automated testing.
@@ -22,29 +19,34 @@ in Cucumber can run before or post a scenario with the help of @Before and @Afte
 2.aim of bdd(behavior driven Development)--> to understand the test scenarios to tech team as well as non tech team.
 
 3.purpose of feature file?--> high level description of test scenarios.
-
-
-
 6.Step Definition file?-->actual code of implementation
-
-
-
-8.starting point of feature file?---> Test Runner class 
-
+8.starting point of feature file?---> Test Runner class
 9. hooks ?
 -->the hooks are used to control the flow of the program and optimize lines of code. A block of code tagged with hooks in Cucumber can run before or post a scenario with the help of @Before and @After annotations.
 
 10.option tag?-->
-
 Options tag is a part of the Test Runner file and comes in the form of an annotation called @CucumberOptions. It contains two parameters feature and glue.
 
 Feature parameter: The feature parameter is used to specify the path of the feature file.
 Glue parameter: The glue parameter is used to specify the path of the step definition file.
 
 
-
-
 ------------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------
+                    ### Project structure ###
+
+src/test/java--> POM(separate java class for each page)
+                 StepDefinition files
+                 Test Runner files
+                 Hooks files
+
+src/test/resources--> Feature files
+                      utilities files-->Test data files
+                      config.properties
+                      log4j.properties
+
+build.gradle/pom.xml-->dependencies
+
+Reports-->cucumber reports
+---------------------------------------------------------------------------------------------------------
 
 
