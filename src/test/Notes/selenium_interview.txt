@@ -14,6 +14,11 @@ Selnoid-->Selenoid is an open-source, automated testing solution that runs brows
 selense-->scripting language-used for writing selenium command
 Selenium IDE-->open source having record and playback feature
 -----------------------------------------------------------------------------------------------------------
+                    ### absolute xpath and Relative xpath ###
+
+1.absolute xpath--> starts of root of HTML document to desired element
+2.Relative xpath--> middle of dom element to desired element
+------------------------------------------------------------------------------------------------------------
 Difference verify and Assert?
 
 verify(soft assertion)-->If the verify condition fails, the test continues to run until the last test is executed.
@@ -30,10 +35,14 @@ and the remaining tests are skipped
 
  2.NoAlertPresentException-->Raised when an expected alert is not present. Happens when trying to interact
  with an alert that doesn’t exist.
- solution-->use try-catch block
+ solution-->use try-catch block4.
 
  3.ElementClickInterceptedException-->raised when an element you try to click is not clickable because another element is blocking it.
 solution-->use javaSriptExecutor
+
+4.StaleElementReferenceException--> element is no longer attached to the actual DOM of the web page
+
+
  -----------------------------------------------------------------------------------------------------------------------
 
                    ### waits #####
@@ -259,7 +268,13 @@ selectByValue(String arg)-->
         select.isMultiple();
 
 ---------------------------------------------------------------------------------------------------------------------------
+                        ### Navigation command ###
 
+1.driver. navigate().to("url") --> command allows the user to launch a new web browser window
+2.driver.navigate().refresh()-->refresh current webpage
+3.driver.navigate().back()-->come to previous webpage
+4.driver.navigate().forward()-->move to the next webpage
+----------------------------------------------------------------------------------------------------------
 
                  ### IMP Questions ###
 
@@ -280,7 +295,9 @@ selectByValue(String arg)-->
   3.How to debug the test in Selenium?
   -->using "breakpoints"
 
+  4.typeAndWait-->"typeAndWait" command is used when you finish typing and the software web page begins to reload.
 
+  5.upload files-->element.sendKeys(filepath)-we need to use the HTML tag ‘input’ with the attribute type as a file
 
 
 

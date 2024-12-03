@@ -2,6 +2,8 @@
 
  Latest version of cucumber-->>7.20.1
 
+ Gherkin-->business readable language
+
  background(keyword)--> used to group multiple given statements into a single group.Excecute the similar precondition for each test scenarios.
 
  Scenario -->Scenario" is used for individual, non-parameterized test cases

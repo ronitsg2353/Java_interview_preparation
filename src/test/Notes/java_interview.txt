@@ -362,4 +362,8 @@ public class Main {
     }
 }
 -----------------------------------------------------------------------------------------------------------
-                    ###
+                    ### Java not 100% OOPS ##
+
+1.Primitive datatype--> primitive datatype like int,float,double etc. are not object.
+2.diamond ambiguity-->multiple inheritance
+------------------------------------------------------------------------------------------------------------
