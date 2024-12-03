@@ -1,2 +1,90 @@
 
+Authentication & Authorization==>
+1.Authentication--> verify that user is valid or not
+2.Authorization-->   give permission to user after authentication
+
+Types of Authorization-->
+1.Basic-->
+2.Digest-->
+3.Preemptive-->
+4.Bearer Token-->
+        OAuth1.0
+        OAuth2.0
+        API KEy
+---------------------------------------------------------------------------------------------------------
+              ### API chaining ###
+
+The API chaining method is to create a sequence of API calls where the output of one API request is used as the input for the next.
+ The technique is an automated and efficient way of executing a Multistep Process.
+
+-----------------------------------------------------------------------------------------------------------
+            ### Serialization & Deserialization ###
+
+POJO-->Plain Old java object-- class is a Java object that can be used in REST Assured to serialize and deserialize requests and responses.
+
+Serialization-->POJO to json
+Deserialization-->json to POJO
+----------------------------------------------------------------------------------------------------------
+            ### Different ways of post Request ###
+ 1.HashMap-->
+                public void createStudentRecord(){
+                HashMap data=new HashMap<>():
+                data.put("Name","Scott");
+                data.put("location","Pune");
+                String coursearr[]={"C","JAva"};
+                data.put("course","coursearr");
+                }
+
+
+ 2.using org.json-->add org.json library
+                public void testPostJsonLibrary(){
+                JSONObject data=new JSONObject();
+                data.put("name","Ronit");
+                data.put("location","pune");
+                }
+
+ 3.POJO class-->Encapsulation(getter n setter)--create separate class for POJO
+
+                public class POJORequest{
+
+                String name;
+                String location;
+
+
+                public String getName(){
+                return name;
+                }
+
+                public void setName(String name){
+                this.name=name;
+                }
+
+                public String getLocation(){
+                return location;
+                }
+
+                public void setLication(String location){
+                this.location=location;
+                }
+                }
+
+                public void POStusingPOJO(){
+                POJORequest data=new POJORequest();
+                data.getName("ROnit"):
+                data.getLocation("Pune");
+
+
+ 4.using external json file-->
+
+ public void testPostExjsonFile(){
+ File file=new File("filepath");
+ FileReader fr=new FileReader(file);
+ JSONTOkener jt=new JsonTokener(fr);
+ JSONObject data =new JSONobject(jt);
+
+ }
+
+ RestAssured.given().baseURI().content-type().header().body(data).when().post().then().log().all();
+ ----------------------------------------------------------
+                ### Path parameter & Query Parameter ###
 
