@@ -3,6 +3,11 @@
 latest version of junit-->Junit 5
 
 Feature of Junit 5-->
+-----------------------------------------------------------------------------------------------------------
+                    ### Junit Framework ###
+
+
+
 
 
 
@@ -20,6 +25,29 @@ Annotation of Junit-->
 @Test(expected=IllegalArgumentException.class)-->f you want to handle some exception during test execution. For, e.g., if you want to check whether a particular method is throwing specified exception or not.
 
 ------------------------------------------------------------------------------------------------------------------------
+Assertion in Junit-->Assert class having different assert methods
+
+Assert assert=new Assert();
+
+1.assertEqual-->assertEquals compares the values of different data types, such as string, integer, double, object, etc.,
+assert.assertEqual(expected,actual);
+
+2.assertSame-->assertSame() method verifies reference of two object
+assert.assertSame(Object expected,Object actual);
+
+3.assertNotEqual--> Asserts that the expected values and the actual values are not equal.
+assert.assertNotEqual(expected,actual);
+
+4.assertTrue(condition)-->This asserts whether the given condition is true. Test case passes if it's true and fails if not.
+
+5.assertFalse(condition)-->This asserts whether the given condition is false. Test case passes if it's false and fails if not.
+
+6.assertNull-->
+7.assertNotNull-->
+-------------------------------------------------------------------------------------------------------------
+
+
+
 
 
 

@@ -1,14 +1,29 @@
                     ####   Java Interview Question ####
 ------------------------------------------------------------------------------------------------------------
-class-->
+class-->collection of objects having same properties
 object-->physical entity having state and behaviour.
-method-->
+method-->set of instruction to perform specific task
 ------------------------------------------------------------------------------------------------------
 Typecasting-->converting one datatype to another datatype
+
 widening--> int to double
 narrowing-->double to int
+
+---------------------------------------------------------------------------------------------------------]
+Wrapper class-->its convert primitive datatype into object & object into primitive datatype.
+autoboxing-->convert primitive datatype to object
+unboxing-->convert object to primitive datatype
+---------------------------------------------------------------------------------------------------------
+                ### Final,Finally & Finalize ###
+
+Final-->keyword/access modifier-use to apply restriction to class,method and variable.
+Finally-->use in try-catch block-necessary code exceute either exception handled or not
+Finalize-->method in Java which is used to perform clean up processing just before object is garbage collected
+
+
 ----------------------------------------------------------------------------------------------------------
 ==> public static void main (String [] args)
+
 public--> access modifier-Making the main() method public makes it globally available.
 static(keyword)-->JVM can invoke it without instantiating the class.
 void--> method not return anything
@@ -165,7 +180,15 @@ A class that implements an interface must implement all the methods declared in 
  -----------------------------------------------------------------------------------------------------------
  Difference between Argument and parameter==>
 
+Parameter-->Parameters refer to the variables listed in a function's declaration,defining the input that the function can accept.
 
+ def fun sum(x,y):
+ return x+y
+
+ Argument--->
+ Arguments are the actual values passed to the function when it is called,filling the parameters during execution.
+
+ result = add(5, 3)
 
 --------------------------------------------------------------------------------------------------------------
 
@@ -180,3 +203,79 @@ this--> refer current class instance variable
 
 super-->super keyword in Java is a reference variable which is used to refer immediate parent class object.
 ----------------------------------------------------------------------------------------------------------
+
+                  ###  Exception and Exception Handling ###
+
+ Exception-->event that occurs during the execution of a program that disrupts the normal flow of instructions
+ Exception Handling-->mechanism to handle the runtime errors so that the normal flow of the application can be maintained
+
+ checked Exception(compile time Exception)-->checked at compiletime by java--IOException,SQLException,ParseExceeption
+ unchecked Exception(runtime exception)-->unchecked at compile time by java--NUllpointerExeption,ArrayIndexoutofbound Excpetion,Arithmetic Exception
+ Error--> exceptional conditions that are typically beyond the control of the application and are not meant to be caught or handled by application code.
+           OutofMemoryError,stackoverflowError,NoclassDefFoundError etc.
+
+try-->keyword.use to specify exception code .we cant use try block alone.try always comes with catch or finally
+catch-->catch is handle the exception
+finally-->excecute the neccesary code either exception handled or not
+throw-->used by dev to user  defined exception
+throws-->use for delcared the exceptions.
+
+Nested try-catch block-->
+Sometimes a situation may arise where a part of a block may cause one error and the entire block itself may cause another error.
+-------------------------------------------------------------------------------------------------------------------
+                    ### Collection Framework ###
+ List(interface)-->we can store all the ordered collections of the objects.Its allows duplicate data.
+                    List implementated by classes like Arraylist,LinkedList,vector,stack & Queue
+
+1.Arraylist(class)--(insertion order-storing and accesing data)-->provides with dynamic arrays in Java.Allows the duplicate data.
+                    List <String >al=new ArrayList();
+                                    al.add("Ronit");
+                                    al.add("Ronit");//accept the duplicate value
+                                    al.remove("Ronit");
+
+
+2.LinkedList(class)--(insertion order-manipulating data)-->allows duplicate data
+3.vector(class)-->similar like arrylist--dyanmic array-store the duplicate element
+4.stack(class)-->subclass of vector-->
+               ____
+              | 4   |---> Last in first out
+              -----
+              |  3  |
+              ------
+              | 2   |
+              ------
+              |  1  |
+              ------
+
+5.Queue(Interface)-->first in first out--ordered list
+It can be defined as an ordered list that is used to hold the elements which are about to be processed
+         -----------------------------------
+        |   1    |   2    |   3    |   4   |
+        |________|________|________|_______|
+
+Priority Queue-->doesn't allow null element. It holds the elements or objects which are to be processed by their priorities
+
+Queue<String> q1 = new PriorityQueue();
+               q1.add("Ronit");
+               q1.remove("Ronit");
+               q1.poll();
+Queue<String> q2 = new ArrayDeque();
+
+Set(interface)-->represents the unordered set of elements which doesn't allow us to store the duplicate items.
+We can store at most one null value in Set.
+
+
+HashSet(class)-->t also contains unique elements. It maintains the insertion order and permits null elements.
+Set<String> s1=new HashSet<String>();
+
+Treeset(class)--> The elements in TreeSet stored in ascending order.
+Set <String> s2=new TreeSet<String>();
+
+LinkedHashSet-->It also contains unique elements. It maintains the insertion order and permits null elements.
+Set <String> s3=new LinkedHashSet<String>();
+
+Map--> It represents a mapping between a set of keys and their corresponding values. A Map cannot contain duplicate keys;
+each key can map to at most one value. The Map interface is used to store key-value pairs, where each key is unique,
+ and it provides an efficient way to retrieve, update, and manipulate data based on keys.
+
+ HashMap-->HashMap implements the Map interface and is used for managing large datasets efficiently.

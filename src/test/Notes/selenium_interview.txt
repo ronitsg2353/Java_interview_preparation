@@ -23,12 +23,10 @@ and the remaining tests are skipped
 
                 ## Selenium Exception ###
  Difference between Invalid Session or NoSession Exception-->
- InvalidSessionIdException-->Raised when the session ID used in a request is invalid or has expired
- No Session-->
 
+ 0.NoSuchSessionException:-->when browser session is no longer active
 
- 1.InvalidSessionIdException-->Raised when the session ID used in a request is invalid or has expired.
- solution-->restart new webdriver session
+1.InvalidSessionIDException:-->server does not recognize session identifier and associated user token is no longer authorized or authneticated on platform.
 
  2.NoAlertPresentException-->Raised when an expected alert is not present. Happens when trying to interact
  with an alert that doesn’t exist.
@@ -136,8 +134,21 @@ which wait is better?--> Explicit wait
           actions.sendKeys("a");
 
  --------------------------------------------------------------------------------------------------------
+                ### PageFactory ###
 
+PageFactory-->
+1.Finding web elements using @FindBy
 
+Page Factory is a class provided by Selenium WebDriver to support Page Object Design patterns. In Page Factory, testers use @FindBy annotation.
+The initElements method is used to initialize web elements.
+
+public BrowserStackHomePage(WebDriver driver) {
+this.driver = driver;
+PageFactory.initElements(driver, this);
+}
+
+PageObject Model-->
+1.finding webelements "By"
 
 -------------------------------------------------------------------------------------------------------
 
