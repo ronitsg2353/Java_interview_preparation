@@ -61,7 +61,7 @@ which wait is better?--> Explicit wait
 -------------------------------------------------------------------------------------------------------------------------
 
                 ## JavaScriptExceutor ###
- JavaScriptExecutor is an interface that is used to execute JavaScriprt through selenium webdriver. JavaScript is a programming language
+ JavaScriptExecutor is an interface that is used to execute JavaScript through selenium webdriver. JavaScript is a programming language
   that interacts with HTML in a browser, and to use this function in Selenium, JavascriptExecutor is required.
 
   JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -138,6 +138,7 @@ which wait is better?--> Explicit wait
 
 PageFactory-->
 1.Finding web elements using @FindBy
+2.PageFactory is a class that implements the Page Object Model design pattern.
 
 Page Factory is a class provided by Selenium WebDriver to support Page Object Design patterns. In Page Factory, testers use @FindBy annotation.
 The initElements method is used to initialize web elements.
@@ -149,13 +150,65 @@ PageFactory.initElements(driver, this);
 
 PageObject Model-->
 1.finding webelements "By"
+2.Page Object Model is a design pattern
+Page Object Model, also known as POM, is a design pattern in Selenium that creates an object repository for storing all web elements.
+It helps reduce code duplication and improves test case maintenance.
 
 -------------------------------------------------------------------------------------------------------
+                ### Screenshot ###
+ Screenshots also help you when your test case fails so that you can identify what went wrong in your script or your application.
+1.we convert webdriver to TakeScreenShot and call getScreenshotAs() method to create an image file by providing the parameter *OutputType.FILE
+    //Convert webdriver to TakeScreenshot
+    File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
-
-
+2. we can use this File object to copy the image at our desired location, as shown below, using the FileUtils Class.
+    FileUtils.copyFile(screenshotFile , new File("C:\\temp\\screenshot.png));
+ --------------------------------------------------------------------------------------------------------------------
+            ### Full Screenshot ###-->Ashot
+  selenium doesnt have capabilites to take full page screeshot. we have to use a third-party library named "Ashot".
 ---------------------------------------------------------------------------------------------------------
-  Capabilities-->
+  Desired Capabilities-->
+  In Selenium 3, capabilities were defined in a session by using Desired Capabilities classes.
+  As of Selenium 4, you must use the browser options classes. For remote driver sessions, a browser options instance is required as it determines which browser will be used.
+ChromeOptions chromeOptions = new ChromeOptions();
+	String version = "latest";
+	chromeOptions.setBrowserVersion(version);
+
+
+  DesiredCapabilities are a set of key-value pairs encoded as a JSON object.It helps QAs define basic test requirements such as operating systems,
+  browser combinations, browser versions, etc. within Selenium test scripts.
+
+  1. getCapability()-->This method helps in retrieving the capabilities of the current system on which the tests are being performed.
+  2. getBrowserName()-->method helps in retrieving the browser name of the current system.
+                    public java.lang.String getBrowserName()
+  3.setBrowserName();
+    This method is used to set the name of the browser on which tests are to be executed.
+
+    public void setBrowserName(java.lang.String browserName)
+
+    public static void main(String[] args) throws Exception {
+        DesiredCapabilities caps = new DesiredCapabilities();
+        caps.setCapability("browser", "Chrome");
+        caps.setCapability("browser_version", "128.0");
+        caps.setCapability("os", "Windows");
+        caps.setCapability("os_version", "11");
+-----------------------------------------------------------------------------------------------------------------------------------
+                        ### Alert ###
+Alert in Selenium is a message/notification box that notifies the user about some information or asks for permission to perform a certain kind of operation.
+It may be used for warning purposes as well.
+
+1.simple alert-->notify the warning message with "ok" button.
+2.prompt alert-->alert ask the information to complete the task.
+3.confirmation alert-->alert ask confirmation of input like yes or no.
+
+1. cancel button--> driver.switchTo().alert().dismiss();
+2.accept button--> driver.switchTo().alert().accept();
+3.getText(capture alert message)--> driver.switchTo().alert().getText();
+4.sendKeys(send data to alert box)-->driver.switchTo().alert().sendKeys("Ronit");
+
+
+
+
 
 
 

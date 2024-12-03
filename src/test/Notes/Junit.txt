@@ -24,8 +24,17 @@ Annotation of Junit-->
 @Test(timeout=500)-->  test execution need to be completed within some specified time.
 @Test(expected=IllegalArgumentException.class)-->f you want to handle some exception during test execution. For, e.g., if you want to check whether a particular method is throwing specified exception or not.
 
+    BeforeClass--
+                -- Before
+                        --@Test
+                 -- After
+   AfterClass
 ------------------------------------------------------------------------------------------------------------------------
 Assertion in Junit-->Assert class having different assert methods
+Hard assertion-->he program execution stops as soon as an exception occurs and thereby skipping all the next steps in the test method
+                 After the assert fails, the current test is skipped and the next @Test is executed.
+Soft assertion--> test execution to continue even when there is any exception encountered.
+                throughout the @Test method and throws all the exceptions caught during the process with the assertAll() method.
 
 Assert assert=new Assert();
 
