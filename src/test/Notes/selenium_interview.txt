@@ -25,13 +25,79 @@ verify(soft assertion)-->If the verify condition fails, the test continues to ru
 Assert(hard assertion)-->If the assert condition fails, the test case is marked as failed,
 and the remaining tests are skipped
 ----------------------------------------------------------------------------------------------------------
+                        ### WebDriver Methods ### WebDriver is Interface
+1.close()-->current open window
+2.quit()-->all opened windows
+3.getCurrentUrl()-->url of current webpage
+4.getPageSource()-->get source of loaded page
+5.get()-->load new wepage in current winodw
+6.getTitle()-->title of current webpage
+7.switch()-->
+8>navigate()-->
+9.manage()-->
 
+---------------------------------------------------------------------------------------------------------
+                        ### Locators ###
+locator-->A locator is a way to identify elements on a page
+
+1.id               --> driver.findElement(By.id("Lname"));
+2.name              -->driver.findElement(By.name("newsletter"));
+3.linkText          -->driver.findElement(By.linkText("Selenium Official Page"));
+4.partialLinkText   -->driver.findElement(By.partialLinkText("Official Page"));
+5.tagname           -->driver.findElement(By.tagName("a"));
+6.class name        -->driver.findElement(By.className("information"));
+7.css selector      -->driver.findElement(By.cssSelector("#fname"));
+8.xpath             -->driver.findElement(By.xpath("//input[@value='f']"));
+
+## Relative locator-->introduced in Selenium 4
+1.Above     -->If the email text field element is not easily identifiable for some reason, but the password text field element is,
+we can locate the text field element using the fact that it is an “input” element “above” the password element.
+
+                By emailLocator = RelativeLocator.with(By.tagName("input")).above(By.id("password"));
+
+2.Below     -->If the password text field element is not easily identifiable for some reason, but the email text field element is,
+ we can locate the text field element using the fact that it is an “input” element “below” the email element.
+
+                By passwordLocator = RelativeLocator.with(By.tagName("input")).below(By.id("email"));
+
+3.Leftof-->
+                By cancelLocator = RelativeLocator.with(By.tagName("button")).toLeftOf(By.id("submit"));
+
+4.RightOf-->
+                By submitLocator = RelativeLocator.with(By.tagName("button")).toRightOf(By.id("cancel"));
+
+5.Near-->
+                By emailLocator = RelativeLocator.with(By.tagName("input")).near(By.id("lbl-email"));
+
+6.chaining of Relative locators-->
+                By submitLocator = RelativeLocator.with(By.tagName("button")).below(By.id("email")).toRightOf(By.id("cancel"));
+----------------------------------------------------------------------------------------------------------------
+                    ### Xpath ###
+
+1.xpath by id--> driver.findElement(By.xpath("//*[@id="inputid"));
+2.xpath by classname-->driver.findElement(By.xpath("//*[@class="classname"));
+3.xpath by name--> driver.findElement(By.xpath("//*[@name="name"));
+4.xpath by text--> driver.findElement(By.xpath("//*[text()='Ronit']"));
+5.xpath by contains-->driver.findElement(By.xpath("//*[contains(@href,'google.com')]"));
+6.xpath by start-with-->driver.findElement(By.xpath("//*[starts-with(@id,'user')]"));
+7.xpath by end-with-->driver.findElement(By.xpath("//*[ends-with(@id,'name')]"));
+
+Axes-->
+1.driver.findElement(By.xpath("//div[@id='main-section']/following::div"));
+driver.findElement("//input[@id='username']/ancestor::form");
+driver.findElement("//input[@id='username']/ancestor::form[1]")
+//div[@id='content']/child::p`.
+//tag[@attribute='value']/parent::tagName`
+
+-----------------------------------------------------------------------------------------------------------
                 ## Selenium Exception ###
+
  Difference between Invalid Session or NoSession Exception-->
 
  0.NoSuchSessionException:-->when browser session is no longer active
 
-1.InvalidSessionIDException:-->server does not recognize session identifier and associated user token is no longer authorized or authneticated on platform.
+1.InvalidSessionIDException:-->server does not recognize session identifier and
+associated user token is no longer authorized or authneticated on platform.
 
  2.NoAlertPresentException-->Raised when an expected alert is not present. Happens when trying to interact
  with an alert that doesn’t exist.
@@ -43,6 +109,9 @@ solution-->use javaSriptExecutor
 4.StaleElementReferenceException--> element is no longer attached to the actual DOM of the web page
 
 
+            ### NoSuchElementException vs StaleElementReferenceExcpetion ###
+ 5.NoSuchElementException-->Element doesnt exist on webpage
+ 6.ELementNotVisibleException-->ELment exist but its hidden
  -----------------------------------------------------------------------------------------------------------------------
 
                    ### waits #####
@@ -70,6 +139,8 @@ which wait is better?--> Explicit wait
 -------------------------------------------------------------------------------------------------------------------------
 
                 ## JavaScriptExceutor ###
+ # JavascriptExecutor is interface and its perform operation on webpage like scrolling,inner text,title etc
+
  JavaScriptExecutor is an interface that is used to execute JavaScript through selenium webdriver. JavaScript is a programming language
   that interacts with HTML in a browser, and to use this function in Selenium, JavascriptExecutor is required.
 
@@ -81,6 +152,7 @@ which wait is better?--> Explicit wait
 
   ----------------------------------------------------------------------------------------------------------------------
                     findElement() and findElements()?
+
   findElement()-->method which finding out webelement of webpage and return noELmentfoundExption for no webelement.
   findElements()-->method which finding out mutliple element of webpage and return zero element for no webelment.
   ---------------------------------------------------------------------------------------------------------------------------
@@ -94,6 +166,8 @@ which wait is better?--> Explicit wait
 
   getWindowHandles-->This method helps to get the handles of all the windows opened
                     String <set> allwindows=driver.getWindowHandles();
+
+Widows popup handled by-->getWindowHandle
 
   switch to: This method helps to switch between the windows
   action: This method helps to perform certain actions on the windows
@@ -162,9 +236,11 @@ PageObject Model-->
 2.Page Object Model is a design pattern
 Page Object Model, also known as POM, is a design pattern in Selenium that creates an object repository for storing all web elements.
 It helps reduce code duplication and improves test case maintenance.
+POM assign seperate page class for each webpage
 
 -------------------------------------------------------------------------------------------------------
                 ### Screenshot ###
+
  Screenshots also help you when your test case fails so that you can identify what went wrong in your script or your application.
 1.we convert webdriver to TakeScreenShot and call getScreenshotAs() method to create an image file by providing the parameter *OutputType.FILE
     //Convert webdriver to TakeScreenshot
@@ -174,9 +250,11 @@ It helps reduce code duplication and improves test case maintenance.
     FileUtils.copyFile(screenshotFile , new File("C:\\temp\\screenshot.png));
  --------------------------------------------------------------------------------------------------------------------
             ### Full Screenshot ###-->Ashot
+
   selenium doesnt have capabilites to take full page screeshot. we have to use a third-party library named "Ashot".
 ---------------------------------------------------------------------------------------------------------
   Desired Capabilities-->
+
   In Selenium 3, capabilities were defined in a session by using Desired Capabilities classes.
   As of Selenium 4, you must use the browser options classes. For remote driver sessions, a browser options instance is required as it determines which browser will be used.
 ChromeOptions chromeOptions = new ChromeOptions();
@@ -203,11 +281,12 @@ ChromeOptions chromeOptions = new ChromeOptions();
         caps.setCapability("os_version", "11");
 -----------------------------------------------------------------------------------------------------------------------------------
                         ### Alert ###
+
 Alert in Selenium is a message/notification box that notifies the user about some information or asks for permission to perform a certain kind of operation.
 It may be used for warning purposes as well.
 
 1.simple alert-->notify the warning message with "ok" button.
-2.prompt alert-->alert ask the information to complete the task.
+2.prompt alert-->alert ask the input to complete the task.
 3.confirmation alert-->alert ask confirmation of input like yes or no.
 
 1. cancel button--> driver.switchTo().alert().dismiss();
@@ -263,7 +342,8 @@ selectByValue(String arg)-->
 
   deselectAll()-->select.deselectAll();
 
-  isMultiple()-->isMultiple(): boolean – This method informs whether the Select element supports multiple selection options at the same time or not.
+  isMultiple()-->
+  boolean – This method informs whether the Select element supports multiple selection options at the same time or not.
   This method accepts nothing and returns a boolean value (true/false).
         select.isMultiple();
 
@@ -298,7 +378,76 @@ public String getCellData(int rowNumber,int cellNumber){
         return cell.getStringCellValue();
     }
 ---------------------------------------------------------------------------------------------------------
-                 ### IMP Questions ###
+                        ### iframe ###
+
+  iframe depreciated on in HTML 5 but before HTML 5 using iframe using Iframes allow the insertion of a document
+   from an entirely different domain,
+Selenium is only aware of the elements in the top level document. To interact with the button,
+we will need to first switch to the frame,
+   in a similar way to how we switch windows. WebDriver offers three ways of switching to a frame.
+
+   1.using WebElement-->
+   WebElement frameelement=driver.findElmement("xpath");
+    driver.switchTo().frame("frameelement");
+
+   2.using name or id-->    driver.switchTo().frame("frameresult");
+   3.using index-->         driver.switchTo().frame(index);
+
+##.switching back to main page-->
+driver.switchTo().defaultContent();
+
+---------------------------------------------------------------------------------------------------------
+                        ###broken links ###
+
+Broken link-->A broken link, also often called a dead link, is one that does not work i.e. does not redirect to the webpage.
+1.Use <a> tag to fetch all the links present on a web page
+2.Send HTTP request for the link
+3.Verify the HTTP response code for the link
+4.Determine if the link is valid or it is broken based on the HTTP response code
+5.Repeat the process for all links captured with the first step
+
+ 1.   List <WebElement> links=driver.findElement(By.tagName("a");
+
+    //iterate into each link to validate the status code
+    for(WebElement link:links){
+    String url=driver.getDOMAttribute("href");
+
+
+    URL link=new URL(url);
+
+ 2  HttpURLConnection httpURLConnection = (HttpURLConnection) link.openConnection();
+   httpURLConnection.setConnectTimeout(3000); // Set connection timeout to 3 seconds
+   httpURLConnection.connect();
+ 3 if (httpURLConnection.getResponseCode() == 200) {
+   System.out.println(url + " - " + httpURLConnection.getResponseMessage());
+   } else {
+   System.out.println(url + " - " + httpURLConnection.getResponseMessage() + " - " + "is a broken link");
+   }
+   } catch (Exception e) {
+   System.out.println(url + " - " + "is a broken link");
+   }
+    }
+
+---------------------------------------------------------------------------------------------------------
+                        ### WebTable ###
+
+ <table>    -->coloumn
+ <th>  -->header
+ <tr>   -->row
+ <td> -->coloumn
+
+ 1. webtable-->table having data -row and coloumn in html code
+ 2.static table--> table data remains unchanged
+ 3.dynamic table-->table data changes eventually
+
+ How to handle the dynamic webtable?
+ 1.finding the xpath of selected element
+ 2.finding the number of row and coloumn of table
+ 3.finding cellvalue of particular row and coloumn
+
+--------------------------------------------------------------------------------------------------------
+
+              ### IMP Questions ###
 
  1.Window resize-->can we minimize and maximize the window size?
                 int width = 600;
@@ -333,10 +482,7 @@ public String getCellData(int rowNumber,int cellNumber){
                    j.executeScript
                         ("document.getElementById('displayed-text').value='Selenium';");
 ----------------------------------------------------------------------------------------------------------
-            ### NoSuchElementException vs StaleElementReferenceExcpetion ###
- 1.NoSuchElementException-->Element doesnt exist on webpage
- 2.ELementNotVisibleException-->ELment exist but its hidden
- 3.
+
 
 
 
