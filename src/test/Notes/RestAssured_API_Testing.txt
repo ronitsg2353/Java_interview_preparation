@@ -1,3 +1,11 @@
+---------------------------------------------------------------------------------------------------------
+                ### Variables ###
+
+1.Global variable-->Global variables are available throughout a workspace
+2.collection variable-->collection variables are available throghout a collection
+3.Enviorment variable-->only available for active environment
+4.Local variable-->Local variable values are scoped to a single request or collection run, and are no longer available when the run is complete
+------------------------------------------------------------------------------------------------------
 
 Authentication & Authorization==>
 1.Authentication--> verify that user is valid or not

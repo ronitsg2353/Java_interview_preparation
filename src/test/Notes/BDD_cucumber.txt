@@ -3,6 +3,16 @@
  Latest version of cucumber-->>7.20.1
 
  Gherkin-->business readable language
+ Given-->steps are used to describe the initial context of the system - the scene of the scenario
+ when-->steps are used to describe an event, or an action.
+ then-->steps are used to describe an expected outcome, or result.
+ And-->And keyword is used to add conditions to your steps.
+ but-->But keyword is used to add negative type comments. /Negative assertion
+ Example-->scenario outline to excute same steps multiple times with different sets of data
+ DataTable-->use to pass tabular data directly within single step.Ideal for single step process row of data
+
+ Difference between Datatable and Example?
+
 
  background(keyword)--> used to group multiple given statements into a single group.Excecute the similar precondition for each test scenarios.
 

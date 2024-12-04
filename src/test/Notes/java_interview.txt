@@ -25,10 +25,13 @@ Finalize-->method in Java which is used to perform clean up processing just befo
 ==> public static void main (String [] args)
 
 public--> access modifier-Making the main() method public makes it globally available.
-static(keyword)-->JVM can invoke it without instantiating the class.
+static(keyword)-->JVM can invoke it without instantiating the class.(no required of object )
 void--> method not return anything
 main-->starting point of Execution for JVM
 (String [] args)--> method having string ,array and argument inside
+
+Main method override-->No
+main method overload-->Yes
 =================================================================================================================
                 ### Access Modifier ###
 
@@ -87,7 +90,7 @@ Static method-->Static methods are the methods in Java that can be called withou
 ===========================================================================================================================
                     # Method overloading & overriding ###
 
-  Both are type of polymorhpism
+  Both are type of polymorhphism
 
  1.Method overloading-->compile time polymorphism
  2.Method overloading-->static binding
@@ -181,11 +184,13 @@ A class that implements an interface must implement all the methods declared in 
 An interface can have methods and variables just like the class but the methods declared in interface are by default abstract. W
 e can achieve 100% abstraction and multiple inheritance in Java with Interface]]
 
+The "implements" keyword is used to implement an interface
+
 
  -----------------------------------------------------------------------------------------------------------
  Difference between Argument and parameter==>
 
-Parameter-->Parameters refer to the variables listed in a function's declaration,defining the input that the function can accept.
+Parameter(declared var in function)-->Parameters refer to the variables listed in a function's declaration,defining the input that the function can accept.
 
  def fun sum(x,y):
  return x+y
@@ -229,6 +234,7 @@ Nested try-catch block-->
 Sometimes a situation may arise where a part of a block may cause one error and the entire block itself may cause another error.
 -------------------------------------------------------------------------------------------------------------------
                     ### Collection Framework ###
+
  List(interface)-->we can store all the ordered collections of the objects.Its allows duplicate data.
                     List implementated by classes like Arraylist,LinkedList,vector,stack & Queue
 
@@ -286,6 +292,7 @@ each key can map to at most one value. The Map interface is used to store key-va
  HashMap-->HashMap implements the Map interface and is used for managing large datasets efficiently.
  ---------------------------------------------------------------------------------------------------------------------------
                          ### Inheritance ###
+
  mechanism in Java by which one class is allowed to inherit the features(fields and methods) of another class.
 
  The "extends" keyword is used for inheritance in Java
@@ -318,7 +325,7 @@ each key can map to at most one value. The Map interface is used to store key-va
  3.Hiearchical Inheritance-->
    one parent class(base class) serves to more than one child class.
 
- 4.Multiple inheritance-->
+ 4.Multiple inheritance-->Diamond ambiguity
  one child class(base class)having more than one parent class.
  #.java 8 support multiple inheritance to interface but not classes.
 
