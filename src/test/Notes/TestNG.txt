@@ -24,6 +24,13 @@ BeforeMethod-->method will be run after each test method.
 --------------------------------------------------------------------------------------------------------
                             ### Data Provider ###
 
+Parametrization-->
+execution strategy that runs a test case automatically multiple times with various input values.
+Dataprovider uses the read the hard -coded data
+
+
+return type of Dataprovider-->Array (2D) object
+
  Dataprovider--> DataProvider helps with data-driven test cases that carry the same methods
   but can be run multiple times with different data sets.
 

@@ -1,4 +1,7 @@
                     ####   Java Interview Question ####
+
+------------------------------------------------------------------------------------------
+latest version of Java--:Java 23
 ------------------------------------------------------------------------------------------------------------
 class-->collection of objects having same properties
 object-->physical entity having state and behaviour.
