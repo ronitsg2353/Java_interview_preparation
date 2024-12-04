@@ -3,8 +3,6 @@ package java_code;
 public class smallest_num {
     public static void main(String[] args) {
 
-
-
         int a[]={12,34,56,32,11};
         int smallest=a[0];
 
