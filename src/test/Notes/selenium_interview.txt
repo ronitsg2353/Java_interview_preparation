@@ -13,6 +13,13 @@ Headless browser-->perform same functionality as standard browserr but without G
 Window based popup-->selenium cant handle window base popup because its web base automation tool.
 Third party tool like "AutoIT" or "Robot class"
 
+proxy in selenium--> a proxy server can be used to route traffic through middle layer testing purposes.
+you can configure proxies using DesiredCapabilites.
+
+DesiredCapabilities -->set browser properties with browser,version, platform before starting webdriver session.
+
+HTTPS cerification issue-->
+selenium can handles these issue using browser-specific setting or DesiredCapabilities.
 
 ---------------------------------------------------------------------------------------------------------
 Selenium Webdriver-->Selenium WebDriver is a code library of APIs for controlling browsers.
@@ -43,6 +50,20 @@ and the remaining tests are skipped
 8>navigate()-->
 9.manage()-->
 
+driver.get()-->wait for load the complete page
+driver.navigate().to()-->doent wait for full page load
+
+Maximum screen size-->
+driver.manage().window().maximize();
+
+isEnabled()-->checked if element is enabled for interaction
+isDisplayed()-->check if element is visible on the page
+isSelected()-->check if checkbox or radio button is selected
+----------------------------------------------------------------------------------------------------
+                    ### limitation of selenium ###
+ 1.no reporting
+ 2.limited support for handling captcha,barcode and images.
+ 3.external tools for handling mobile testing(appium)
 ---------------------------------------------------------------------------------------------------------
                         ### Locators ###
 locator-->A locator is a way to identify elements on a page
@@ -122,6 +143,8 @@ solution-->use javaSriptExecutor
  -----------------------------------------------------------------------------------------------------------------------
 
                    ### waits #####
+
+ WebDriverWait in selenium-->explicit wait
 
  Thread.sleep-->Thread.sleep(2000)-->static wait provided by java
 
@@ -361,6 +384,10 @@ selectByValue(String arg)-->
 2.driver.navigate().refresh()-->refresh current webpage
 3.driver.navigate().back()-->come to previous webpage
 4.driver.navigate().forward()-->move to the next webpage
+
+Difference betn navigate().refresh() & driver.get(driver.getCurrentUrl())?
+1.navigate().refresh()-->refreshes the browser window
+2.driver.get(driver.getCurrentUrl())-->load the current url again which also result page refesg
 ----------------------------------------------------------------------------------------------------------
                    ## Data Driven (data extract from excel file)###
 
