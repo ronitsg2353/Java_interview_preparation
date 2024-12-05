@@ -7,6 +7,13 @@ Desktop application-->
 Robot Framework-->
 WinAppDriver-->
 katalon-->
+
+Headless browser-->perform same functionality as standard browserr but without GUI.
+
+Window based popup-->selenium cant handle window base popup because its web base automation tool.
+Third party tool like "AutoIT" or "Robot class"
+
+
 ---------------------------------------------------------------------------------------------------------
 Selenium Webdriver-->Selenium WebDriver is a code library of APIs for controlling browsers.
 Selenium Grid--> Selenium Grid is a smart proxy server that makes it easy to run tests in parallel on multiple machines
