@@ -1,4 +1,23 @@
 
+-----------------------------------------------------------------------------------------------------
+                        ### Introduction ###
+Hello MY name is Ronit.I have 5 years of experience as Quality Assurance Engineer specialization in
+both manual & automation across domain like banking and finanical services.I have expertise in designing
+automation framework using tools like selenium and Rest Assured,implementing BDD with cucumber & working
+with CI?CD pipeline using jenkins.MY experience includes end to end testing,API testing & regression testing
+with strong focus on test efficency & defect detection.I developed resuable automation script that reduced
+regrssion time by 40% and ensure more than 80% test coverage.Im passionate about delivering high quality
+software,collabrating with team & continous enhancing to business goal.
+--------------------------------------------------------------------------------------------------
+                        ### explain project structure ###
+
+ In my BDD project,I used cucumber with junit to automate testing for banking application,focus on
+ authentication services.The framework was built using Java & POM structure with dedicated packages for
+ feature fils,StepDefinition ,page classes and utitlies ensure scalability & maintainability.
+ Gherkin is used to write feature file to make clear communicayion between technical and non techincal stakeholder
+ I implemented stepDefinition in java,integrated framwork with jenkins ci/cd use cucumber plugin for generated
+ report.This approach testing proccess reduced the manual efforts.
+---------------------------------------------------------------------------------------------------
 1.Difficulties in Automation testing?
 1.Rapid changes in UI--> changing ui--updating locators and some methods.
 2.flakiness -->

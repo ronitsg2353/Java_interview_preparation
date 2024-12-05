@@ -20,7 +20,7 @@ Types of Authorization-->
         OAuth2.0
         API KEy
 
- HTTP Request--> Get,Put,Patch,delete
+ HTTP Request--> Get,post,Put,Patch,delete
 
  RestAssured-->using gherking keyword-->Given,when ,then
 ---------------------------------------------------------------------------------------------------------
