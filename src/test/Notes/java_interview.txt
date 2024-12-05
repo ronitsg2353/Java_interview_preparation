@@ -155,6 +155,48 @@ System.out.println("Eating for derived method");
  animal.eat();
  }
  -------------------------------------------------------------------------------------------------------------
+                                ### String ###
+   String is an object that represents a sequence of characters
+   String is an immutable class which means a constant and cannot be changed once created and if wish to change ,
+    we need to create an new object
+
+   # how to create new String:
+   1.literal-->
+   2.new keyword-->
+
+   StringBuffer-->
+    StringBuffer is a peer class of String, it is mutable in nature and it is thread safe
+            ex.StringBuffer demoString = new StringBuffer("GeeksforGeeks");
+
+  StringBuilder-->
+  StringBuilder in Java represents an alternative to String and StringBuffer Class,
+   as it creates a mutable sequence of characters and it is not thread safe.
+
+   Ex.StringBuilder demoString = new StringBuilder();
+   demoString.append("GFG");
+
+   String methods:
+   1.charAt()-->return character of specific index
+   2.concat()-->combine two string
+   3.equals()-->compare two string
+   4.equalsIgnoreCase()-->compare two string.without caseSensitivity
+   5.length()-->size of string
+   6.split()-->splits string into a array of substring
+   7.substring()-->return new string
+   8.toCharArray()-->convert string into new character array
+   9.toLowerCase()-->convert into lowecase
+   10.toUpperCase()-->convert into uppercase
+   11.trim()-->remove whitespace of both end of string
+   12.ValueOf()-->
+   -----------------------------------------------------------------------------------------------
+                    ### Array ###
+    Arrays are fundamental structures in Java that allow us to store multiple values of the same type in a single variable
+     They allow you to store and manipulate collections of data efficiently
+     all arrays are dynamically allocated.
+     Arrays may be stored in contiguous memory
+     The variables in the array are ordered, and each has an index beginning with 0.
+
+ ------------------------------------------------------------------------------------------------
  Abstraction==> OOPs concept-hiding the unnecessary details from user and show only functionality.
 
 
