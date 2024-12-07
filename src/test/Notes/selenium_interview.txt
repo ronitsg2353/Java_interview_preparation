@@ -515,6 +515,10 @@ Broken link-->A broken link, also often called a dead link, is one that does not
                   JavascriptExecutor j = (JavascriptExecutor) driver;
                    j.executeScript
                         ("document.getElementById('displayed-text').value='Selenium';");
+
+    8. When do you use Xpath over CSS locators?
+    9.What happens if you receive browser notifications in between Test Automation Execution?
+    10.
 ----------------------------------------------------------------------------------------------------------
 
 

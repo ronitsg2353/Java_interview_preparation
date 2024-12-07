@@ -1,0 +1,41 @@
+𝗜𝗻𝘁𝗲𝗴𝗿𝗮𝘁𝗶𝗻𝗴 𝗚𝗶𝘁 𝗪𝗲𝗯𝗵𝗼𝗼𝗸 𝘄𝗶𝘁𝗵 𝗝𝗲𝗻𝗸𝗶𝗻𝘀
+
+Setting up a Git webhook with Jenkins allows automated build and test execution whenever there’s a change in th Git repository.
+
+Here's a step-by-step guide:
+
+𝟭️.𝗣𝗿𝗲𝗿𝗲𝗾𝘂𝗶𝘀𝗶𝘁𝗲𝘀
+A Jenkins instance with the required plugins installed (e.g., Git Plugin).
+Admin access to the Git repository.
+A publicly accessible Jenkins server URL (or via tools like ngrok for local instances).
+
+𝟮️. 𝗘𝗻𝗮𝗯𝗹𝗲 𝗚𝗶𝘁 𝗪𝗲𝗯𝗵𝗼𝗼𝗸𝘀
+
+In Your Git Repository (GitHub/GitLab):
+Navigate to the repository settings.
+Go to the "Webhooks" section and click "Add webhook."
+
+Enter your Jenkins URL in this format:
+http://<JENKINS_URL>/github-webhook/
+Choose the event(s) to trigger the webhook (e.g., "Push event").
+Save the webhook.
+
+𝟯️. 𝗖𝗼𝗻𝗳𝗶𝗴𝘂𝗿𝗲 𝗝𝗲𝗻𝗸𝗶𝗻𝘀 𝗝𝗼𝗯
+
+Create or Open a Jenkins Job:
+Go to Jenkins and create a new "Freestyle Project" or "Pipeline Job."
+
+Source Code Management:
+Choose "Git" and add the repository URL.
+If needed, add credentials for private repositories.
+
+Build Triggers:
+Select "GitHub hook trigger for GITScm polling" (for GitHub).
+For GitLab, use a plugin like "GitLab Hook" and configure it accordingly.
+
+𝟰️. 𝗧𝗲𝘀𝘁𝗶𝗻𝗴 𝘁𝗵𝗲 𝗪𝗲𝗯𝗵𝗼𝗼𝗸
+Push a change to your repository or trigger the webhook manually from your Git service's webhook settings.
+Monitor Jenkins to ensure the build starts automatically.
+
+𝗧𝗶𝗽𝘀:
+If using a Jenkinsfile, ensure your Jenkinsfile is correctly configured to define the build and test steps triggered by the webhook.
