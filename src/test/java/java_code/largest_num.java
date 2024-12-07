@@ -4,14 +4,21 @@ public class largest_num {
 
     public static void main(String[] args) {
 
-        int a[]={12,34,56,32,11};
-        int largest=a[0];
+        int arr[]={34,22,67,43,78};
+        int size=arr.length;
 
-        for(int i=0;i<a.length;i++){
-            if(largest<a[i]){
-                largest=a[i];
+        for(int i=0;i<size;i++){
+            for(int j=i+1;j<size;j++){
+                if(arr[i]<arr[j]){
+                    int temp=arr[i];
+                    arr[i]=arr[j];
+                    arr[j]=temp;
+                }
             }
         }
-        System.out.println(largest);
+        for(int i=0;i<size;i++){
+            System.out.println(arr[i]+" is the largest number");
+            break;
+        }
     }
 }

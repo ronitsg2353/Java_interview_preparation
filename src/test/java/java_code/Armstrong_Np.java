@@ -1,25 +1,24 @@
 package java_code;
 
+import java.util.Scanner;
+
 public class Armstrong_Np {
 
     public static void main(String[] args) {
-        int  num=134;
-        int orgnum=num;
-        int sum=0;
-
-        while(num>0){
-            int digit=num%10;
-
-            sum+=(digit*digit*digit);
-
-            num/=10;
-        }
-
-        if(sum==orgnum){
-            System.out.println(orgnum+ "armstrong number");
-        }
-        else{
-            System.out.println(orgnum+" no armstrong");
-        }
+        Scanner scanner=new Scanner(System.in);
+       int num= scanner.nextInt();
+       int orgnum=num;
+       int cubeno=0;
+       while(num>0){
+           int rem=num%10;
+           cubeno=cubeno+(rem*rem*rem);
+           num=num/10;
+       }
+       if(orgnum==cubeno){
+           System.out.println("armstrong no");
+       }
+       else{
+           System.out.println("no armstrong numb");
+       }
     }
 }
