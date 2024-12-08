@@ -461,6 +461,9 @@ It may be used for warning purposes as well.
  FindBy-->annotation
  FindElement-->"method" in pom to identify webelement
 
+ constructor-->
+
+
  1.Inheritance--> one class acquires the property of another class.
  We create a Base Class in the Automation Framework to initialize the WebDriver interface, WebDriver waits, Property files, Excels, etc., in the Base Class.
  We extend the Base Class to other classes such as Tests and Utility Class.
@@ -472,7 +475,8 @@ It may be used for warning purposes as well.
  2.2 Method overrriding-->We use a method which was already implemented in another class by changing its parameters.
                     "get" and "navigate" methods of different drivers in Selenium .
 
-3.Abstraction(POM-locators)--> Page Object Model design pattern, we write locators (such as id, name, xpath etc.,) and the methods in a Page Class. We utilize these locators in tests but we can’t see the implementation of the methods.
+3.Abstraction(POM-locators)--> Page Object Model design pattern, we write locators (such as id, name, xpath etc.,) and the methods in a Page Class.
+We utilize these locators in tests but we can’t see the implementation of the methods.
  Literally we hide the implementations of the locators from the tests.
 
 4.Interface-->WebDriver driver = new FirefoxDriver();
@@ -595,7 +599,7 @@ Broken link-->A broken link, also often called a dead link, is one that does not
 ---------------------------------------------------------------------------------------------------------
                         ### WebTable ###
 
- <table>    -->coloumn
+ <table>    -->table
  <th>  -->header
  <tr>   -->row
  <td> -->coloumn
@@ -621,7 +625,8 @@ Broken link-->A broken link, also often called a dead link, is one that does not
 
   window.resizeTo() method and capability commands can also be used to achieve the same result.
   Use windows.resizeTo() method along with Javascript executor.
-                ((JavascriptExecutor)driver).executeScript("window.resizeTo(600,400);");
+                    JavascriptExecutor js=(JavascriptExecutor)driver;
+                js.executeScript("window.resizeTo(600,400);");
 
 
   2. How to Handle colors in webdriver?
@@ -636,6 +641,7 @@ Broken link-->A broken link, also often called a dead link, is one that does not
 
    6.how do yo handle dynamic webelemtns in selenium? -->
         fluent wait and explicit wait..cssSelector& xpaths
+        use selectorHub -debugger (freeze)
 
 
    7.How do you handle situation where an element is not visible(hidden element)?
@@ -653,7 +659,7 @@ Broken link-->A broken link, also often called a dead link, is one that does not
     10.
 ----------------------------------------------------------------------------------------------------------
 
-                    ### File uploads ###
+                    ### File uploads ###-->sendKeys() or AUTOIT tool
 
  Selenium cant interact with file uploads but if the element is an "input" element with type "file"
  then you can use sendkeys method to send full path to file upload
@@ -682,15 +688,15 @@ Broken link-->A broken link, also often called a dead link, is one that does not
     Logger logger=Logger.getLogger("testlog");
     logger.info("Test started");
     -------------------------------------------------------------------------------------------------
-                ### Email Testing ###
+                ### Email Testing ###-->JavaMail API
 
    Use "JavaMail API" to fetch email and validate email contents
    -----------------------------------------------------------------------------------------------------
-                        ### Tooltip ###--> "getAttribute() " method
+                        ### Tooltip ###--> "getAttribute()" method
 
    tooltip-->small hoverable elements that provide additional information when a user hovers over an element on a webpage.
 
-        WebElement elment=driver.findElement(By.id("tooltip"));
+        WebElement element=driver.findElement(By.id("tooltip"));
         String tooltip=element.getAttribute("title");
         System.out.println("Tooltips"+tooltip);
 
@@ -698,6 +704,7 @@ Broken link-->A broken link, also often called a dead link, is one that does not
                 ### Session Management ###-->"getSessionId()" method
 
    manages browser sessions using cookies or webdriver capabilities
+        //remotewebdriver convert into webdriver
 
    String sessionid=((RemoteWebDriver)driver).getSessionId().toString();
    System.out.println("Session id "+sessionid);
