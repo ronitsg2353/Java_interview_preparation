@@ -21,6 +21,8 @@ DesiredCapabilities -->set browser properties with browser,version, platform bef
 HTTPS cerification issue-->
 selenium can handles these issue using browser-specific setting or DesiredCapabilities.
 
+SelectorHub-->selectorhub debugger feature use to freeze the hidden /disappearing element.
+
 ---------------------------------------------------------------------------------------------------------
 Selenium Webdriver-->Selenium WebDriver is a code library of APIs for controlling browsers.
 Selenium Grid--> Selenium Grid is a smart proxy server that makes it easy to run tests in parallel on multiple machines

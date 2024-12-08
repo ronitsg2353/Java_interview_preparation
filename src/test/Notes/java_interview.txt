@@ -43,6 +43,7 @@ protected-->accessible for class/outside class/package/outside package with help
 private -->accesible only within class only..no outside class
 Default--> only for package-no outside package
 
+Singleton class--> class having only one object.
 ===================================================================================================================
 Constructor==>
 ----###code-#########--------------------------------------------------
