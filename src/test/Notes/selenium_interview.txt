@@ -27,6 +27,27 @@ Selenium Grid--> Selenium Grid is a smart proxy server that makes it easy to run
 Selnoid-->Selenoid is an open-source, automated testing solution that runs browsers in Docker containers
 selense-->scripting language-used for writing selenium command
 Selenium IDE-->open source having record and playback feature
+
+                ###Limitation of selenium ###
+1.cant handle desktop application
+2.no reporting facilities-should add third party dependencies
+3.Handling captcha and barcode
+4.requires the external tool for mobile testing -appium
+------------------------------------------------------------------------------------------------
+                    ### handling Captcha ###
+ for handling captcha -third party tool like "OCR" or APIs.
+ use services like "2Captcha" to solve captchas programmetically.
+ "2captcha"--> provides bypass for selenium
+
+ -----------------------------------------------------------------------------------------
+
+
+            ### Advantage of Selenium ###
+1.mulitple lagnuage support
+2.open source tool
+3.cross-platform
+4.large community support
+
 -----------------------------------------------------------------------------------------------------------
                     ### absolute xpath and Relative xpath ###
 
@@ -60,10 +81,7 @@ isEnabled()-->checked if element is enabled for interaction
 isDisplayed()-->check if element is visible on the page
 isSelected()-->check if checkbox or radio button is selected
 ----------------------------------------------------------------------------------------------------
-                    ### limitation of selenium ###
- 1.no reporting
- 2.limited support for handling captcha,barcode and images.
- 3.external tools for handling mobile testing(appium)
+
 ---------------------------------------------------------------------------------------------------------
                         ### Locators ###
 locator-->A locator is a way to identify elements on a page
@@ -118,6 +136,47 @@ driver.findElement("//input[@id='username']/ancestor::form[1]")
 //tag[@attribute='value']/parent::tagName`
 
 -----------------------------------------------------------------------------------------------------------
+                        ### Handling cookies ###
+
+A cookie is a small piece of data that is sent from a website and stored in your computer.
+Cookies are mostly used to recognise the user and load the stored information.
+
+1.GetCookies-->
+        driver.manage().getCookies();
+        driver.manage().getCookieNamed(arg o);
+
+2.addCookie-->
+    driver.manage().addCookie(arg o);
+    driver.manage().addAllCookies();
+
+3.DeleteCookies-->
+     driver.manage().deleteCookie(arg o);
+     driver.manage().deleteAllCookies();
+
+----------------------------------------------------------------------------------------------------
+                    ### Delete the Cache ###
+public void ClearBrowserCache()
+{
+webDriver.Manage().Cookies.DeleteAllCookies(); //delete all cookies
+Thread.Sleep(7000); //wait 7 seconds to clear cookies.
+}
+
+----------------------------------------------------------------------------------------------------------
+               ### Shadow DOM ###
+
+The Shadow DOM is a way to achieve encapsulation in the HTML document.
+
+-"NoSuchElementException" directly when we try accessible to shadow dom element
+
+$ solution-->
+1.getShadowMethod()-->selenium method
+-->WebElement shadowHost = driver.findElement(By.cssSelector("#shadow_host"));
+   SearchContext shadowRoot = shadowHost.getShadowRoot();
+   WebElement shadowContent = shadowRoot.findElement(By.cssSelector("#shadow_content"));
+
+2.JavaScriptExector-->
+
+----------------------------------------------------------------------------------------------------------
                 ## Selenium Exception ###
 
  Difference between Invalid Session or NoSession Exception-->
@@ -141,7 +200,10 @@ solution-->use javaSriptExecutor
  5.NoSuchElementException-->Element doesnt exist on webpage
  6.ELementNotVisibleException-->ELment exist but its hidden
  -----------------------------------------------------------------------------------------------------------------------
+                    ### Handling or solution for selenium Exception ###
 
+ 1.StaleElementReferenceExcpetion-->Refresh the locators or add wait conditions.
+-----------------------------------------------------------------------------------------------------
                    ### waits #####
 
  WebDriverWait in selenium-->explicit wait
@@ -167,8 +229,8 @@ It allows you to wait for a particular element or condition with a specific time
 
 which wait is better?--> Explicit wait
 -------------------------------------------------------------------------------------------------------------------------
+            ## JavaScriptExceutor ###
 
-                ## JavaScriptExceutor ###
  # JavascriptExecutor is interface and its perform operation on webpage like scrolling,inner text,title etc
 
  JavaScriptExecutor is an interface that is used to execute JavaScript through selenium webdriver. JavaScript is a programming language
@@ -279,7 +341,7 @@ POM assign seperate page class for each webpage
 2. we can use this File object to copy the image at our desired location, as shown below, using the FileUtils Class.
     FileUtils.copyFile(screenshotFile , new File("C:\\temp\\screenshot.png));
  --------------------------------------------------------------------------------------------------------------------
-            ### Full Screenshot ###-->Ashot
+            ### Full Screenshot ###-->" Ashot "
 
   selenium doesnt have capabilites to take full page screeshot. we have to use a third-party library named "Ashot".
 ---------------------------------------------------------------------------------------------------------
@@ -520,6 +582,38 @@ Broken link-->A broken link, also often called a dead link, is one that does not
     9.What happens if you receive browser notifications in between Test Automation Execution?
     10.
 ----------------------------------------------------------------------------------------------------------
+
+                    ### File uploads ###
+
+ Selenium cant interact with file uploads but if the element is an "input" element with type "file"
+ then you can use sendkeys method to send full path to file upload
+
+ WebElement fileupload=driver.findElement(By.xpath(""));
+ fileupload.sendKeys("filepath");
+
+ ----------------------------------------------------------------------------------------------------------
+                ### File Download ###
+
+   handling file downloads by setting browser preferences.
+
+   for(chrome)-->
+
+   ChromeOptions options=new ChromeOptions();
+   options.addArguments("download.default_directory=C:\\Downloads");
+   WebDriver driver=new ChromeDriver(options);
+
+   -----------------------------------------------------------------------------------------------
+
+                ### Logging(Log4J) in Selenium ###
+
+    1.add Log4J dependencies in project
+    use logging implementation for better traceability .
+
+    Logger logger=Logger.getLogger("testlog");
+    logger.info("Test started");
+    -------------------------------------------------------------------------------------------------
+
+
 
 
 
