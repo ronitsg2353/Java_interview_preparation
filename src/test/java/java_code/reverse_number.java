@@ -7,11 +7,11 @@ public class reverse_number {
         int num=2353;
         int rev = 0;
 
-        while(num!=0) {
-            rev = rev * 10 + num % 10;
-            num = num / 10;
-        }
-
+      while(num>0){
+          int rem=num%10; //3
+          rev=rev*10+rem; //235
+          num=num/10;
+      }
         System.out.println(rev);
     }
 }
