@@ -8,7 +8,7 @@ Robot Framework-->
 WinAppDriver-->
 katalon-->
 
-Headless browser-->perform same functionality as standard browserr but without GUI.
+Headless browser-->perform same functionality as standard browser but without GUI.
 
 Window based popup-->selenium cant handle window base popup because its web base automation tool.
 Third party tool like "AutoIT" or "Robot class"
@@ -35,14 +35,14 @@ Selenium IDE-->open source having record and playback feature
 4.requires the external tool for mobile testing -appium
 ------------------------------------------------------------------------------------------------
                     ### handling Captcha ###
+
  for handling captcha -third party tool like "OCR" or APIs.
  use services like "2Captcha" to solve captchas programmetically.
  "2captcha"--> provides bypass for selenium
 
  -----------------------------------------------------------------------------------------
-
-
             ### Advantage of Selenium ###
+
 1.mulitple lagnuage support
 2.open source tool
 3.cross-platform
@@ -61,11 +61,12 @@ Assert(hard assertion)-->If the assert condition fails, the test case is marked 
 and the remaining tests are skipped
 ----------------------------------------------------------------------------------------------------------
                         ### WebDriver Methods ### WebDriver is Interface
+
 1.close()-->current open window
 2.quit()-->all opened windows
 3.getCurrentUrl()-->url of current webpage
 4.getPageSource()-->get source of loaded page
-5.get()-->load new wepage in current winodw
+5.get()-->load new webpage in current window
 6.getTitle()-->title of current webpage
 7.switch()-->
 8>navigate()-->
@@ -80,7 +81,7 @@ driver.manage().window().maximize();
 isEnabled()-->checked if element is enabled for interaction
 isDisplayed()-->check if element is visible on the page
 isSelected()-->check if checkbox or radio button is selected
-----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------------------------
                         ### Locators ###
@@ -90,9 +91,9 @@ locator-->A locator is a way to identify elements on a page
 2.name              -->driver.findElement(By.name("newsletter"));
 3.linkText          -->driver.findElement(By.linkText("Selenium Official Page"));
 4.partialLinkText   -->driver.findElement(By.partialLinkText("Official Page"));
-5.tagname           -->driver.findElement(By.tagName("a"));
-6.class name        -->driver.findElement(By.className("information"));
-7.css selector      -->driver.findElement(By.cssSelector("#fname"));
+5.tagName           -->driver.findElement(By.tagName("a"));
+6.className        -->driver.findElement(By.className("information"));
+7.cssSelector      -->driver.findElement(By.cssSelector("#fname"));
 8.xpath             -->driver.findElement(By.xpath("//input[@value='f']"));
 
 ## Relative locator-->introduced in Selenium 4
@@ -121,7 +122,7 @@ we can locate the text field element using the fact that it is an “input” el
                     ### Xpath ###
 
 1.xpath by id--> driver.findElement(By.xpath("//*[@id="inputid"));
-2.xpath by classname-->driver.findElement(By.xpath("//*[@class="classname"));
+2.xpath by className-->driver.findElement(By.xpath("//*[@class="classname"));
 3.xpath by name--> driver.findElement(By.xpath("//*[@name="name"));
 4.xpath by text--> driver.findElement(By.xpath("//*[text()='Ronit']"));
 5.xpath by contains-->driver.findElement(By.xpath("//*[contains(@href,'google.com')]"));
@@ -134,6 +135,41 @@ driver.findElement("//input[@id='username']/ancestor::form");
 driver.findElement("//input[@id='username']/ancestor::form[1]")
 //div[@id='content']/child::p`.
 //tag[@attribute='value']/parent::tagName`
+------------------------------------------------------------------------------------------------
+                    ### cssSelector ###
+
+CSSSelectors in Selenium are used to identify and locate web elements based on their id, class, name, attributes and other attributes.
+CSS is a preferred locator strategy as it is simpler to write and faster as compared to XPath.
+
+===> preferred use this way-->
+driver.findElement(By.cssSelector("a[class='login']"));
+
+1.ID--> " * "-->notation used to select id
+     ex.   driver.findElement(By.cssSelector("a[id='offer']"));
+           driver.findElement(By.cssSelector("#offer"));
+           driver.findElement(By.cssSelector("a#offer"));
+
+2.class--> " . " notation used to select class
+        ex.  driver.findElement(By.cssSelector("a[class='Navbar_logo__26S5Y']");
+             driver.findElement(By.cssSelector("a.Navbar_logo__26S5Y"));
+             driver.findElement(By.cssSelector(".Navbar_logo__26S5Y"));
+
+3.Attribute-->
+            ex. driver.findElement(By.cssSelector("a[href='/favourites']");
+
+4.sub-string--> allows to match partial string
+            1.start-With--> " ^ " notation use for start-with
+            driver.findElement(By.cssSelector("a[class^='navbar_log']"));
+
+            2.end-with-->" $ " notation use for end-with
+            driver.findElement(By.cssSelector("a[class$='2689Y']");
+
+
+            3.contains-->" * "--> notation use for contains
+            ex. driver.findElement(By.cssSelector("a[class*='logo_']");
+
+
+5.Inner String-->
 
 -----------------------------------------------------------------------------------------------------------
                         ### Handling cookies ###
