@@ -202,7 +202,29 @@ solution-->use javaSriptExecutor
  -----------------------------------------------------------------------------------------------------------------------
                     ### Handling or solution for selenium Exception ###
 
+  try{
+
+  }
+  catch(Exception e){
+
+  System.out.println(e.getMessage());
+  }
+
+
+
  1.StaleElementReferenceExcpetion-->Refresh the locators or add wait conditions.
+ 2.ElementNotInteractableException---->occur when interact with hidden or unclikable elements.
+                    use javascriptExceutor instead of click
+           js.executeScript("arguments[0].click();",element);
+-----------------------------------------------------------------------------------------------
+                  ### connect DATABASE (JDBC)###
+
+    JDBC-->Java Database connectivity
+
+  Connection conn=DriverManager.getConnection("jdbc:mysql://localhost"3306/testdb","user","password");
+        Statement stat=conn.createStatement();
+        ResultSet rs=stat.executeQuery("SELECT * from user");
+
 -----------------------------------------------------------------------------------------------------
                    ### waits #####
 
@@ -613,6 +635,19 @@ Broken link-->A broken link, also often called a dead link, is one that does not
     logger.info("Test started");
     -------------------------------------------------------------------------------------------------
 
+                ### Email Testing ###
+
+   Use "JavaMail API" to fetch email and validate email contents
+   -----------------------------------------------------------------------------------------------------
+                        ### Tooltip ###
+
+   tooltip-->small hoverable elements that provide additional information when a user hovers over an element on a webpage.
+
+        WebElement elment=driver.findElement(By.id("tooltip"));
+        String tooltip=element.getAttribute("title");
+        System.out.println("Tooltips"+tooltip);
+
+   ---------------------------------------------------------------------------------------------------------
 
 
 
