@@ -263,9 +263,17 @@ solution-->use javaSriptExecutor
 
     JDBC-->Java Database connectivity
 
-  Connection conn=DriverManager.getConnection("jdbc:mysql://localhost"3306/testdb","user","password");
+String userid="userid;
+String password="password";
+String url="https:url"
+
+//establish a connection
+Connection connection=DriverManager.getConnection(url,userid,password);
+
+//create statement
         Statement stat=conn.createStatement();
-        ResultSet rs=stat.executeQuery("SELECT * from user");
+
+  ResultSet rs=stat.executeQuery("SELECT * from user");
 
 -----------------------------------------------------------------------------------------------------
                    ### waits #####
@@ -309,6 +317,12 @@ It allows you to wait for a particular element or condition with a specific time
   get title--> string sText =  js.executeScript(“return document.title;”).toString();
   inner text of webpage-->string sText =  js.executeScript(“return document.documentElement.innerText;”).toString();
   alert poput window--> Js.executeScript(“alert(‘hello world’);”);
+
+## Window Resize-->
+window.resizeTo() method and capability commands can also be used to achieve the same result.
+  Use windows.resizeTo() method along with Javascript executor.
+                    JavascriptExecutor js=(JavascriptExecutor)driver;
+                js.executeScript("window.resizeTo(600,400);");
 
   ----------------------------------------------------------------------------------------------------------------------
                     findElement() and findElements()?
@@ -622,10 +636,7 @@ Broken link-->A broken link, also often called a dead link, is one that does not
                 Dimension dimension = new Dimension(width, height);
                 driver.manage().window().setSize(dimension);
 
-  window.resizeTo() method and capability commands can also be used to achieve the same result.
-  Use windows.resizeTo() method along with Javascript executor.
-                    JavascriptExecutor js=(JavascriptExecutor)driver;
-                js.executeScript("window.resizeTo(600,400);");
+
 
 
   2. How to Handle colors in webdriver?
