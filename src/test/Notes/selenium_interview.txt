@@ -461,8 +461,7 @@ It may be used for warning purposes as well.
  FindBy-->annotation
  FindElement-->"method" in pom to identify webelement
 
- constructor-->
-
+ constructor-->intilize webdriver instance,manage configuration or set up intial state for test classes or utilty.
 
  1.Inheritance--> one class acquires the property of another class.
  We create a Base Class in the Automation Framework to initialize the WebDriver interface, WebDriver waits, Property files, Excels, etc., in the Base Class.
