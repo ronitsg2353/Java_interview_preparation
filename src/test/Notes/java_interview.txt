@@ -95,6 +95,7 @@ Static method-->Static methods are the methods in Java that can be called withou
 2.can we overload static method-->Yes.
 ===========================================================================================================================
                 ### Polymorphism ###
+
 poly means many and morph means form--?
 one object showing many forms at different states.
 
@@ -200,7 +201,7 @@ System.out.println("Eating for derived method");
    -----------------------------------------------------------------------------------------------
                     ### Array ###(Arrays class)--> java.util.Arrays;
 
-                    Array is non primitve data type
+                    Array is non primitive data type
     Arrays are fundamental structures in Java that allow us to store multiple values of the same type in a single variable
      They allow you to store and manipulate collections of data efficiently
      all arrays are dynamically allocated.
@@ -278,7 +279,6 @@ Parameters refer to the variables listed in a function's declaration,defining th
  result = add(5, 3)
 
 --------------------------------------------------------------------------------------------------------------
-
 
 throw--->throw is keyword is used to throw an exception explicitly by programmer.we can defined user defined exception.
 
