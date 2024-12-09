@@ -12,6 +12,9 @@ Typecasting-->converting one datatype to another datatype
 widening--> int to double
 narrowing-->double to int
 
+upcasting-->typecasting chid class object  to parent class object
+downcasting--> typecasting parent class to child class object
+
 ---------------------------------------------------------------------------------------------------------]
 Wrapper class-->its convert primitive datatype into object & object into primitive datatype.
 autoboxing-->convert primitive datatype to object
@@ -22,7 +25,6 @@ unboxing-->convert object to primitive datatype
 Final-->keyword/access modifier-use to apply restriction to class,method and variable.
 Finally-->use in try-catch block-necessary code exceute either exception handled or not
 Finalize-->method in Java which is used to perform clean up processing just before object is garbage collected
-
 
 ----------------------------------------------------------------------------------------------------------
 ==> public static void main (String [] args)
@@ -92,6 +94,11 @@ Static method-->Static methods are the methods in Java that can be called withou
 1.can we override static method-->No
 2.can we overload static method-->Yes.
 ===========================================================================================================================
+                ### Polymorphism ###
+poly means many and morph means form--?
+one object showing many forms at different states.
+
+
                     # Method overloading & overriding ###
 
   Both are type of polymorhphism
@@ -157,7 +164,8 @@ System.out.println("Eating for derived method");
  }
  -------------------------------------------------------------------------------------------------------------
                                 ### String ###
-   String is an object that represents a sequence of characters
+
+   String is an Non primitve dataype & object that represents a sequence of characters
    String is an immutable class which means a constant and cannot be changed once created and if wish to change ,
     we need to create an new object
 
@@ -190,19 +198,36 @@ System.out.println("Eating for derived method");
    11.trim()-->remove whitespace of both end of string
    12.ValueOf()-->
    -----------------------------------------------------------------------------------------------
-                    ### Array ###
+                    ### Array ###(Arrays class)--> java.util.Arrays;
+
+                    Array is non primitve data type
     Arrays are fundamental structures in Java that allow us to store multiple values of the same type in a single variable
      They allow you to store and manipulate collections of data efficiently
      all arrays are dynamically allocated.
-     Arrays may be stored in contiguous memory
+     Arrays may be stored in contiguous memory Allocation
      The variables in the array are ordered, and each has an index beginning with 0.
 
+     Type of Array-->
+     1.one dimenional array-->
+     int [] arrays={12,4,21,56,21};
+
+     2.Two Dimesnional array-->
+     int [][] arrays={{1,2,4,},{3,4,21}};
+
+
+
+    ## Array methods-->
+    1.length-->
+    2.compare-->
+    3.equal-->
+
  ------------------------------------------------------------------------------------------------
+                    ### Abstraction ###
+
  Abstraction==> OOPs concept-hiding the unnecessary details from user and show only functionality.
 
-
  Abstract class & Abstract Method:
-Abstract method--> using abstract keyword in abstract class.A method dont have implementation body.
+Abstract method--> using abstract keyword in abstract class.A method don'`t have implementation body.
 
 Abstract class--> both abstract and concrete method.its restricted class and its cannt user for create obj
 
@@ -232,11 +257,17 @@ e can achieve 100% abstraction and multiple inheritance in Java with Interface]]
 
 The "implements" keyword is used to implement an interface
 
+------------------------------------------------------------------------------------------------------
+                ### Marker interface & Functional Interface ###
+
+ 1.Marker interface-->interface having no method..its use for metadata about class
+ 2.Functional interface-->interface contain single abstract method and can have multiple static and default methods
 
  -----------------------------------------------------------------------------------------------------------
  Difference between Argument and parameter==>
 
-Parameter(declared var in function)-->Parameters refer to the variables listed in a function's declaration,defining the input that the function can accept.
+Parameter(declared var in function)-->
+Parameters refer to the variables listed in a function's declaration,defining the input that the function can accept.
 
  def fun sum(x,y):
  return x+y
@@ -251,7 +282,7 @@ Parameter(declared var in function)-->Parameters refer to the variables listed i
 
 throw--->throw is keyword is used to throw an exception explicitly by programmer.we can defined user defined exception.
 
-throws--->java throws keyword is used to declared an exception. This gives info to programmer.they might give a exception so use to try n catch
+throws--->java throws keyword is used to declared an exception.they might give a exception so use to try n catch
 
 finally--> finally block contains the code which is always executed whether the exception is handled or not.
 
@@ -259,10 +290,9 @@ this--> refer current class instance variable
 
 super-->super keyword in Java is a reference variable which is used to refer immediate parent class object.
 ----------------------------------------------------------------------------------------------------------
-
                   ###  Exception and Exception Handling ###
 
- Exception-->event that occurs during the execution of a program that disrupts the normal flow of instructions
+ Exception--> event that occurs during the execution of a program that disrupts the normal flow of instructions
  Exception Handling-->mechanism to handle the runtime errors so that the normal flow of the application can be maintained
 
  checked Exception(compile time Exception)-->checked at compiletime by java--IOException,SQLException,ParseExceeption
@@ -343,12 +373,12 @@ each key can map to at most one value. The Map interface is used to store key-va
 
  The "extends" keyword is used for inheritance in Java
 
- 1.Single level inheritance-->
+ 1.Single level inheritance-->parent class property into child class
   a sub-class is derived from only one super class. It inherits the properties and behavior of a single-parent class.
          ----
         | B  |    -->super(single parent class)
         -----
-          ^
+
           |
          -----
         | A  |     -->subclass
@@ -377,11 +407,13 @@ each key can map to at most one value. The Map interface is used to store key-va
 
  5.Hybrid inheritance-->
  combination two or more type of inheritance.
+
  ----------------------------------------------------------------------------------------------------------
                        ### Encapsulation ###
 
 Encapsulation in Java is a process of wrapping code and data together into a single unit.
-Java Encapsulation is a way of hiding the implementation details of a class from outside access and only exposing a public interface that can be used to interact with the class.
+Java Encapsulation is a way of hiding the implementation details of a class from outside access and only exposing a
+ public interface that can be used to interact with the class.
 
 // Person Class
 class Person {
@@ -420,3 +452,10 @@ public class Main {
 1.Primitive datatype--> primitive datatype like int,float,double etc. are not object.
 2.diamond ambiguity-->multiple inheritance
 ------------------------------------------------------------------------------------------------------------
+                ### Garbage Collector ###
+
+Garbage collection is process of looking into at heap memory ,identify which object are in use or not and deleting
+unuse object.
+
+outofMemoryError-->this error is thrown there is insufficient space allocation for object in the java heap.
+-------------------------------------------------------------------------------------------------------

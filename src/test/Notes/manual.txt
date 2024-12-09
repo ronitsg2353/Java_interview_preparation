@@ -12,4 +12,15 @@
  2.validation-->validation refers to software provide the customers and client satifaction.
 
  -------------------------------------------------------------------------------------
+1.AdHoc testing-->software testing without planned intial test case documentation
+2.Exploratory testing-->software testing perform before testing based knowledge,experience & intitution
+3.Monkey testing-->a technique provide random inputs and checking behaviour or see whether crash the application
+4.Gorilla testing-->in depth testing of particular single feature of functionality tested it correctness & reliability.
+5.Alpha testing-->aplha testing takes place within orgnization
+6.Beta testing--->beta testing takes places in user's enviorment
+7.black box testing-->without knowing the internal code
+8.White box testing-->with knowledge of internal code
+9.Grey box testing->combination black box  & white box
+
+-------------------------------------------------------------------------------------------
 
