@@ -23,6 +23,11 @@ selenium can handles these issue using browser-specific setting or DesiredCapabi
 
 SelectorHub-->selectorhub debugger feature use to freeze the hidden /disappearing element.
 
+Selenium 4.27 update -->
+getAttribute depreciated -->
+cause-->user wrongly use getAttribute method find visibleText that negatively impacted
+solution--> driver.getDomAttribute('attr name');
+
 ---------------------------------------------------------------------------------------------------------
 Selenium Webdriver-->Selenium WebDriver is a code library of APIs for controlling browsers.
 Selenium Grid--> Selenium Grid is a smart proxy server that makes it easy to run tests in parallel on multiple machines
@@ -405,8 +410,8 @@ this.driver = driver;
 PageFactory.initElements(driver, this);
 }
 
-PageObject Model-->
-1.finding webelements "By"class
+PageObject Model-->(object repository)
+1.finding webElements of page using "By"class
 2.Page Object Model is a design pattern
 Page Object Model, also known as POM, is a design pattern in Selenium that creates an object repository for storing all web elements.
 It helps reduce code duplication and improves test case maintenance.
