@@ -351,7 +351,27 @@ Widows popup handled by-->getWindowHandle
   switch to: This method helps to switch between the windows
   action: This method helps to perform certain actions on the windows
   ---------------------------------------------------------------------------------------------------------
-                     ### Action class ###
+                    ### How to close second open window ###
+
+      //start browser & open url
+                    driver.get(url);
+
+//get all window handles
+   Set<String>handles=driver.getWindowHandles();
+
+   //switch to second window
+   driver.switchTo().window(handles[i]);
+
+   //close the second window
+   driver.close();
+
+   //switch back to original window
+   driver.switchTo().window(handles[o]);
+   driver.quit();
+
+
+  ---------------------------------------------------------------------------------------------------
+                    ### Action class ###
 
   Action-->Interface
   Actions-->class

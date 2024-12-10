@@ -18,7 +18,26 @@ public class JavaScriptExecutor_code {
         JavascriptExecutor js=(JavascriptExecutor) driver;
             js.executeScript("window.scrollBy(0,350)", "");
 
-            Thread.sleep(2000);
+ //JavascriptExceutor for click button
+ JavascriptExecutor js1=(JavascriptExecutor)driver;
+ js1.executeScript("document.getElementByID(" element").click();");
+
+
+ //JavascriptExceutor for send text
+  JavascriptExceutor js2=(JavascriptExceutor)driver;
+  js2.executeScript("document.getElementByID('element id').value='Ronit';");
+
+  //JavascriptExceutor for refresh browser window
+  JavascriptExceutor js3=(JavascriptExceutor)driver;
+  js3.executeScript("location.reload()");
+
+  //JavascriptExcector for interact with checkbox
+  JavascriptExceutor js4=(JavascriptExecutor)driver;
+  js4.exceuteScript("document.getElementByID('element id').checked-false");
+
+
+
+            Thread.sleep(2000)
             driver.close();
     }
 }
