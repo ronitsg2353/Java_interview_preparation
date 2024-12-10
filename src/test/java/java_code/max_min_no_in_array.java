@@ -6,8 +6,9 @@ public class max_min_no_in_array {
 
         int max=arr[0];
         int min=arr[0];
+        int size=arr.length;
 
-        for(int i=0;i<arr.length;i++){
+        for(int i=0;i<size;i++){
             if(max<arr[i]){
                 max=arr[i];
             }

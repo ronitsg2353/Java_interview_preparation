@@ -35,7 +35,13 @@ public class JavaScriptExecutor_code {
   JavascriptExceutor js4=(JavascriptExecutor)driver;
   js4.exceuteScript("document.getElementByID('element id').checked-false");
 
+//inner text
+        JavascriptExecutor js=(JavascriptExecutor)driver;
+        js.executeScript("document.getElementID("").innertext;").toString();
 
+        string sText =  js.executeScript(“return document.title;”).toString();
+
+        alert poput window--> Js.executeScript(“alert(‘hello world’);”);
 
             Thread.sleep(2000)
             driver.close();

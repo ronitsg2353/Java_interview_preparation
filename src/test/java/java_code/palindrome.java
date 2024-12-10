@@ -1,20 +1,28 @@
 package java_code;
 
+import java.util.*;
 public class palindrome {
     public static void main(String[] args) {
-        int r,sum=0,temp;
-        int n=454;//It is the number variable to be checked for palindrome
-
-        temp=n;
-        while(n>0){
-            r=n%10;  //getting remainder
-            sum=(sum*10)+r;
-            n=n/10;
+        int count=0;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number:");
+        int num=sc.nextInt();
+        int rev=0;
+        int rem=0;
+        int orgnum=num;
+        while(num>0){
+            rem=num%10;
+            rev=(rev*10)+rem;
+            num=num/10;
         }
-        if(temp==sum)
-            System.out.println("palindrome number ");
-        else
+        System.out.println(rev);
+        if(orgnum==rev){
+            System.out.println("plaindrome");
+        }
+        else{
             System.out.println("not palindrome");
+        }
+
     }
 }
 
