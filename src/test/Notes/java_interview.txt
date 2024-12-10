@@ -311,6 +311,38 @@ Sometimes a situation may arise where a part of a block may cause one error and 
 -------------------------------------------------------------------------------------------------------------------
                     ### Collection Framework ###
 
+
+List-->duplicate elements and multiple null values
+       1.Arraylist-->dynamic element with random access.
+       2.LinkedList-->doubly linked list--->faster insertion n delete
+       3.vector-->similar version of arraylist--Thread safe and synchronized
+
+
+Set-->no duplicate element and only one null value
+         HashSet-->unique items
+         LinkedHashSet-->unique item allows null elements
+         TreeSet-->element sorted in ascending order
+         SortedSet-->also stored elements in ascending order
+
+
+Queue-->first -in- first-out --perform operation on both sides
+               PriorityQueue-->no null value
+               Deque-->Deques means "double ended queue"-->perform operation on both side
+               ArrayDeque-->can add or delete the elements on both sides.
+
+
+Map-->key.value pair-->no duplicate keys allowed but duplicate values
+                Hashmap and LinkedHashMap-->allows null keys and value
+                Treemap-->doesn't allow any null key or value
+
+ HashTable(class)-->Map key -value pair--> no null value or keys
+
+ Difference between HashMap and HashTable-->
+ hashmap is non synchronized making its faster for single threaded tasks,
+ HashTabled is synchronized  and providing thread-safety
+
+------------------------------------------------------------------------------
+
  List(interface)-->we can store all the ordered collections of the objects.Its allows duplicate data.
                     List implementated by classes like Arraylist,LinkedList,vector,stack & Queue
 

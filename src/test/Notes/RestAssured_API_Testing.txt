@@ -5,16 +5,19 @@
 1.200-->OK-->the request was succesful & response contains the requested data.
 2.201-->created-->the request was succesful & resulted in creation of new resource.
 3.202-->Accepted-->the request has been accepted for processing but not yet completed.
-4.204-->no content-->the server has received the initate part of request and client should proceed
+4.203-->No authoritive info-->
+5.204-->no content-->the server has received the initate part of request and client should proceed
 
 4XX-->Client error
 1.400-->Bad Request-->The server cannot understand the request due to bad syntax
 2.401-->unauthroized-->The request requires authentication and the client has not provide valid credential
+3.402-->Payment required
 3.403-->Forbidden-->the server understood the request but client doesnt have permission to access resource
 4.404-->NOt Found-->the requested resource could not found on the server.
 
 5XX-->Server error
 1.500-->Internal Server error-->an unexpected condition was encountered by server preventing it from fulfilling request
+2.501-->Not implemented
 2.502-->Bad Gateway-->the server acting as gateway recieved an invalid response from upstream server
 3.503-->Service unavailable-->the server currently unable to handle the request due to temp overload
 4.504-->Gateway timeout-0>server acting as gateway no reciecely timely response from upstream server
@@ -34,23 +37,29 @@ Authentication & Authorization==>
 1.Authentication--> verify that user is valid or not
 2.Authorization-->   give permission to user after authentication
 
-Types of Authorization-->
-1.Basic-->
-2.Digest-->
-3.Preemptive-->
-4.Bearer Token-->
-        OAuth1.0
-        OAuth2.0
-        API KEy
+Types of Authentication->
+1.Basic-->basic method of authorization ..provide usename & password
+2.Digest-->similar like basic but having "MD5" algorithm
+4.Bearer Token-->a security token for grant the access
+5.API Key-->Key and value pair ..add to request header
+6.OAuth1.0-->(HMAC_SHA1 or RSA) allow user on one site to another site without sharing client credentials.secure but more complex
+oauth 1.0 is secure but complex authorization protocol that uses "cryptographic signatures" for authenticate API access.
+
+7.OAuth2.0--->(HTTPS)flexbile and simplified framework for granting delegated access to resources using tokens.
+
+OAUth 1.0 and Outh 2.0 difference-->
+1.Oauth1 uses cryptographic methd(HMAC_SH! or RSA) or Oauth2.0 relies on HTTPS for security using bearer token for access
+2.OAuth1 is more complex -OAUth 2 is simpler
+3.OAuth1 ->token are opaque and alway requires signature & OAuth 2.0 token arevJWTs or bearer token ahich is easier to handle.
 
  HTTP Request--> Get,post,Put,Patch,delete
 
- RestAssured-->using gherking keyword-->Given,when ,then
+ RestAssured-->using gherkin keyword-->Given,when ,then
 ---------------------------------------------------------------------------------------------------------
               ### API chaining ###
 
 The API chaining method is to create a sequence of API calls where the output of one API request is used as the input for the next.
- The technique is an automated and efficient way of executing a Multistep Process.
+ The technique is an automated and efficient way of executing a Multisteps Process.
 
 -----------------------------------------------------------------------------------------------------------
             ### Serialization & Deserialization ###
@@ -134,7 +143,7 @@ Query Parameter-->API Query parameters can be defined as the optional key-value 
 Response response=RestAssured.given().content-type("application/json").body(data).when().Post().then().statusCode(200).extract().response();
 
 -------------------------------------------------------------------------------------------------------
-                ### Fetch data from response ###
+                ### Fetch data from response ###-->create a object of jsonpath
 
  JSonPath js=new JSonPath(response);
  System.out.println(js.getString("id"));
@@ -170,7 +179,7 @@ Response response=RestAssured.given().content-type("application/json").body(data
   RestAssured.given().multiPart("file",file).content-type("multiPart/form-data").when().post(baseurl).then().statusCode().log().all();
   }
   ---------------------------------------------------------------------------------------------------------------------------------------
-                  ### JsonArray to JsonObject ###
+                  ### JsonArray to JSONObject ###
 
   JSONArray jarr=new JSONArray(response.toString());
   jarr.getJSONObject().get("first name");
@@ -182,8 +191,6 @@ Response response=RestAssured.given().content-type("application/json").body(data
      Faker fakedata=new Faker();
      String name=fakedata.name.fullName();
      String firstname=fakedata.name.firstname();
-
-
 
  -----------------------------------------------------------------------------------------------------------
                   ## Data Driven (data extract from excel file)###
@@ -217,5 +224,5 @@ public String getCellData(int rowNumber,int cellNumber){
   src/main/resources
   src/test/java-->
   --------------------------------------------------------------------------------------------------------------
-  How will you validate an API rqst if VPN is required for it to work?
+  How will you validate an API request if VPN is required for it to work?
 
