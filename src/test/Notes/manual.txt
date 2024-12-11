@@ -8,7 +8,7 @@
 ---------------------------------------------------------------------------------------------
                 ### verification & validation ###
 
- 1.verification-->verification means check the build as per requirement
+ 1.verification-->verification means check the build as per requirement or not
  2.validation-->validation means build/software should meet client/end user requirements.
 
  -------------------------------------------------------------------------------------

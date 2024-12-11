@@ -6,7 +6,7 @@
 2.201-->created-->the request was succesful & resulted in creation of new resource.
 3.202-->Accepted-->the request has been accepted for processing but not yet completed.
 4.203-->No authoritive info-->
-5.204-->no content-->the server has received the initate part of request and client should proceed
+5.204-->no content-->the server has received the initiate part of request and client should proceed
 
 4XX-->Client error
 1.400-->Bad Request-->The server cannot understand the request due to bad syntax
@@ -23,8 +23,6 @@
 4.504-->Gateway timeout-0>server acting as gateway no reciecely timely response from upstream server
 
 --------------------------------------------------------------------------------------------------------------
-
-
               ### Variables ###
 
 1.Global variable-->Global variables are available throughout a workspace

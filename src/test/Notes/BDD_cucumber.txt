@@ -14,7 +14,7 @@
  Difference between Datatable and Example?
 
 
- background(keyword)--> used to group multiple given statements into a single group.Excecute the similar precondition for each test scenarios.
+ background(keyword)--> used to group multiple given statements into a single group.Execute the similar precondition for each test scenarios.
 
  Scenario -->Scenario" is used for individual, non-parameterized test cases
  Scenario outline--> "Scenario Outline" is used for parameterized test cases where the same steps are executed with different sets of input data.
@@ -44,6 +44,16 @@ It contains two parameters feature and glue.
 
 Feature parameter: The feature parameter is used to specify the path of the feature file.
 Glue parameter: The glue parameter is used to specify the path of the step definition file.
+------------------------------------------------------------------------------------------------------------------------
+
+monochrome=true-->print readable output
+
+@CucumberOptions(
+	features = "src/test/resources/functionalTests",
+	glue= {"stepDefinitions"},
+	plugin = { "pretty", "json:target/cucumber-reports/Cucumber.json" },
+	monochrome = true
+)
 
 -----------------------------------------------------------------------------------------------------------
             ### Fixture ###
