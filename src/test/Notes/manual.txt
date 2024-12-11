@@ -8,8 +8,8 @@
 ---------------------------------------------------------------------------------------------
                 ### verification & validation ###
 
- 1.verification-->verification refers to software build correctly implement specific fun
- 2.validation-->validation refers to software provide the customers and client satifaction.
+ 1.verification-->verification means check the build as per requirement
+ 2.validation-->validation means build/software should meet client/end user requirements.
 
  -------------------------------------------------------------------------------------
 1.AdHoc testing-->software testing without planned intial test case documentation
@@ -23,4 +23,24 @@
 9.Grey box testing->combination black box  & white box
 
 -------------------------------------------------------------------------------------------
+story point-->follows fibonacci series
+
+1 1 2 3 5
+
+------------------------------------------------------------------------------------------
+Priortiy and Severity-->
+
+severse-->how impact of issue on product
+priority-->how imp fix this issue
+--------------------------------------------------------------------------------------
+            ### Agile ceremonies ###
+ 1.daily standup-->what did you yesterday..planning to do today task
+ 2.sprint planning-->what work should have to complete within time period
+ 3.sprint review-->demo to stalkholder on end of sprint
+ 4.story grooming meeting-->
+ 5.sprint retrospective meeting->last day of sprint
+
+ ---------------------------------------------------------------------------------------
+
+
 

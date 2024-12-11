@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa016312-86f7-4c23-ac29-0637b5db6c74" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/selenium_code/Alert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/selenium_code/DesiredCapabilites.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/selenium_code/File_Handling.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/selenium_code/Navigation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/java_code/remove_duplicate_Set.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/selenium_code/iframe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/java_code/max_min_no_in_array.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/java_code/max_min_no_in_array.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/java_code/missing_No_Array.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/java_code/missing_No_Array.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/java_code/palindrome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/java_code/palindrome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/Notes/manual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Notes/manual.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
