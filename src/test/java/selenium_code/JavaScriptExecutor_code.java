@@ -14,7 +14,7 @@ public class JavaScriptExecutor_code {
         driver.get("https://www.tiaa.org/public");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2000));
 
-//JavaScript Exeuctor for scolling page
+//JavaScript Exeuctor for scrolling page
         JavascriptExecutor js=(JavascriptExecutor) driver;
             js.executeScript("window.scrollBy(0,350)", "");
 
