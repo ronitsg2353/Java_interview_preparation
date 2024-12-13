@@ -25,7 +25,11 @@ unboxing-->convert object to primitive datatype
 Final-->keyword/access modifier-use to apply restriction to class,method and variable.
 Finally-->use in try-catch block-necessary code exceute either exception handled or not
 Finalize-->method in Java which is used to perform clean up processing just before object is garbage collected
+------------------------------------------------------------------------------------------------------
 
+Break-->break statement in java is used to terminate from the loop immediately.inside the loop
+continue-->
+The continue statement is used to skip the current iteration of the loop..We can not use a continue with the switch statement.
 ----------------------------------------------------------------------------------------------------------
 ==> public static void main (String [] args)
 

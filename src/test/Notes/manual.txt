@@ -5,6 +5,22 @@
         2.Integration testing
         3.system testing
         4.user acceptance testing
+------------------------------------------------------------------------------------------------------
+            ### Design technique ###
+ 1.Boundry value Analysis
+ 2.Equivalent class partitioning
+
+ Both test comes under edge cases that reduces the number of test case while ensuring adequete coverage.
+
+ 1.Boundry value analysis-->
+    Identify the boundry value (minimum and maximum values of the range)
+    Test at boundry value just below and just above the boundaries.
+
+ 2.Equivalent Class Partitioning-->   (0 to 100-->50 is middle value)
+ ECP divides input data into partitions or classes that are expected to exhibit similar behaviour.
+       Identity valid and invalid equivalent classes.
+       Choose one representative value from each class for testing
+
 ---------------------------------------------------------------------------------------------
                 ### verification & validation ###
 
@@ -12,12 +28,12 @@
  2.validation-->validation means build/software should meet client/end user requirements.
 
  -------------------------------------------------------------------------------------
-1.AdHoc testing-->software testing without planned intial test case documentation
+1.AdHoc testing-->software testing without planned initial test case documentation
 2.Exploratory testing-->software testing perform before testing based knowledge,experience & intitution
 3.Monkey testing-->a technique provide random inputs and checking behaviour or see whether crash the application
 4.Gorilla testing-->in depth testing of particular single feature of functionality tested it correctness & reliability.
-5.Alpha testing-->aplha testing takes place within orgnization
-6.Beta testing--->beta testing takes places in user's enviorment
+5.Alpha testing-->aplha testing takes place within organization
+6.Beta testing--->beta testing takes places in user's environment
 7.black box testing-->without knowing the internal code
 8.White box testing-->with knowledge of internal code
 9.Grey box testing->combination black box  & white box
@@ -30,7 +46,7 @@ story point-->follows fibonacci series
 ------------------------------------------------------------------------------------------
 Priortiy and Severity-->
 
-severse-->how impact of issue on product
+severity-->how impact of issue on product
 priority-->how imp fix this issue
 --------------------------------------------------------------------------------------
             ### Agile ceremonies ###
@@ -42,5 +58,6 @@ priority-->how imp fix this issue
 
  ---------------------------------------------------------------------------------------
 
+    ### Boundry value Analysis###
 
 

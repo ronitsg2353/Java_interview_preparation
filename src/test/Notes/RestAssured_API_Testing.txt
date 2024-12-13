@@ -22,6 +22,30 @@
 3.503-->Service unavailable-->the server currently unable to handle the request due to temp overload
 4.504-->Gateway timeout-0>server acting as gateway no reciecely timely response from upstream server
 
+---------------------------------------------------------------------------------------------------------
+                        ### Attribute ###
+
+                        ###Header Attributes###(key value pair)
+
+ 1.content-Type-->application/json(json data)
+                --->application/x-www-form-urlencoded(for form data)
+                -->multipart/form-data(for file uploads)
+
+ 2.Authorization-->
+                -->Bearer Token (OAuth token)
+                -->Basic ()
+ 3.Accept-->
+                -->application/json
+ 4.Host-->domain name of server
+ 5.Content-Length-->specific size of request body
+ 6.Cookie-->send cookies stored in browser or client to the server
+ 7.X-Request-ID-->a unique indentifier for tracking request
+ 8.Cache-Control-->no-chache
+ 9.Custom Headers-->headers specific to API or services...X-customer-Header:value
+
+
+
+
 --------------------------------------------------------------------------------------------------------------
               ### Variables ###
 
