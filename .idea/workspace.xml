@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa016312-86f7-4c23-ac29-0637b5db6c74" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/java_code/Half_Swap_Array.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/java_code/extract_number_from_StringArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/java_code/left_rotatation_array.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/java_code/right_rotation_array.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/Notes/selenium_interview.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Notes/selenium_interview.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,45 +77,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Java_interview_preparation [:anagram.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Java_interview_preparation [:java_code.second_largest_no_array.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Java_interview_preparation [:java_code.sort_array.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Java_interview_preparation [:selenium_code.JavaScriptExecutor_code.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Java_interview_preparation [dependencies].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.java_interview-code [:Duplicate_array.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.java_interview-code [:ascending_order.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.java_interview-code [:count_occurance_of_char_in_string.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.java_interview-code [:desceding_order.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.java_interview-code [:factorial_number.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.java_interview-code [:fibonnaci_number.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.java_interview-code [:largest_num.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.java_interview-code [:palindrome.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.java_interview-code [:prime_number.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.java_interview-code [:remove_whitespace.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.java_interview-code [:reverse_number.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.java_interview-code [:reverse_number_in_array.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.java_interview-code [:reverse_string.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.java_interview-code [:second_largest_no_array.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.java_interview-code [:second_smallest_no_array.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.java_interview-code [:smallest_num.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.java_interview-code [:sort_array.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.java_interview-code [:sum_average.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.java_interview-code [:swap_num_with_3rd_var.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.java_interview-code [:swap_two_num_without_var.main()].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/312952/IdeaProjects/Java_interview_preparation/src/test/Notes&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/LENOVO/IdeaProjects/java_interview-code/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Java_interview_preparation [:anagram.main()].executor": "Debug",
+    "Gradle.Java_interview_preparation [:java_code.second_largest_no_array.main()].executor": "Run",
+    "Gradle.Java_interview_preparation [:java_code.sort_array.main()].executor": "Run",
+    "Gradle.Java_interview_preparation [:selenium_code.JavaScriptExecutor_code.main()].executor": "Run",
+    "Gradle.Java_interview_preparation [dependencies].executor": "Run",
+    "Gradle.java_interview-code [:Duplicate_array.main()].executor": "Run",
+    "Gradle.java_interview-code [:ascending_order.main()].executor": "Run",
+    "Gradle.java_interview-code [:count_occurance_of_char_in_string.main()].executor": "Run",
+    "Gradle.java_interview-code [:desceding_order.main()].executor": "Run",
+    "Gradle.java_interview-code [:factorial_number.main()].executor": "Run",
+    "Gradle.java_interview-code [:fibonnaci_number.main()].executor": "Run",
+    "Gradle.java_interview-code [:largest_num.main()].executor": "Run",
+    "Gradle.java_interview-code [:palindrome.main()].executor": "Run",
+    "Gradle.java_interview-code [:prime_number.main()].executor": "Run",
+    "Gradle.java_interview-code [:remove_whitespace.main()].executor": "Run",
+    "Gradle.java_interview-code [:reverse_number.main()].executor": "Run",
+    "Gradle.java_interview-code [:reverse_number_in_array.main()].executor": "Run",
+    "Gradle.java_interview-code [:reverse_string.main()].executor": "Run",
+    "Gradle.java_interview-code [:second_largest_no_array.main()].executor": "Run",
+    "Gradle.java_interview-code [:second_smallest_no_array.main()].executor": "Run",
+    "Gradle.java_interview-code [:smallest_num.main()].executor": "Run",
+    "Gradle.java_interview-code [:sort_array.main()].executor": "Run",
+    "Gradle.java_interview-code [:sum_average.main()].executor": "Run",
+    "Gradle.java_interview-code [:swap_num_with_3rd_var.main()].executor": "Run",
+    "Gradle.java_interview-code [:swap_two_num_without_var.main()].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/312952/IdeaProjects/Java_interview_preparation/src/test/Notes",
+    "onboarding.tips.debug.path": "C:/Users/LENOVO/IdeaProjects/java_interview-code/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "vcs.Git"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\312952\IdeaProjects\Java_interview_preparation\src\test\Notes" />
