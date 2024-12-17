@@ -1,5 +1,43 @@
 ------------------------------------------------------------------------------------------------------------------------
+1.which is fastest webdriver -->HtmlUnitDriver
+----------------------------------------------------------------------------------------
 Selenium cant handle Desktop application.open source for web application
+
+Selenium WebDriver itself is API
+WebDriver is interface
+
+child classes-->
+ChromeDriver
+OperaDriver
+FirefoxDriver
+
+-----------------------------------------------------------------------------------------------
+                ### Selenium supported Framework ###
+ 1.Appium
+ 2.Proctractor
+ 3.WebDriverIO
+ 4.RobotFramework
+ 5.Serenity
+
+-------------------------------------------------------------------------------------------
+                ### Selenium best practices ###
+1.code optimization
+2.Page object model
+3.Avoids hard waits
+4.Exception handling
+-----------------------------------------------------------------------------
+            ### How to select test cases for automation ###
+
+1.Frequency-->how often test case should run or need to exceuted.
+2.complexity--> less complex test cases are good candidate
+3.stability-->stable test case required less time to maintainance
+4.core functionality/critical -->test case should cover core/critical functionality
+-----------------------------------------------------------------------------------------
+                ### Selenium Grid-->###
+
+Hub-->central point in selenium grid
+Node-->a remote device use to exceute the test cases loaded onto hub.
+----------------------------------------------------------------------------------------------
 
 Appium-->mobile application testing
 
@@ -9,6 +47,14 @@ WinAppDriver-->
 katalon-->
 
 Headless browser-->perform same functionality as standard browser but without GUI.
+ex.chromeHeadless and Firefox Headless
+
+WebDriverManager.firefoxdriver().setup();
+FirefoxOptions options=new FirefoxOptions();
+options.addArguments("--headless");
+WebDriver driver=new FirefoxDriver(options);
+---------------------------------------------------------------------------------------------------
+
 
 Window based popup-->selenium cant handle window base popup because its web base automation tool.
 Third party tool like "AutoIT" or "Robot class"
@@ -50,6 +96,13 @@ Selenium IDE-->open source having record and playback feature
 2.no reporting facilities-should add third party dependencies
 3.Handling captcha and barcode
 4.requires the external tool for mobile testing -appium
+5.video control
+---------------------------------------------------------------------------------------------
+                ### Recovery Scenario ###
+
+recovery scenario handled in QTP/UFT
+selenium-->try and catch block
+
 ------------------------------------------------------------------------------------------------
                     ### handling Captcha ###
 
@@ -60,10 +113,24 @@ Selenium IDE-->open source having record and playback feature
  -----------------------------------------------------------------------------------------
             ### Advantage of Selenium ###
 
-1.mulitple lagnuage support
+1.multiple language support
 2.open source tool
 3.cross-platform
 4.large community support
+-------------------------------------------------------------------------------------------
+            ### Pause the Exeuction ###
+
+Java--> Thread.sleep(5000);
+Selenium WebDriver--> synchronized(driver){
+                        driver.wait(5000);
+                        }
+-----------------------------------------------------------------------------------------
+                ### Different refresh ###
+
+ 1.driver.navigate().refresh();
+ 2.sendKeys(Keys.F5); -->for action class
+ 3.driver.get(driver.getCurrentUrl());
+ 4.driver.navigate().to(driver.getCurrentUrl());
 
 -----------------------------------------------------------------------------------------------------------
                     ### absolute xpath and Relative xpath ###
@@ -100,11 +167,32 @@ driver.navigate().to()-->doesn't wait for full page load
 
 Maximum screen size-->
 driver.manage().window().maximize();
+---------------------------------------------------------------------------------------------
+                ### Selenium verification point ###
 
+size()-->element is present or not
+getTitle()-->title of page
+getCurrentUrl()-->url of webpage
+getPageSource()-->
 isEnabled()-->checked if element is enabled for interaction
 isDisplayed()-->check if element is visible on the page
 isSelected()-->check if checkbox or radio button is selected
 ----------------------------------------------------------------------------------------------------------
+                ### without sendkeys ###
+
+JavascriptExceutor js=(JavascriptExceutor)driver;
+
+WebElement searchbox=driver.findElement(By.xpath());
+js.exceuteScript("arguments[0].value='iMac;",searchbox);
+
+----------------------------------------------------------------------------------------------------
+                ### getAttribute() ###
+
+ driver.findElement(By.id('abc')).getAttribute('attributename');
+ -----------------------------------------------------------------------------------------------------
+            ### Press Enter key ###
+
+ driver.findElement(By.xpath("//input[@id='']")).sendKeys(Keys.ENTER);
 
 ---------------------------------------------------------------------------------------------------------
                         ### Locators ###
@@ -339,11 +427,19 @@ window.resizeTo() method and capability commands can also be used to achieve the
                     JavascriptExecutor js=(JavascriptExecutor)driver;
                 js.executeScript("window.resizeTo(600,400);");
 
+
+## How to read Javascript variable in selenium-->
+            JavascriptExecutor js=(JavascriptExeceutor)driver;
+           String title=(String) js.executeScript("return.document.title");
+           System.out.println(title);
+
   ----------------------------------------------------------------------------------------------------------------------
                     findElement() and findElements()?
 
   findElement()-->method which finding out webElement on webpage and return noELmentfoundExption for no webelement.
   findElements()-->method which finding out multiiple elements on webpage and return zero element for no webelment.
+            ---find more than one webelement on webpage
+
   ---------------------------------------------------------------------------------------------------------------------------
                Diff between getWindowHandle and getWindowHandles ?
 
@@ -357,6 +453,7 @@ window.resizeTo() method and capability commands can also be used to achieve the
                     String <set> allwindows=driver.getWindowHandles();
 
 Widows popup handled by-->getWindowHandle
+Web base popup handled by-->getWindowHandle
 
   switch to: This method helps to switch between the windows
   action: This method helps to perform certain actions on the windows
@@ -427,6 +524,10 @@ Widows popup handled by-->getWindowHandle
 
  --------------------------------------------------------------------------------------------------------
                 ### PageFactory ###
+
+ OBject repository-->an object repository is centrialized storage of locators in the form of
+                    object.Without hardcording we can centralized them in object repository
+
 
 PageFactory-->
 1.Finding web elements using @FindBy
@@ -755,7 +856,7 @@ Broken link-->A broken link, also often called a dead link, is one that does not
    System.out.println("Session id "+sessionid);
 
    ----------------------------------------------------------------------------------------------
-                    ### handle Browser notification ###
+                    ### handle chrome Browser notification ###
 
     browser notification / push notification handle-->
     we have to use ChromeOptions to disable push notification.
@@ -763,6 +864,12 @@ Broken link-->A broken link, also often called a dead link, is one that does not
     ChromeOptions option=new ChromeOptions();
     option.addArguments("--disable-notifications");
     -------------------------------------------------------------------------------------------
+                    ### Retreive css property ###
+
+   WebElement cartButton=driver.findElement(By.xpath(""));
+   String fontsize=cartButton.getCssValue("font-size");
+   System.out.println(fontsize);
+   --------------------------------------------------------------------------------------------------
 
 
 

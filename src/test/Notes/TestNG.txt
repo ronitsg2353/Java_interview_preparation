@@ -79,4 +79,15 @@ Listener is an interfaces that can track events and modify system behavior durin
    </test> <!-- Test -->
    </suite> <!-- Suite -->
    -----------------------------------------------------------------------------------------
+     ### Exclude test method in testng ###
+
+     <exclude> tag use in testng.xml file
+     <exclude name=""/>
+   ------------------------------------------------------------------------------------------
    1.What does ThreadPoolSize mean in TestNG? How does it work?
+   -->
+   ThreadPoolSize-->the threadpoolsize attribute tells Testng to create a thread pool to run
+   the test method via multiple thread With thread pool it will greatly decrease the running
+   time of test method
+
+   ---------------------------------------------------------------------------------------------
