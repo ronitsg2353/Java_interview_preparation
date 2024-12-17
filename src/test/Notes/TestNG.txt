@@ -3,27 +3,32 @@ invocation count--> an annotation that specifies how many times a test method sh
 disabled--> @Test(enabled=false)--
 dependsOnMethods-->(dependsOnMethod="")-->list of groups that depends on method
 dependOnGroups-->(dependsOnGroups="")-->list of methods that depends on group
-dataprovider-->
-Test-->
 Timeout--> (Timeout=1000)-->limit the maximum time a test method to run
 @Factory-->return the object will be used by TestNG or test
 
+Thread-count-->No.of test methods run or exceute in parallel testing.
+Thread-count=5
+
 -----------------------------------------------------------------------------------------------------
 
-BeforeSuite-->method will be run before all tests in this suite have run.
-AfterSuite--> method will be run after all tests in this suite have run
-BeforeTest-->method will be run before any test method belonging to the classes inside the <test> tag is run.
-AfterTest-->method will be run after all the test methods belonging to the classes inside the <test> tag have run.
-BeforeGroup-->The list of groups that this configuration method will run before. This method is guaranteed to
- run shortly before the first test method that belongs to any of these groups is invoked.
+            ### Annotations ###
+1.@Test-->execute as test method
+2.@BeforeMethod-->execute before every test method in class
+3.@AfterMethod-->execute after every test method in class
+4.@BeforeClass-->exceute only once before test method in class
+5.@AfterClass-->exceute only once after test method in class
+6.@BeforeTest-->excute before <test> tag in testng.xml file
+7.@AfterTest-->excute after<test> tag in testng.xml file
+8.@AfterSuite-->excute before <suite>tag in testng.xml file
+9.@BeforeSuite-->exceute after <suite> tag in testng.xml file
+10.@BeforeGroup-->exceute only once before all test methods belongs to specific group
+11.@AfterGroup-->excute only once after all test methods belongs to specific group
+12.@parameter-->we want to set the global variables such url settings, username, password or API Keys, there are some
+values which are constant in all the test cases, in such case we use the TestNG Parameters.
+13.@DataProvider-->
 
-AfterGroup-->The list of groups that this configuration method will run after. This method is guaranteed to run shortly
- after the last test method that belongs to any of these groups is invoked.
 
-BeforeClass-->method will be run before the first test method in the current class is invoked.
-AfterClass-->method will be run after all the test methods in the current class have been run.
-AfterMethod-->method will be run before each test method.
-BeforeMethod-->method will be run after each test method.
+
 --------------------------------------------------------------------------------------------------------
                             ### Data Provider ###
 
@@ -44,6 +49,7 @@ public Object[][] dpMethod() {
 
 -----------------------------------------------------------------------------------------------------------
                 ### Listeners ###
+
 Listener is an interfaces that can track events and modify system behavior during the execution of Selenium tests.
 
   1.IRetryAnalyzer--> rerun the failed tests

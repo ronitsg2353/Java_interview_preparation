@@ -1,5 +1,8 @@
                     ####   Java Interview Question ####
+--------------------------------------------------------------------------------------------------
+                    ### Diff betn Encapsulation and Abstraction ###
 
+ Abstraction  hide "implementation details" but encsapsultion hides "data" by restricted access.
 ------------------------------------------------------------------------------------------
 latest version of Java--:Java 23
 ------------------------------------------------------------------------------------------------------------
@@ -83,14 +86,14 @@ Copy constructor: A constructor that creates a duplicate of an existing object o
 can we override constructor like method-->No
 can we overload the constructor-->Yes.
 
-constructor overloading-->is feature of java.that allows a class to have multiple constructors,
+constructor overloading-->is feature of java that allows a class to have multiple constructors,
 each with a different set of parameters
 
 ------------------------------------------------------------------------------------------------------------
 Instance method & static method-->
 
 1.Instance method-->its required object of class
-2.Static method-->its doesn't requires object of class.Accesible for only static attribute.
+2.Static method-->its doesn't requires object of class.Accessible for only static attribute.
 
 Static method-->Static methods are the methods in Java that can be called without creating an object of class
 
@@ -232,7 +235,7 @@ System.out.println("Eating for derived method");
  Abstraction==> OOPs concept-hiding the unnecessary details from user and show only functionality.
 
  Abstract class & Abstract Method:
-Abstract method--> using abstract keyword in abstract class.A method don'`t have implementation body.
+Abstract method--> using abstract keyword in abstract class.A method don't have implementation body.
 concrete method-->method having implementation body
 
 Abstract class--> both abstract and concrete method.its restricted class and its cannot user for create obj
