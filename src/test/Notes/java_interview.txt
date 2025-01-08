@@ -205,10 +205,20 @@ System.out.println("Eating for derived method");
    10.toUpperCase()-->convert into uppercase
    11.trim()-->remove whitespace of both end of string
    12.ValueOf()-->
+
+   Q.Why string is immutable in nature?
+   -->for performance,memory efficiency-->(jvm reuses in string pool by memory),Thread safety,Security-->(userid,password),hash code caching and Ease of use
+   Ex.setting up or hardcoding password
+
+   -->once a string object is created, its content cannot be changed.
+   If we try to change a string, a new string object is created instead.
+
+   String class not being override in java
+
    -----------------------------------------------------------------------------------------------
                     ### Array ###(Arrays class)--> java.util.Arrays;
 
-                    Array is non primitive data type
+                    Array is non-primitive data type
     Arrays are fundamental structures in Java that allow us to store multiple values of the same type in a single variable
      They allow you to store and manipulate collections of data efficiently
      all arrays are dynamically allocated.
