@@ -2,7 +2,7 @@
 --------------------------------------------------------------------------------------------------
                     ### Diff betn Encapsulation and Abstraction ###
 
- Abstraction  hide "implementation details" but encsapsultion hides "data" by restricted access.
+ Abstraction  hide "implementation details" but encsapsultion hides "data"    by restricted access.
 ------------------------------------------------------------------------------------------
 latest version of Java--:Java 23
 ------------------------------------------------------------------------------------------------------------

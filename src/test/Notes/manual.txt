@@ -57,7 +57,32 @@ priority-->how imp fix this issue
  5.sprint retrospective meeting->last day of sprint
 
  ---------------------------------------------------------------------------------------
+Q if web application has "search" feature ,what functional test would you create to ensure it work correctly?
+-->
+TC1.valid search
+Tc2.empty search
+Tc3.special characters
+Tc4.escape character or invalid character
+Tc5.search case-insensitivity
+Tc6.enter partial search
+Tc7.check autosuggestion
+Tc8.check for multi word are entered.eg.laptop charger
+Tc9.verify appropriate msg dispalyed when no result are found
+---
+Q.Test the login modules of sample website("https://www.saucedemo.com/v1") with all possible scenarios.
+1.valid login
+2.invalid login(invalid username)
+3.Invalid login(invalid password)
+4.empty fields(both username and password)
+5.empty username(only password entered)
+6.empty passowrd(only username entered)
+7.password length validation(too short or exceed allowed lenth)
+8.case sensitivity-->mixing upper and lowercase
+9.special character
+10.login timeout
+11.session expiry
+12.cross site scripting-->using javascript or html tags username password
 
-    ### Boundry value Analysis###
+
 
 

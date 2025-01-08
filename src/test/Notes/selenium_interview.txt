@@ -21,6 +21,7 @@ FirefoxDriver
 
 -------------------------------------------------------------------------------------------
                 ### Selenium best practices ###
+
 1.code optimization
 2.Page object model
 3.Avoids hard waits
@@ -36,7 +37,7 @@ FirefoxDriver
                 ### Selenium Grid-->###
 
 Hub-->central point in selenium grid
-Node-->a remote device use to exceute the test cases loaded onto hub.
+Node-->a remote device use to execute the test cases loaded onto hub.
 ----------------------------------------------------------------------------------------------
 
 Appium-->mobile application testing
@@ -55,7 +56,6 @@ options.addArguments("--headless");
 WebDriver driver=new FirefoxDriver(options);
 ---------------------------------------------------------------------------------------------------
 
-
 Window based popup-->selenium cant handle window base popup because its web base automation tool.
 Third party tool like "AutoIT" or "Robot class"
 
@@ -64,9 +64,9 @@ A proxy acts as an intermediary between a client and a server.
  Through it, the client makes requests to other servers anonymously and securely and avoids geographical restrictions.
  Headless browsers can be configured to use proxy servers like HTTP clients
 a proxy server can be used to route traffic through middle layer testing purposes.
-you can configure proxies using DesiredCapabiliteso or ChromeOptions.
+you can configure proxies using DesiredCapabilities or ChromeOptions.
 
-ROXY = "11.456.448.110:8080"
+PROXY = "11.456.448.110:8080"
 chrome_options = WebDriver.ChromeOptions()
 chrome_options.add_argument('--proxy-server=%s' % PROXY)
 chrome = webdriver.Chrome(chrome_options=chrome_options)
@@ -358,7 +358,7 @@ solution-->use javaSriptExecutor
 
 
  1.StaleElementReferenceExcpetion-->Refresh the locators or add wait conditions.
- 2.ElementNotInteractableException---->occur when interact with hidden or unclikable elements.
+ 2.ElementNotInteractableException---->occur when interact with hidden or unclickable elements.
                     use javascriptExceutor instead of click
            js.executeScript("arguments[0].click();",element);
 -----------------------------------------------------------------------------------------------

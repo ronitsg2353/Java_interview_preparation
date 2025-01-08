@@ -17,3 +17,175 @@ Difference between Git Rebase vs Git Merge?
 git merge combines changes from one branch (source branch) into another branch (target branch),
  while git rebase moves the changes from one branch to another branch
  ---------------------------------------------------------------------------------------------------------------
+                        ## CI && CD ##
+ Continous integration--:>Developers regularly merge their code changes into a shared repository, and automated builds and tests are run
+ ci reduces bugs in build..early bug detection
+
+ continous deployment--->after merge the code to reposity...code get test.build and directly go to product without
+ human intervention
+
+ continous delivery-->after code to repo...build get push to non production staging for testing purpose or no post production suprpirse
+
+ ----------------------------------------------------------------------------------------------------------------------------------------
+ Q.1.A team member accidentally breaking changes the disrupt the main branch .How could you prevent this happening in future?
+ 1.Restrict direct pushes-->require changes to be merged only via pull request.
+ 2.Enforce Review--> require at least one or more team member to review and approve pull request before merging.
+ 3.using revert or rollback mechanism
+-----
+ Q2.Described a simple deployment pipeline for small project,including key stages & tools you would use?
+ 1.Source code Mangement-->Git /GItlab
+ Developers commit changes to central repository
+
+ 2.for continous integration(CI)-->automate process in which build,test and validate changes as soon as they commited.
+ Tools-->Jenkins,Github actions
+
+ 3.Build-->Package the application into deployable artifact.
+ Tool-->maven,gradle,npm,docker image
+
+ 4.Testing-->ensure code meets the quality standard.
+ Tools-->Selenium,cypress
+
+ 5.Deployment to staging-->
+ Deployment the application to staging environment.
+ Tools-->Ansible,docker
+
+ 6.Deployment to production-->
+ deploy the final application to production.
+ Tools-->AWs elastic beanstalk,kubernates
+ ------------
+ Q3.How do you monitor the performance and reliability of your ci?
+ KPI--->Key perfomrnace indicator
+ -->Jenkin  have monitoring plugins
+ 1.percentage of succesful build vs failed build
+ 2.Time taken for build to complete
+ 3.how often deployment occurs.
+ 4.Time to recover from pipleine failure
+ ---
+ Q4.Describe a situation when you encountred with testing framework .How did you reolve them?
+ 1.inconsistent test data
+ 2.incorrect webdriver config
+ 3.Flakiness in test
+----
+Q5.How to reolve the issue the you encountered with testing framework?
+1.inconsistent test data-->design a dedicated test data mangement module.
+To create,use and clean up test data dynamically during test exceution
+
+2.To Fixed webdriver configuration-->
+introduced centralised webdriver mangement uitlity to handle driver initialzation and teardown
+
+3.add dynmaic wait in script and finding the unstable test cases
+-----
+Q6.can you explan your strategu of handling flaky test?How did you design your test framework is order to make the
+discovry of flaky rest and resolution?
+-->
+identity-->log flaky test failure->monitor test exceution log to capture pattern of failure
+resolve-->improve synchronzation mechanism like explicit wait
+
+Build in retry logic-->retires for failed test using annotation eg.testng retryAnalyzer,Junit retryrule
+##adequate exception
+robust assertion
+##root cause analyse priority fixing unstable tests.
+
+
+ ---------------------------------------------------------------------------------------------------------------
+
+    ### Jenkins pipeline groovy scripts ##
+
+    stage(git checkout){
+    url of repository
+    }
+
+    stage('Test_case Exceution'){
+    mention particular suite in project
+    }
+
+    stage('cucumber_report'){
+
+    }
+
+    --------------------------------------------------------------------------------------------------------------
+
+    ### Basic jenkins pipeline configuaration ###
+
+    simple jenkins build pipeline-->
+
+    ## General-->
+                Description-->
+
+    ## Source code Management-->
+                None-->
+                Git-->
+                        Git Repository url-->
+                        credentials-->
+    ## Build Trigger-->
+                Trigger build remotely
+                Build periodically
+
+    ## build pipeline-->
+            stage('git checkout'){
+            steps{
+
+            }
+            }
+            Stage('Test_case Execution'){
+            steps{
+
+            }
+            }
+            Stage("Cucumber_report"){
+            steps{
+
+            }
+            }
+
+ ------------------------------------------------------------------------------------------------------------------
+
+                        ### Description of Tiaa pipeline ###
+
+   GitHub connection-->github-connection
+
+   This project is parametrized
+
+   ##choice parameter-->
+                Name-->browser_version
+                choice-->120
+                         108
+
+   ##choice parameter-->
+                Name-->browser
+                choice-->chrome_webSecurityDisabled
+                        chrome
+                        firefox
+                        edge
+
+   ## String parameter-->
+            Name-->enviroment
+            Default value-->ST4
+            Description-->ST2/ST4
+
+   ##String parameter-->
+            Name-->Branch_name
+            Default_value-->IdentityServices_Transmit
+            Description-->
+
+   ##Build Trigger-->
+   Build periodically
+
+   Pipeline-->
+   timeout(time:120,unit:MINUTES')
+
+   {
+   node('rh6'){
+   //set enviroment
+
+   withEnv
+   }
+   stage('git checkout'){
+   //clean workspace
+   clean wsc
+   }
+
+   }
+   ---------------------------------------------------------------------------------------------
+
+

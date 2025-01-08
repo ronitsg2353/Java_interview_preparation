@@ -8,7 +8,7 @@
  then-->steps are used to describe an expected outcome, or result.
  And-->And keyword is used to add conditions to your steps.
  but-->But keyword is used to add negative type comments. /Negative assertion
- Example-->scenario outline to excute same steps multiple times with different sets of data
+ Example-->scenario outline to execute same steps multiple times with different sets of data
  DataTable-->use to pass tabular data directly within single step.Ideal for single step process row of data
 
  Difference between Datatable and Example?
