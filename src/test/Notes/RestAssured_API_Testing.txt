@@ -1,5 +1,10 @@
 ---------------------------------------------------------------------------------------------------------
-Put-->replace the entire resource
+API-->Application Programming Interface (API) is useful for communication between different software systems. It acts as an interface between two applications
+and allows two software systems to communicate with one another.
+
+
+
+ut-->replace the entire resource
 Patch-->partially replace the resource
 
 ------------------------------------------------------------------------------------------------
