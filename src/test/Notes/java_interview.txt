@@ -2,7 +2,7 @@
 --------------------------------------------------------------------------------------------------
                     ### Diff betn Encapsulation and Abstraction ###
 
- Abstraction  hide "implementation details" but encsapsultion hides "data"    by restricted access.
+ Abstraction  hide "implementation details" but encsapsultion hides "data"by restricted access.
 ------------------------------------------------------------------------------------------
 latest version of Java--:Java 23
 ------------------------------------------------------------------------------------------------------------
@@ -326,6 +326,14 @@ throws-->use for delcared the exceptions.
 
 Nested try-catch block-->
 Sometimes a situation may arise where a part of a block may cause one error and the entire block itself may cause another error.
+
+
+checked Exception-->                            unchecked Exception-->
+1.ClassNotFoundException                        1.Arithmetic Exception
+2.InterruptedException                          2.NullPointerException-->object referece has null value
+3.IOException                                   3.ArrayIndexOutOfBoundException
+4.FileNotFoundException                         4.IllegalThreadStateException
+5.SQLException
 -------------------------------------------------------------------------------------------------------------------
                     ### Collection Framework ###
 

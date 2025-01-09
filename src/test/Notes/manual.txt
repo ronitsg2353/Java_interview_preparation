@@ -5,6 +5,8 @@
         2.Integration testing
         3.system testing
         4.user acceptance testing
+--------------------------------------------------------------------------------------------
+1.Test Bed--> a production mimic enviroment that use for testing with test data.
 ------------------------------------------------------------------------------------------------------
             ### Design technique ###
  1.Boundry value Analysis

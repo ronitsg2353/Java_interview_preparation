@@ -34,3 +34,31 @@ software,collabrating with team & continous enhancing to business goal.
 2.prioritze test cases-smoke and regression
 3.critical path & high priority testing
 4.Exploratory testing-->identify the hidden issue through unscripted testing of high risk modules
+-------------------------------------------------------------------------------------------------------------
+Q .Describe a situation where you had to work unser pressure to meet a deadline.How did you manage
+your time and task?
+-->
+while working as automation tester,i was assigned to develop and exceute a critical suite of automated test
+cases for TIAa bank related project.the deadline was tight due to an upcoming release,there wew last minute changes
+to the application that required immediate adjustment to test script.
+
+1.prioritization-->i quickly identified high priority test cases that has the maximum impact-on app core functionality
+2.Planning-->i broke the work into smaller tasks,setting clear milestones for script updates,execution and reporting
+3.collaboration-->i communicated with developers to understand changes,ensuring my scripts aligned with updated functionality
+4.time mangement-->i utlized a combination of focused work session and regular check in to monitor progress
+--------------------------------------------------------------------------------------------------------------------
+Q.2 hOW do you prioritize testing tasks when faced with tight deadlines?
+1.Identify critical feautre-->communicate with scrum to understand which feature are most critical to business or end user
+2.Assess risk-->focus on area with high risk such as new feature ,bug fixes or complex integration
+3.Categories the test cases
+   High priority tc--> high risk area,critical user journey
+   Medium priority tc-->secondary feature and edge cases
+   Low priority tc-->non critical functionalities and minor UI/ux checks
+
+4.Automate repetitve and regression test to save time for manual exploratory testing
+5.execute automated test in parallel using ci/cd pipelines to speed up results.
+6.break tasks into smaller chunks and assigns to deadlines
+7.collabration with develops
+8.perform exploratory testing-->exploratory testing helps uncover critical issue quickly
+--------------------------------------------------------------------------------
+
