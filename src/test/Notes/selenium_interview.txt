@@ -1,4 +1,17 @@
 ------------------------------------------------------------------------------------------------------------------------
+            ### Dynamic Locators ###
+
+
+  Dnyamic Elements-->dev frequently changes attributes and elements one build to another.for use Xpath axes method(parent,siblings)
+
+  Dynamic XPath is a feature in Selenium WebDriver that helps locate web elements
+  "that change their attributes dynamically".
+  1.use 'and ' OR'
+  2.using contains
+  3.using xpath axes
+  4.using multiple attributes
+
+-----------------------------------------------------------------------------------------------
 1.which is fastest webdriver -->HtmlUnitDriver
 ----------------------------------------------------------------------------------------
 Selenium cant handle Desktop application.open source for web application
@@ -298,6 +311,10 @@ Cookies are mostly used to recognise the user and load the stored information.
      driver.manage().deleteCookie(arg o);
      driver.manage().deleteAllCookies();
 
+     ##Return type of cookie and cookeis##
+     1.Single cookies-->cookie
+     2.cookies-->Set <cookie>
+
 ----------------------------------------------------------------------------------------------------
                     ### Delete the Cache ###
 
@@ -437,8 +454,12 @@ window.resizeTo() method and capability commands can also be used to achieve the
                     findElement() and findElements()?
 
   findElement()-->method which finding out webElement on webpage and return noELmentfoundExption for no webelement.
-  findElements()-->method which finding out multiiple elements on webpage and return zero element for no webelment.
+  findElements()-->method which finding out multiple elements on webpage and return zero element for no webelment.
             ---find more than one webelement on webpage
+
+           # Return type of FindElement and FindElements:
+  1.findElement--> WebElement
+  2.findElements--> List<WebElement>
 
   ---------------------------------------------------------------------------------------------------------------------------
                Diff between getWindowHandle and getWindowHandles ?
@@ -449,8 +470,13 @@ window.resizeTo() method and capability commands can also be used to achieve the
   getWindowHandle-->This method helps to get the window handle of the current window
                     String parentWindow=driver.getWindowHandle();
 
-  getWindowHandles-->This method helps to get the handles of all the windows opened
+  getWindowHandles-->This method helps to get the handles of all the opened windows
                     String <set> allwindows=driver.getWindowHandles();
+
+
+                   ## Return type of getWindowHandle & getwindowHandles- ##
+ getwindowhandle-->String
+ getWindowhandle-->String<Set>
 
 Widows popup handled by-->getWindowHandle
 Web base popup handled by-->getWindowHandle
@@ -547,6 +573,15 @@ PageObject Model-->(object repository)
 Page Object Model, also known as POM, is a design pattern in Selenium that creates an object repository for storing all web elements.
 It helps reduce code duplication and improves test case maintenance.
 POM assign seperate page class for each webpage
+
+
+### Benefit of POM ###
+
+1.improve test maintance
+2.enhance readability and resuablility
+3.scalability-->new page/feature easy added to existing structure
+4.reduce code duplication-
+5.Parallel and continous testing
 
 -------------------------------------------------------------------------------------------------------
                 ### Screenshot ###
@@ -870,7 +905,26 @@ Broken link-->A broken link, also often called a dead link, is one that does not
    String fontsize=cartButton.getCssValue("font-size");
    System.out.println(fontsize);
    --------------------------------------------------------------------------------------------------
+  Q.In framework,suppose you have 100 pages,Do you create 100 pages objects?
 
+  -->No.this is not an efficient approach.
+  1.Group common functionalities-->create base page that includes shared methods and elements.(like navigation,login or logout)
+  2.create seperate page for unique features
+  3.dynamic locators for repeated elements
+
+  ------------------------------------------------------------------------------------------------------
+Q.How to make selenium framework robust?
+
+1.Page object model--> POM pattern to seperate test script from page specific actions and locators.
+2.reusable component-->create utilities classes for common actions(file uploads,handling alerts ,waits condtions)
+3.use Dynamic Wait(Explicit wait & fluent wait)-->handle dynamic loading of elment instead of thread.sleep
+4.Locators-->use stable locators like id or name -rely on xpath or css for dynmaic elements
+5.Exception handling-->try-catch block or create custom exception
+7.Screenshot for failure-->
+8.logging and reporting-->Log4j and cucumber or extent reports
+9.Refactor code-->alway refactor code
+10.integrate the third party tools-->saucelab.browserStack for cross browser testing.
+-----------------------------------------------------------------------------------------------
 
 
 
