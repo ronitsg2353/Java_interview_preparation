@@ -7,6 +7,10 @@
         4.user acceptance testing
 --------------------------------------------------------------------------------------------
 1.Test Bed--> a production mimic enviroment that use for testing with test data.
+
+Exploratory testing-->unscripted strategy.Tester use his knowlegde,prior experience and abilities to check the developed build
+Adhoc testing-->no documentation/no specific procedure.to find out the defect by random approach
+Monkey testing-->testing technique-->in which provide random inputs to evalute the stability of application.
 ------------------------------------------------------------------------------------------------------
             ### Design technique ###
  1.Boundry value Analysis

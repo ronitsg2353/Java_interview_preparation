@@ -1,4 +1,25 @@
 ------------------------------------------------------------------------------------------------------------------------
+ Q1.   "ID"-locator is fasted in selenium
+
+ Q2.If you method fails to find the elment which of the two methods throws you the exception?
+ -->findElement & findElements
+
+ Q3.which method allow you to change control from one window to aother?
+ -->driver.switchTo()
+
+ Q.4. when you only want to access a single element on webpage which method you will use?
+ -->findElement() method
+
+ Q5.How to convert List to Array?
+ -->1.using get() method
+    2.usning toArray() method
+    3.using stream8
+
+ Q6.Which exception is shown in selenium when there is a delay in loading time of element with we are interacting?
+ -->"ElementNotVisibileException"
+
+
+----------------------------------------------------------------------------------------------------
             ### Dynamic Locators ###
 
 
@@ -341,11 +362,15 @@ $ solution-->
 ----------------------------------------------------------------------------------------------------------
                 ## Selenium Exception ###
 
+1.NoSuchCookieException-->raised when trying to interact with cookies that doesnt exist.
+2.NoAlertPresentException-->alert doesn't exist
+
+
  Difference between Invalid Session or NoSession Exception-->
 
- 0.NoSuchSessionException:-->when browser session is no longer active
+ 3.NoSuchSessionException:-->when browser session is no longer active
 
-1.InvalidSessionIDException:-->server does not recognize session identifier and
+4.InvalidSessionIDException:-->server does not recognize session identifier and
 associated user token is no longer authorized or authneticated on platform.
 
  2.NoAlertPresentException-->Raised when an expected alert is not present. Happens when trying to interact
@@ -359,8 +384,12 @@ solution-->use javaSriptExecutor
 
 
             ### NoSuchElementException vs StaleElementReferenceExcpetion ###
+
  5.NoSuchElementException-->Element doesnt exist on webpage
- 6.ELementNotVisibleException-->ELment exist but its hidden
+ 6.ElementNotInteractableException(previous-ELementNotVisibleException)-->is deprecated in selenium 4..replaced by  ElementNotInteractableException.
+ ELment exist but its hidden
+
+ StaleElementReferenceException--->element not attached to dom--earlier was found
  -----------------------------------------------------------------------------------------------------------------------
                     ### Handling or solution for selenium Exception ###
 
@@ -547,6 +576,19 @@ Web base popup handled by-->getWindowHandle
   // Select the Current Address using CTRL + A
           actions.keyDown(Keys.CONTROL);
           actions.sendKeys("a");
+ --------------------------------------------------------------------------------------------------------
+                        ### Page Object Model ###
+
+  Page object model is design pattern/architecute in selenium that create object repository for storing for all webelements.
+  Its help reduce code duplication and improve test case maintance.
+  In Page Object Model, consider each web page of an application as a class file.
+  Each class file will contain only corresponding web page elements.
+
+  Benefit-->
+  1.code reusuabilty
+  2.Easy maintenace
+  3.readability and reliability of script
+
 
  --------------------------------------------------------------------------------------------------------
                 ### PageFactory ###
