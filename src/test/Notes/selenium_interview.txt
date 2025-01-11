@@ -16,7 +16,7 @@
     3.using stream8
 
  Q6.Which exception is shown in selenium when there is a delay in loading time of element with we are interacting?
- -->"ElementNotVisibileException"
+ -->"  ElementNotInteractlableExectpion previous-ElementNotVisibileException"
 
 
 ----------------------------------------------------------------------------------------------------
@@ -60,6 +60,7 @@ FirefoxDriver
 2.Page object model
 3.Avoids hard waits
 4.Exception handling
+
 -----------------------------------------------------------------------------
             ### How to select test cases for automation ###
 
@@ -584,6 +585,8 @@ Web base popup handled by-->getWindowHandle
   In Page Object Model, consider each web page of an application as a class file.
   Each class file will contain only corresponding web page elements.
 
+  finding an weblement by using "By" class.
+
   Benefit-->
   1.code reusuabilty
   2.Easy maintenace
@@ -608,22 +611,6 @@ public BrowserStackHomePage(WebDriver driver) {
 this.driver = driver;
 PageFactory.initElements(driver, this);
 }
-
-PageObject Model-->(object repository)
-1.finding webElements of page using "By"class
-2.Page Object Model is a design pattern
-Page Object Model, also known as POM, is a design pattern in Selenium that creates an object repository for storing all web elements.
-It helps reduce code duplication and improves test case maintenance.
-POM assign seperate page class for each webpage
-
-
-### Benefit of POM ###
-
-1.improve test maintance
-2.enhance readability and resuablility
-3.scalability-->new page/feature easy added to existing structure
-4.reduce code duplication-
-5.Parallel and continous testing
 
 -------------------------------------------------------------------------------------------------------
                 ### Screenshot ###
@@ -941,7 +928,7 @@ Broken link-->A broken link, also often called a dead link, is one that does not
     ChromeOptions option=new ChromeOptions();
     option.addArguments("--disable-notifications");
     -------------------------------------------------------------------------------------------
-                    ### Retreive css property ###
+                    ### Retreive css property ###-->getCssValue()
 
    WebElement cartButton=driver.findElement(By.xpath(""));
    String fontsize=cartButton.getCssValue("font-size");
@@ -967,6 +954,40 @@ Q.How to make selenium framework robust?
 9.Refactor code-->alway refactor code
 10.integrate the third party tools-->saucelab.browserStack for cross browser testing.
 -----------------------------------------------------------------------------------------------
+                    ### Handle SSL certificiate ###--> //desired capabilities or chromeOptions
+
+  Ex.
+
+  ChromeOptions options=new ChromeOptions();
+  options.setAcceptInsecureCerts(true);
+
+  ---------------------------------------------------------------------------------------------------------
+                    #### Selenium code for login functionality ###
+
+      public class LoginPage{
+      public static void main(String []args){
+      System.setProperty("webdriver.chrome.driver","chromedriverpath");
+
+      //Intialize the webdriver
+      WebDriver driver=new ChromeDriver();
+      driver.get("https://example.com/login");
+
+      driver.manage().window().maximize();
+
+      WebElement username=driver.findElement(By.xpath("//*[@id='']");
+
+      username.sendKeys("Ronit");
+
+      WebElement password=driver.findElement(By.xpath("//*[text()='']");
+      password.sendKeys("Ronit@2353");
+
+      WebElement loginbtn=driver.findElement(By.xpath("//*[@class='']");
+      loginbtn.click();
+
+
+      }
+      }
+
 
 
 
