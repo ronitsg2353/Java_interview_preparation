@@ -213,7 +213,7 @@ System.out.println("Eating for derived method");
    -->once a string object is created, its content cannot be changed.
    If we try to change a string, a new string object is created instead.
 
-   String class not being override in java
+   String class not being override in java-->final
 
    -----------------------------------------------------------------------------------------------
                     ### Array ###(Arrays class)--> java.util.Arrays;

@@ -15,6 +15,9 @@ Thread-count=5
 -----------------------------------------------------------------------------------------------------
 
             ### Annotations ###
+
+ Q1.which annotation exceute the first in testng?-->@BeforeSuite
+
 1.@Test-->execute as test method
 2.@BeforeMethod-->execute before every test method in class
 3.@AfterMethod-->execute after every test method in class
