@@ -1,10 +1,23 @@
 ---------------------------------------------------------------------------------------------------------
+Epresentational State Transfer (REST) is an architectural style that defines a set of constraints to be used for creating web services.
+ REST API is a way of accessing web services in a simple and flexible way without having any processing.
+
+-----------------------------------------------------------------------
+Q.How to handle Dynamic Payload in rest assured?
+
+-->1.use testng parametrization or data provider
+    2.handle the dynmic payload-->1.java string manipulation
+                                   2.using hashMap
+                                   3.using Json Library
+                                   4.using pojo class
+                                   5.using external file(json files)
+-----------------------------------------------------------------------------------------------
 API-->Application Programming Interface (API) is useful for communication between different software systems. It acts as an interface between two applications
 and allows two software systems to communicate with one another.
 
 
 
-ut-->replace the entire resource
+Put-->replace the entire resource
 Patch-->partially replace the resource
 
 ------------------------------------------------------------------------------------------------

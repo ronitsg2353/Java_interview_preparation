@@ -1,7 +1,6 @@
 package selenium_code;
 
 
-public class Actions_class {
     public static void main(String[] args) {
 
 

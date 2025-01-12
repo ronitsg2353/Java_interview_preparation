@@ -1,3 +1,14 @@
+----------------------------------------------------------------------------------------------
+                ## Test Strategy vs Test Plan
+
+1.Test Strategy-->scope,objective,methods,approach
+A Test Strategy is a high-level document that outlines the approach, scope, objectives, and methods for testing a software application.
+It provides a framework for planning and executing testing activities throughout the software development lifecycle.
+
+2.Test Plan-->scope,objective,apporach,resource and schedule for the testing.
+Test Plan is a document that outlines the objectives, scope, approach, resources, and schedule for a software testing effort.
+It serves as a roadmap for testing activities and provides a comprehensive guide for testers and stakeholders involved in the testing process.
+
 
 -----------------------------------------------------------------------------------
 1.Level 0f testing-->
