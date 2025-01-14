@@ -1,7 +1,7 @@
                     ####   Java Interview Question ####
 --------------------------------------------------------------------------------------------------
  Session -->
- its event that its starts from users login to application and remain till user logout of app
+ ``SCXits event that its starts from users login to application and remain till user logout of app
  or shutdown of machine
  -------------------------------------------------------------------------------------------------
 

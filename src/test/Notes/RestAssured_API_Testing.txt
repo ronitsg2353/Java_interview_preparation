@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------------
-Epresentational State Transfer (REST) is an architectural style that defines a set of constraints to be used for creating web services.
+Representational State Transfer (REST) is an architectural style that defines a set of constraints to be used for creating web services.
  REST API is a way of accessing web services in a simple and flexible way without having any processing.
 
 -----------------------------------------------------------------------

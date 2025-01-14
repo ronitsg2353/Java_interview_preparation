@@ -1,0 +1,20 @@
+1. mkdir--> create a directory-->ex. $ mkdir new_folder
+2. rmdir--> remove an empty directory--> $rmdir new_folder
+3. rm--> remove file-->ex . $rm file_name
+4. pwd--> print current working directory $pwd
+5. ls--> list of directory--> $ ls
+6. ls -l --> list files with detailed information
+7. ls-a--> show hidden files
+8. cd--> change directory
+9. touch--> new empty file. ex--> touch file_name
+10. cp --> copy file or directories--> ex. cp source_file
+11. mv--> move or rename file -->ex. mv old_name new_name
+12.cat--> display file content-->ex. cat file_name
+13.chmod--> change file permission--> chmod file_name
+14.chown-->change the file owner
+15. find--> search for file and directories
+16.grep-->search text in file---> $grep "keyword" file_name
+17.whoami-->display the current user
+18.uname--> dispaly system information
+
+

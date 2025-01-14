@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------------------------------------------------------
- Q1.   "ID"-locator is fasted in selenium
+ Q1. which is fasted locators in selenium?->  "ID"-locator is fasted in selenium
 
  Q2.If you method fails to find the elment which of the two methods throws you the exception?
  -->findElement & findElements
@@ -619,7 +619,7 @@ PageFactory.initElements(driver, this);
 1.we convert webdriver to TakeScreenShot and call getScreenshotAs() method to create an image file by providing the parameter *OutputType.FILE
     //Convert webdriver to TakeScreenshot
     File source = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        File Destination="filepath.jpg";
+        File  Destination="filepath.jpg";
 2. we can use this File object to copy the image at our desired location, as shown below, using the FileHandler class
    FileHandler.copy(source,Destination);
  --------------------------------------------------------------------------------------------------------------------

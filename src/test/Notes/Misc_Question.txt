@@ -46,6 +46,7 @@ to the application that required immediate adjustment to test script.
 2.Planning-->i broke the work into smaller tasks,setting clear milestones for script updates,execution and reporting
 3.collaboration-->i communicated with developers to understand changes,ensuring my scripts aligned with updated functionality
 4.time mangement-->i utlized a combination of focused work session and regular check in to monitor progress
+
 --------------------------------------------------------------------------------------------------------------------
 Q.2 hOW do you prioritize testing tasks when faced with tight deadlines?
 1.Identify critical feautre-->communicate with scrum to understand which feature are most critical to business or end user

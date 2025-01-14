@@ -1,1 +1,103 @@
-1.Write an SQL query to fetch the top 10 records from a table.
+
+1.SQL is Structured Query lang is use for storing, manipulating and retrieving data in databases.
+SQl can create database,
+create new table in database;
+insert record into the database;
+update record into the database;
+delete record from the database;
+
+
+## RDBMS-->Relational Database management System
+
+Q1.Which SQL statement is used to select all records from a table named 'Customers'?
+----> Select * from Customers;
+
+### Some of The Most Important SQL Commands ##
+SELECT - extracts data from a database
+UPDATE - updates data in a database
+DELETE - deletes data from a database
+INSERT INTO - inserts new data into a database
+CREATE DATABASE - creates a new database
+ALTER DATABASE - modifies a database
+CREATE TABLE - creates a new table
+ALTER TABLE - modifies a table
+DROP TABLE - deletes a table
+CREATE INDEX - creates an index (search key)
+DROP INDEX - deletes an index
+
+
+Q2.to fetch particular coloumn data of table?
+--> Select coloumn1,coloumn2 from table;
+ex. Select customerid,first_name from Customers;
+
+
+## DISTINCT-->return only different values in tables
+-->SELECT Distinct coloumn from table;
+ex.Select distinct first_name from Customers;
+
+## Where--> where clause use to filter the records.
+ -->Select * from table where coloumn condition;
+ ex. Select * from Customer where first_name="John";
+
+ ## Operators
+ =   --> equals  ex.Select * from customers where age=31;
+ >    -->(Greater than)  Ex. Select * from customers where age<31;
+ <    ---> (Less than)   Ex. Select * from customers where age >80;
+ >=  --->(Greater than equal)
+ <=  --> (Less than equal)
+ != --> Not equal
+ IN
+ Between
+
+
+ ## Order By--> keyword -sort by ascending and descending order
+
+ Select * from customers order by age ASC;
+ Select * from customers order by age DESC;
+
+
+ ## using both ASC and DESC-->
+ Select * from customer order by age DESC ,customer_id ASC;
+
+ ## Like-->
+  'Letter %'--> start with-->First letter of word
+  '%Letter'--> end with--> last letter of word
+
+  Select * from Customers where first_name LIKE 'J%'; --> John
+  Select * from Customers where first_name LIKE '%n'; ---> John
+
+  ## AND OR
+
+  And--> Select * from Customers where first_name='John' and last_name='Doe';
+  OR --> Select * from Customers where first_name='John' or last_name='Doe';
+
+
+## Not -->
+select * from Customers where Not first_name='John'; --> other than john
+
+
+## insert into--> adding values into table
+insert into Customers (customers_id,first_name,last_name,age,Country) values ( 6,'Ronit','Gaikwad',27,'India');
+
+
+# insert the mutliple rows
+
+insert into customers( customers_id,first_name,last_name,age,country) values(7,'Pranv','wani',24,'India'),
+(8,'Shubham','wani',27,'India'),
+(9,'asif','shaikh',29,'India');
+
+## Not null-->
+Select * from customers where age is not null;
+
+## Null--.
+Select * from customers where age is null;
+
+
+
+
+
+
+
+
+
+
