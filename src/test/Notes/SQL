@@ -92,6 +92,42 @@ Select * from customers where age is not null;
 ## Null--.
 Select * from customers where age is null;
 
+## Update-->
+update Customers Set first_name='Ronit',last_name='Gaikwad' where customer_id=1;
+
+
+## Max Min-->
+
+Select Min(age) from customers;
+Select Max(age) from customers;
+
+# count-->
+Select Count(age) from customers;
+
+#Sum-->
+Select Sum(age) from customers;
+
+#Avg-->
+Select Avg(age) from customers;
+
+#Like-->
+Select * from Customers where first_name Like 'R%';
+
+## In-->The 'IN' operator is shorthand for multiple 'oR' condtions
+Select * from customers where first_name in ('Ronit','David');
+
+## Between-->The BETWEEN operator selects values within a given range. The values can be numbers, text, or dates.
+Select * from customers where age Between 20 and 30;
+
+## Alias--> provide the temporary name
+Select customer_id as school_id from customers;
+
+
+### jOINS ###
+1.INNER JOIN-->
+2.lEFT JOIN-->
+3.rIGHT jOIN-->
+4.fULL JOIN-->
 
 
 
