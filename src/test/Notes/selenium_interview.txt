@@ -35,7 +35,7 @@
 -----------------------------------------------------------------------------------------------
 1.which is fastest webdriver -->HtmlUnitDriver
 ----------------------------------------------------------------------------------------
-Selenium cant handle Desktop application.open source for web application
+Selenium can't handle Desktop application.open source for web application
 
 Selenium WebDriver itself is API
 WebDriver is interface

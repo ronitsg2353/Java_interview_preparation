@@ -23,8 +23,8 @@ Annotation of Junit-->
 @BeforeAll-->(junit5)-run only once for test class having test methods
 @AfterAll-->(junit 5)-run only once for test clas having test methods
 
-@BeforeClass-->(execution before all test case)-- his annotation is used if you want to execute some statements before all the test cases for e.g. test connection must be executed before all the test cases.
-@AfterClass-->(Execution after all test case)--This annotation can be used if you want to execute some statements after all test cases for e.g. Releasing resources after executing all test cases.
+@BeforeClass-->(execution before all test cases in class)-- his annotation is used if you want to execute some statements before all the test cases for e.g. test connection must be executed before all the test cases.
+@AfterClass-->(Execution after all test cases in class)--This annotation can be used if you want to execute some statements after all test cases for e.g. Releasing resources after executing all test cases.
 @Ignores-->disabling some test cases during test execution.
 @Test(timeout=500)-->  test execution need to be completed within some specified time.
 @Test(expected=IllegalArgumentException.class)-->f you want to handle some exception during test execution. For, e.g., if you want to check whether a particular method is throwing specified exception or not.

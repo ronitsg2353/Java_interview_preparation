@@ -63,8 +63,14 @@ story point-->follows fibonacci series
 ------------------------------------------------------------------------------------------
 Priortiy and Severity-->
 
-severity-->how impact of issue on product
-priority-->how imp fix this issue
+severity-->how impact of issue on core functionality
+priority-->how imp fix this issue (business need)
+
+high priority -high severity--> after deployment,application 500 error(aaplication crashes)
+high priority-low severity-->company logo missing  or distortion on the homepage
+high severity -low priority--> app crashes when opening old feature that no one uses anymore
+low priority-low severity-->cosmatic mistake/typo (spelling mistakes) mistake
+
 --------------------------------------------------------------------------------------
             ### Agile ceremonies ###
  1.daily standup-->what did you yesterday..planning to do today task
