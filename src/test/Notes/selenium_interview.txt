@@ -1,4 +1,22 @@
 ------------------------------------------------------------------------------------------------------------------------
+ How you select test cases for automation?
+ 1.Frequently used scenarios-->for smoke test n sanity
+ 2.time consuming manual test cases
+ 3.stable functionality and well define test steps
+ 4.easy to automate technically
+
+ How you select test cases for manual?
+ 1.New or unstable feature
+ 2.complex UI or UX
+ 3.feature and modules are temporary and not critical
+
+ How you design test cases after recieving a feature?
+ 1.understanding of the feature-->user stories,acceptance criteria, clarifity any ambiguity with scrum team
+ 2.understand the user flow-->how user interact with feature
+ 3.Identify positive and negative scenarios
+ 4.prepare test data-->valid ,invalid,edge cases,dummy data/test data
+ 5.to ensure full coverage and test case review to peers.
+
  Q1. which is fasted locators in selenium?->  "ID"-locator is fasted in selenium
 
  Q2.If you method fails to find the elment which of the two methods throws you the exception?

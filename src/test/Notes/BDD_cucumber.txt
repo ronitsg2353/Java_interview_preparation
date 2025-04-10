@@ -20,7 +20,7 @@
  Scenario outline--> "Scenario Outline" is used for parameterized test cases where the same steps are executed with different sets of input data.
 
  dry run-->compile the stepDefination files and feature files.Its runs find any compilation errors.
-
+mn
 hooks-->myhook.java file in project-->the hooks are used to control the flow of the program and optimize lines of code. A block of code tagged with hooks
 in Cucumber can run before or post a scenario with the help of @Before and @After annotations.
 

@@ -72,8 +72,8 @@ Patch-->partially replace the resource
               ### Variables ###
 
 1.Global variable-->Global variables are available throughout a workspace
-2.collection variable-->collection variables are available throghout a collection
-3.Enviorment variable-->only available for active environment
+2.collection variable-->collection variables are available throughout a collection
+3.Environment variable-->only available for active environment
 4.Local variable-->Local variable values are scoped to a single request or collection run, and are no longer available when the run is complete
 ------------------------------------------------------------------------------------------------------
 
@@ -83,7 +83,7 @@ Authentication & Authorization==>
 
 Types of Authentication->
 0.JWT-->token that contains base64 encoded JSON.
-1.Basic-->basic method of authorization ..provide usename & password
+1.Basic-->basic method of authorization provide username & password
 2.Digest-->similar like basic but having "MD5" algorithm
 4.Bearer Token-->a security token for grant the access
 5.API Key-->Key and value pair ..add to request header
@@ -126,6 +126,7 @@ Deserialization-->json to POJO
 
 
  2.using org.json-->add org.json library
+
                 public void testPostJsonLibrary(){
                 JSONObject data=new JSONObject();
                 data.put("name","Ronit");

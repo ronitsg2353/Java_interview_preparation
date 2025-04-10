@@ -1,5 +1,5 @@
 
------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
                         ### Introduction ###
 Hello MY name is Ronit.I have 5 years of experience as Quality Assurance Engineer specialization in
 both manual & automation across domain like banking and finanical services.I have expertise in designing
@@ -8,17 +8,19 @@ with CI?CD pipeline using jenkins.MY experience includes end to end testing,API 
 with strong focus on test efficency & defect detection.I developed resuable automation script that reduced
 regrssion time by 40% and ensure more than 80% test coverage.Im passionate about delivering high quality
 software,collabrating with team & continous enhancing to business goal.
---------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------
                         ### explain project structure ###
 
  In my BDD project,I used cucumber with junit to automate testing for banking application,focus on
  authentication services.The framework was built using Java & POM structure with dedicated packages for
- feature fils,StepDefinition ,page classes and utitlies ensure scalability & maintainability.
- Gherkin is used to write feature file to make clear communication between technical and non techincal stakeholder
- I implemented stepDefinition in java,integrated framwork with jenkins ci/cd use cucumber plugin for generated
- report.This approach testing proccess reduced the manual efforts.
----------------------------------------------------------------------------------------------------
+ feature files,StepDefinition,page classes and utilitieies ensure scalability & maintainability.
+ Gherkin is used to write feature file to make clear communication between technical and non-technical stakeholder
+ I implemented stepDefinition in java,integrated framework with jenkins ci/cd use cucumber plugin for generated
+ report.This approach testing processes reduced the manual efforts.
+------------------------------------------------------------------------------------------------------------------------
 1.Difficulties in Automation testing?
+-->
 1.Rapid changes in UI--> changing ui--updating locators and some methods.
 2.flakiness -->
 3.Maintaining test data-->
@@ -31,9 +33,10 @@ software,collabrating with team & continous enhancing to business goal.
 
 3.Testing in one day before Prod?
 1.inform the stakeholder and scrum
-2.prioritze test cases-smoke and regression
+2.prioritize test cases-smoke and regression
 3.critical path & high priority testing
 4.Exploratory testing-->identify the hidden issue through unscripted testing of high risk modules
+
 -------------------------------------------------------------------------------------------------------------
 Q .Describe a situation where you had to work unser pressure to meet a deadline.How did you manage
 your time and task?
@@ -56,7 +59,7 @@ Q.2 hOW do you prioritize testing tasks when faced with tight deadlines?
    Medium priority tc-->secondary feature and edge cases
    Low priority tc-->non critical functionalities and minor UI/ux checks
 
-4.Automate repetitve and regression test to save time for manual exploratory testing
+4.Automate repetitive and regression test to save time for manual exploratory testing
 5.execute automated test in parallel using ci/cd pipelines to speed up results.
 6.break tasks into smaller chunks and assigns to deadlines
 7.collabration with develops
